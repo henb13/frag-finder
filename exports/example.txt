@@ -1,0 +1,1488 @@
+**playdemo 031275b7-a45f-4ff6-8604-addad5ba4fc5_map1_de_inferno
+
+   x._ShotgunBoris_4k-molotov(1)-M4(3)_inferno_team-Storebrand_r12 1:35 (demo_gototick 206000)
+
+         ----3k's:
+               x._Lembert_3k-pistol_inferno_team-Storebrand_r01 0:23 (demo_gototick 22000)
+               x._ShotgunBoris_3k-molotov(1)-M4(2)_inferno_team-Storebrand_r02_#ANTIECO 1:05 (demo_gototick 53000)
+               x._ShotgunBoris_3k-M4_inferno_team-Storebrand_r04 0:57 (demo_gototick 87000)
+               x._ShotgunBoris_3k-AK_inferno_team-Storebrand_r05 0:48 (demo_gototick 104000)
+               x._Lembert_3k-HE(1)-M4(2)-fast_inferno_team-Storebrand_r06 1:05 (demo_gototick 118000)
+               x._Bentster_3k-Galil-spread_inferno_team-BoitanoN00bsters_r08 0:46 (demo_gototick 139000)
+               x._ShotgunBoris_3k-M4_inferno_team-Storebrand_r10 0:58 (demo_gototick 171000)
+               x._Xel_3k-M4(1)-AK(1)-pistol(1)-spread_inferno_team-Storebrand_r11 1:12 (demo_gototick 188000)
+               x._Xel_3k-AK_inferno_team-Storebrand_r14 1:38 (demo_gototick 230000)
+               x._Xel_3k-AK_inferno_team-Storebrand_r15 0:59 (demo_gototick 238000)
+
+
+
+**playdemo 065bfbef-1979-4460-aaa1-d8cd26de6900_map1_de_overpass
+
+   x._LexSuperior_4k-M4_overpass_team-DHLExpress_r04 1:34 (demo_gototick 51000)
+   x._Q(''Q)Bacon!☣_4k-AK_overpass_team-DHLExpress_r10 1:22 (demo_gototick 114000)
+   x._Q(''Q)Bacon!☣_4k-AK_overpass_team-DHLExpress_r15 0:56 (demo_gototick 176000)
+
+         ----3k's:
+               x._Vhess_3k-pistol-fast_overpass_team-DHLExpress_r01 1:20 (demo_gototick 20000)
+               x._Q(''Q)Bacon!☣_3k-M4-fast_overpass_team-DHLExpress_r03 1:02 (demo_gototick 42000)
+               x._ölemann_3k-AK_overpass_team-DHLExpress_r06 1:27 (demo_gototick 71000)
+               x._DrBlaze_3k-M4_overpass_team-DHLExpress_r07 0:53 (demo_gototick 80000)
+               x._Q(''Q)Bacon!☣_3k-AK_overpass_team-DHLExpress_r11 1:16 (demo_gototick 125000)
+               x._cevit_3k-AWP_overpass_team-SmartCylinders_r12 1:09 (demo_gototick 136000)
+
+
+
+**playdemo 067a10f3-c8ca-4990-8e05-82e17d635c51_map2_de_inferno
+
+   x._Muummipappa_4k-Famas_inferno_team-DataResponsR&DServic_r08 0:40 (demo_gototick 100000)
+   x._cevit_4k-AK-spread_inferno_team-SmartCylinders_r10 1:42 (demo_gototick 121000)
+   x._alx_ACE-P90_inferno_team-DataResponsR&DServic_r17_#ANTIECO 1:04 (demo_gototick 209000)
+   x._cevit_ACE-AWP-spread_inferno_team-SmartCylinders_r19 1:45 (demo_gototick 236000)
+   x._cevit_4k-MP9_inferno_team-SmartCylinders_r21 1:20 (demo_gototick 273000)
+   x._Muummipappa_4k-AK_inferno_team-DataResponsR&DServic_r23 0:38 (demo_gototick 288000)
+
+         ----3k's:
+               x._fhqwhgads_3k-pistol(1)-AK(2)_inferno_team-DataResponsR&DServic_r02 1:29 (demo_gototick 31000)
+               x._Simonski123_3k-AK_inferno_team-SmartCylinders_r02_#ANTIECO 1:08 (demo_gototick 31000)
+               x._alx_3k-M4_inferno_team-DataResponsR&DServic_r04 1:00 (demo_gototick 53000)
+               x._fhqwhgads_3k-M4-spread_inferno_team-DataResponsR&DServic_r05 1:32 (demo_gototick 64000)
+               x._fhqwhgads_3k-AK_inferno_team-DataResponsR&DServic_r07 1:39 (demo_gototick 88000)
+               x._fhqwhgads_3k-molotov(1)-M4(1)-pistol(1)_inferno_team-DataResponsR&DServic_r10 1:24 (demo_gototick 121000)
+               x._Simonski123_3k-AK_inferno_team-SmartCylinders_r12 1:18 (demo_gototick 146000)
+               x._Craxo_3k-pistol_inferno_team-DataResponsR&DServic_r13 1:39 (demo_gototick 163000)
+               x._fhqwhgads_3k-AK_inferno_team-DataResponsR&DServic_r14 1:19 (demo_gototick 171000)
+               x._fhqwhgads_3k-pistol_inferno_team-DataResponsR&DServic_r16 1:13 (demo_gototick 199000)
+               x._Simonski123_3k-AUG_inferno_team-SmartCylinders_r20 0:09 (demo_gototick 252000)
+               x._cevit_3k-AK(1)-HE(1)-pistol(1)_inferno_team-SmartCylinders_r22_#ANTIECO 1:40 (demo_gototick 283000)
+               x._fhqwhgads_3k-deagle(1)-M4(2)_inferno_team-DataResponsR&DServic_r25 1:18 (demo_gototick 319000)
+               x._alx_3k-M4-spread_inferno_team-DataResponsR&DServic_r26_#ANTIECO 1:26 (demo_gototick 338000)
+
+
+
+**playdemo 031275b7-a45f-4ff6-8604-addad5ba4fc5_map2_de_overpass
+
+   x._Lembert_1v3-4k-M4_overpass_team-Storebrand_r05 0:39 (demo_gototick 66000)
+   x._ShotgunBoris_4k-M4_overpass_team-Storebrand_r10 1:17 (demo_gototick 131000)
+   x._ShotgunBoris_4k-M4_overpass_team-Storebrand_r14 1:08 (demo_gototick 170000)
+
+         ----3k's:
+               x._Xel_3k-pistol_overpass_team-Storebrand_r01 1:05 (demo_gototick 17000)
+               x._Bentster_3k-AK_overpass_team-BoitanoN00bsters_r06 1:35 (demo_gototick 83000)
+               x._Xel_3k-AWP-spread_overpass_team-Storebrand_r06 1:03 (demo_gototick 83000)
+               x._orjanHessen_3k-AK_overpass_team-Storebrand_r07 1:39 (demo_gototick 99000)
+               x._Lembert_3k-AK_overpass_team-Storebrand_r08 1:41 (demo_gototick 110000)
+               x._Lembert_3k-AK_overpass_team-Storebrand_r13 1:39 (demo_gototick 159000)
+               x._Knekk_3k-Galil_overpass_team-BoitanoN00bsters_r13 1:29 (demo_gototick 159000)
+               x._ShotgunBoris_3k-shotgun-fast_overpass_team-Storebrand_r17_#ANTIECO 1:19 (demo_gototick 200000)
+
+
+
+**playdemo 0aad1ce5-af87-4c3a-ba94-c66d234aec5b_map1_de_overpass
+
+   x._Muummipappa_4k-Galil_overpass_team-DataResponsR&DServic_r03 1:34 (demo_gototick 44000)
+
+         ----3k's:
+               x._Razorblade_3k-pistol_overpass_team-DataResponsR&DServic_r01 1:38 (demo_gototick 23000)
+               x._fhqwhgads_3k-AK-spread_overpass_team-DataResponsR&DServic_r05 0:30 (demo_gototick 72000)
+               x._alx_3k-AK_overpass_team-DataResponsR&DServic_r06 1:35 (demo_gototick 94000)
+               x._fhqwhgads_3k-AK(2)-pistol(1)_overpass_team-DataResponsR&DServic_r13 1:39 (demo_gototick 174000)
+
+
+
+**playdemo 0aad1ce5-af87-4c3a-ba94-c66d234aec5b_map2_de_inferno
+
+   x._alx_ACE-M4_inferno_team-DataResponsR&DServic_r02_#ANTIECO 1:35 (demo_gototick 30000)
+   x._Razorblade_4k-AWP(3)-molotov(1)_inferno_team-DataResponsR&DServic_r11 1:43 (demo_gototick 130000)
+   x._Razorblade_4k-AWP(3)-molotov(1)_inferno_team-DataResponsR&DServic_r15 1:43 (demo_gototick 169000)
+
+         ----3k's:
+               x._alx_3k-pistol_inferno_team-DataResponsR&DServic_r01 1:30 (demo_gototick 23000)
+               x._Muummipappa_3k-AWP(2)-Knife(1)-spread_inferno_team-DataResponsR&DServic_r06 1:27 (demo_gototick 63000)
+               x._Razorblade_3k-AWP_inferno_team-DataResponsR&DServic_r07 1:45 (demo_gototick 73000)
+               x._Magmanthe_3k-molotov(1)-AK(2)_inferno_team-Accenture#2_r07 1:26 (demo_gototick 73000)
+               x._Muummipappa_3k-AWP-spread_inferno_team-DataResponsR&DServic_r09 1:37 (demo_gototick 100000)
+               x._Razorblade_3k-AWP_inferno_team-DataResponsR&DServic_r10 1:23 (demo_gototick 117000)
+
+
+
+**playdemo 11a41439-404e-42cc-9536-0accb795e03c_map1_de_mirage
+
+   x._Illedan_4k-shotgun_mirage_team-BoitanoN00bsters_r17 1:26 (demo_gototick 255000)
+   x._M4gZ_1v3-AK_mirage_team-SmartCylinders_r17_#ANTIECO 0:48 (demo_gototick 255000)
+
+         ----3k's:
+               x._cevit_3k-M4_mirage_team-SmartCylinders_r02 1:04 (demo_gototick 32000)
+               x._cevit_3k-M4_mirage_team-SmartCylinders_r11 1:22 (demo_gototick 173000)
+               x._[GÆTTA]Larbohell_3k-AWP_mirage_team-SmartCylinders_r12 1:36 (demo_gototick 181000)
+               x._Knekk_3k-krieg_mirage_team-BoitanoN00bsters_r13 1:11 (demo_gototick 198000)
+               x._cevit_3k-pistol_mirage_team-SmartCylinders_r16 1:43 (demo_gototick 246000)
+
+
+
+**playdemo 11a41439-404e-42cc-9536-0accb795e03c_map2_de_nuke
+
+   x._cevit_4k-deagle(2)-M4(2)_nuke_team-SmartCylinders_r11 1:30 (demo_gototick 123000)
+   x._Simonski123_1v3-AK_nuke_team-SmartCylinders_r13 1:13 (demo_gototick 154000)
+
+         ----3k's:
+               x._cevit_3k-AK_nuke_team-SmartCylinders_r02 1:35 (demo_gototick 34000)
+               x._Bentster_3k-AUG-spread_nuke_team-BoitanoN00bsters_r14 1:41 (demo_gototick 165000)
+               x._GamesBond_3k-MP7(1)-AK(2)-spread_nuke_team-SmartCylinders_r15 1:35 (demo_gototick 177000)
+               x._GamesBond_3k-Famas_nuke_team-SmartCylinders_r17_#ANTIECO 0:40 (demo_gototick 199000)
+               x._cevit_3k-MP9_nuke_team-SmartCylinders_r18 1:21 (demo_gototick 215000)
+               x._Knekk_3k-Galil-spread_nuke_team-BoitanoN00bsters_r19 1:34 (demo_gototick 226000)
+               x._cevit_3k-deagle(1)-AK(2)_nuke_team-SmartCylinders_r21 1:26 (demo_gototick 248000)
+               x._Guahtdim_3k-Galil_nuke_team-BoitanoN00bsters_r23 1:30 (demo_gototick 269000)
+               x._Bentster_3k-AK-spread_nuke_team-BoitanoN00bsters_r26 1:32 (demo_gototick 308000)
+               x._M4gZ_3k-M4_nuke_team-SmartCylinders_r27 1:26 (demo_gototick 327000)
+
+
+
+**playdemo 18a4c717-1cd1-415c-887e-c7aa77c6650f_map1_de_inferno
+
+   x._orjanHessen_4k-pistol_inferno_team-Storebrand_r01 1:40 (demo_gototick 24000)
+
+         ----3k's:
+               x._Xel_3k-AK(2)-pistol(1)_inferno_team-Storebrand_r04 1:36 (demo_gototick 50000)
+               x._orjanHessen_3k-AK-fast_inferno_team-Storebrand_r05 1:37 (demo_gototick 61000)
+               x._Xel_3k-AK-spread_inferno_team-Storebrand_r06 1:36 (demo_gototick 69000)
+               x._World_3k-Unknown-fast_inferno_team-notFound_r15 0:36 (demo_gototick 165000)
+
+
+
+**playdemo 18a4c717-1cd1-415c-887e-c7aa77c6650f_map2_de_dust2
+
+   x._Xel_ACE-scout(1)-Famas(3)-pistol(1)_dust2_team-Storebrand_r02 1:31 (demo_gototick 31000)
+   x._Xel_4k-AK(3)-molotov(1)_dust2_team-Storebrand_r05 1:29 (demo_gototick 65000)
+   x._Xel_4k-AWP(3)-CZ(1)_dust2_team-Storebrand_r06 1:43 (demo_gototick 72000)
+   x._Lembert_4k-deagle(2)-AK(2)_dust2_team-Storebrand_r12 1:43 (demo_gototick 128000)
+   x._orjanHessen_4k-AK(3)-pistol(1)_dust2_team-Storebrand_r13 1:41 (demo_gototick 136000)
+
+         ----3k's:
+               x._orjanHessen_3k-M4-spread_dust2_team-Storebrand_r04 1:38 (demo_gototick 53000)
+               x._Lembert_3k-AK_dust2_team-Storebrand_r07 1:24 (demo_gototick 81000)
+               x._Lembert_3k-AK(1)-molotov(1)-deagle(1)_dust2_team-Storebrand_r08 1:44 (demo_gototick 89000)
+               x._Xel_3k-AWP_dust2_team-Storebrand_r10 1:16 (demo_gototick 106000)
+               x._Lembert_3k-AK_dust2_team-Storebrand_r14 1:37 (demo_gototick 142000)
+               x._orjanHessen_3k-deagle(2)-AK(1)_dust2_team-Storebrand_r15 1:17 (demo_gototick 149000)
+               x._Xel_3k-pistol_dust2_team-Storebrand_r16 1:37 (demo_gototick 160000)
+
+
+
+**playdemo 20027092-9cf1-42d4-a50a-e83618ffb0f7_map1_de_mirage
+
+   x._psN_4k-M4(3)-krieg(1)_mirage_team-SimradBIL_r06 1:27 (demo_gototick 92000)
+   x._psN_4k-AWP_mirage_team-SimradBIL_r09 1:38 (demo_gototick 125000)
+   x._psN_ACE-AWP_mirage_team-SimradBIL_r15 1:38 (demo_gototick 204000)
+
+         ----3k's:
+               x._Creeds_3k-pistol_mirage_team-SimradBIL_r01 0:55 (demo_gototick 23000)
+               x._LeeRoy_3k-deagle-fast_mirage_team-SimradBIL_r02_#ANTIECO 1:23 (demo_gototick 36000)
+               x._Illedan_3k-krieg_mirage_team-BoitanoN00bsters_r08 0:58 (demo_gototick 110000)
+               x._Creeds_3k-molotov(1)-AWP(2)_mirage_team-SimradBIL_r11 1:26 (demo_gototick 145000)
+               x._psN_3k-AWP_mirage_team-SimradBIL_r12 0:52 (demo_gototick 162000)
+               x._Arasaith_3k-Galil(1)-M4(2)_mirage_team-BoitanoN00bsters_r13 1:01 (demo_gototick 176000)
+               x._Affe_3k-AK_mirage_team-SimradBIL_r17_#ANTIECO 1:31 (demo_gototick 222000)
+
+
+
+**playdemo 20027092-9cf1-42d4-a50a-e83618ffb0f7_map2_de_inferno
+
+   x._psN_4k-AK_inferno_team-SimradBIL_r05 1:25 (demo_gototick 52000)
+   x._psN_4k-M4_inferno_team-SimradBIL_r17_#ANTIECO 1:37 (demo_gototick 193000)
+   x._psN_4k-M4_inferno_team-SimradBIL_r18 1:40 (demo_gototick 201000)
+
+         ----3k's:
+               x._Creeds_3k-pistol_inferno_team-SimradBIL_r01 1:21 (demo_gototick 21000)
+               x._Creeds_3k-AK_inferno_team-SimradBIL_r04 1:22 (demo_gototick 44000)
+               x._Einar_3k-HE(1)-AK(2)_inferno_team-SimradBIL_r07 1:40 (demo_gototick 78000)
+               x._Affe_3k-AWP_inferno_team-SimradBIL_r08 1:44 (demo_gototick 87000)
+               x._Creeds_3k-AK_inferno_team-SimradBIL_r09 1:44 (demo_gototick 99000)
+               x._psN_3k-molotov(1)-AK(2)_inferno_team-SimradBIL_r10 1:12 (demo_gototick 109000)
+               x._psN_3k-AK_inferno_team-SimradBIL_r13 1:41 (demo_gototick 151000)
+               x._Bentster_3k-M4_inferno_team-BoitanoN00bsters_r13 1:02 (demo_gototick 151000)
+
+
+
+**playdemo 2258aeb5-55d3-4873-ba90-5b5b7acf5994_map1_de_mirage
+
+   x._nANU_4k-pistol_mirage_team-SimradBIL_r16 1:41 (demo_gototick 212000)
+
+         ----3k's:
+               x._NeseGreven_3k-HE(1)-MP9(1)-pistol(1)_mirage_team-SimradBIL_r02_#ANTIECO 1:39 (demo_gototick 30000)
+               x._nANU_3k-AWP(2)-AK(1)-spread_mirage_team-SimradBIL_r05 1:38 (demo_gototick 69000)
+               x._nANU_3k-AWP_mirage_team-SimradBIL_r06 1:41 (demo_gototick 80000)
+               x._nANU_3k-M4_mirage_team-SimradBIL_r09 0:47 (demo_gototick 121000)
+               x._nANU_3k-AWP_mirage_team-SimradBIL_r12 1:48 (demo_gototick 165000)
+               x._nANU_3k-AWP(2)-HE(1)_mirage_team-SimradBIL_r14 1:39 (demo_gototick 196000)
+               x._NeseGreven_3k-AK(2)-molotov(1)_mirage_team-SimradBIL_r15 1:38 (demo_gototick 204000)
+               x._nANU_3k-AK-spread_mirage_team-SimradBIL_r17_#ANTIECO 1:17 (demo_gototick 219000)
+               x._JRProject_3k-M4_mirage_team-Scelto_r18 1:44 (demo_gototick 236000)
+               x._[SCELTO]Jani_3k-scout_mirage_team-Scelto_r19 1:13 (demo_gototick 244000)
+
+
+
+**playdemo 2258aeb5-55d3-4873-ba90-5b5b7acf5994_map2_de_inferno
+
+   x._Affe_4k-HE(2)-UMP(2)_inferno_team-SimradBIL_r02_#ANTIECO 1:44 (demo_gototick 33000)
+   x._NeseGreven_4k-M4(1)-krieg(3)_inferno_team-SimradBIL_r03 0:12 (demo_gototick 42000)
+
+         ----3k's:
+               x._NeseGreven_3k-AK_inferno_team-SimradBIL_r04 1:38 (demo_gototick 60000)
+               x._[SCELTO]Danduras_3k-AWP_inferno_team-Scelto_r09 1:44 (demo_gototick 137000)
+               x._[SCELTO]Danduras_3k-AWP_inferno_team-Scelto_r10 1:46 (demo_gototick 152000)
+               x._nANU_3k-M4(2)-AWP(1)_inferno_team-SimradBIL_r10 1:16 (demo_gototick 152000)
+               x._NeseGreven_3k-scout(2)-pistol(1)_inferno_team-SimradBIL_r15 0:30 (demo_gototick 234000)
+               x._NeseGreven_3k-pistol_inferno_team-SimradBIL_r16 1:20 (demo_gototick 252000)
+               x._nANU_3k-AK-fast_inferno_team-SimradBIL_r19 1:42 (demo_gototick 288000)
+               x._NeseGreven_3k-AK_inferno_team-SimradBIL_r20 1:34 (demo_gototick 293000)
+               x._[SCELTO]Ismslo_3k-M4_inferno_team-Scelto_r20 0:23 (demo_gototick 293000)
+
+
+
+**playdemo 2aa7bb97-4e5e-417a-bfb2-8539d33abd40_map1_de_mirage
+
+   x._LexSuperior_4k-deagle_mirage_team-DHLExpress_r05 1:16 (demo_gototick 73000)
+   x._Vhess_4k-M4(2)-AWP(2)-spread_mirage_team-DHLExpress_r14 1:43 (demo_gototick 187000)
+
+         ----3k's:
+               x._Q(''Q)Bacon!☣_3k-M4_mirage_team-DHLExpress_r03 0:44 (demo_gototick 37000)
+               x._OMGNinja_3k-pistol_mirage_team-DHLExpress_r16 1:22 (demo_gototick 214000)
+               x._Q(''Q)Bacon!☣_3k-AK-fast_mirage_team-DHLExpress_r17_#ANTIECO 1:39 (demo_gototick 227000)
+
+
+
+**playdemo 2aa7bb97-4e5e-417a-bfb2-8539d33abd40_map2_de_inferno
+
+   x._Vhess_4k-M4_inferno_team-DHLExpress_r12 1:37 (demo_gototick 170000)
+
+         ----3k's:
+               x._[SCELTO]Jani_3k-AK_inferno_team-Scelto_r02 0:17 (demo_gototick 29000)
+               x._LexSuperior_3k-M4_inferno_team-DHLExpress_r04 1:01 (demo_gototick 64000)
+               x._[SCELTO]FuteX_3k-krieg_inferno_team-Scelto_r07 1:18 (demo_gototick 105000)
+               x._Vhess_3k-AWP_inferno_team-DHLExpress_r14 1:38 (demo_gototick 187000)
+               x._ölemann_3k-pistol-fast_inferno_team-DHLExpress_r16 0:38 (demo_gototick 212000)
+
+
+
+**playdemo 371f30d7-c9c7-43c9-b3d7-75d0b31d7e8b_map2_de_nuke
+
+   x._Illedan_1v4-krieg_nuke_team-BoitanoN00bsters_r04 1:09 (demo_gototick 57000)
+   x._Arasaith_4k-krieg_nuke_team-BoitanoN00bsters_r10 1:32 (demo_gototick 125000)
+   x._Illedan_4k-pistol_nuke_team-BoitanoN00bsters_r16 1:31 (demo_gototick 196000)
+   x._Illedan_4k-shotgun_nuke_team-BoitanoN00bsters_r17 1:40 (demo_gototick 206000)
+
+         ----3k's:
+               x._Illedan_3k-krieg_nuke_team-BoitanoN00bsters_r02 1:37 (demo_gototick 30000)
+               x._Arasaith_3k-AK_nuke_team-BoitanoN00bsters_r05 1:13 (demo_gototick 70000)
+               x._Bentster_3k-Galil_nuke_team-BoitanoN00bsters_r07 1:10 (demo_gototick 90000)
+               x._Illedan_3k-AK_nuke_team-BoitanoN00bsters_r09 1:13 (demo_gototick 114000)
+               x._Tobben_3k-AWP_nuke_team-DIPS2_r11 1:25 (demo_gototick 139000)
+               x._Tobben_3k-scout(1)-AK(2)_nuke_team-DIPS2_r12 0:59 (demo_gototick 154000)
+               x._aslak_3k-M4_nuke_team-DIPS2_r15 1:18 (demo_gototick 185000)
+               x._CommanderData_3k-M4_nuke_team-BoitanoN00bsters_r18 0:48 (demo_gototick 212000)
+
+
+
+**playdemo 371f30d7-c9c7-43c9-b3d7-75d0b31d7e8b_map1_de_inferno
+
+   x._Tobben_4k-pistol(2)-AK(2)-spread_inferno_team-DIPS2_r11 1:22 (demo_gototick 181000)
+   x._Bentster_4k-M4_inferno_team-BoitanoN00bsters_r18 0:45 (demo_gototick 284000)
+   x._Illedan_4k-shotgun_inferno_team-BoitanoN00bsters_r20 1:05 (demo_gototick 314000)
+   x._Illedan_4k-shotgun_inferno_team-BoitanoN00bsters_r24 0:12 (demo_gototick 366000)
+   x._Heudrik_1v4-AK(3)-pistol(1)_inferno_team-DIPS2_r26 0:14 (demo_gototick 400000)
+
+         ----3k's:
+               x._aslak_3k-pistol_inferno_team-DIPS2_r01 1:33 (demo_gototick 21000)
+               x._Arasaith_3k-pistol_inferno_team-BoitanoN00bsters_r01 1:31 (demo_gototick 21000)
+               x._Illedan_3k-krieg_inferno_team-BoitanoN00bsters_r02 1:42 (demo_gototick 31000)
+               x._Tobben_3k-M4_inferno_team-DIPS2_r03 1:13 (demo_gototick 42000)
+               x._Bentster_3k-Galil-spread_inferno_team-BoitanoN00bsters_r06 1:04 (demo_gototick 86000)
+               x._aslak_3k-Famas_inferno_team-DIPS2_r07 0:46 (demo_gototick 107000)
+               x._CommanderData_3k-Galil(1)-M4(2)_inferno_team-BoitanoN00bsters_r08 0:49 (demo_gototick 124000)
+               x._aslak_3k-M4_inferno_team-DIPS2_r15 1:27 (demo_gototick 238000)
+               x._Tobben_3k-pistol_inferno_team-DIPS2_r16 1:36 (demo_gototick 255000)
+               x._Illedan_3k-shotgun-fast_inferno_team-BoitanoN00bsters_r17 0:16 (demo_gototick 267000)
+               x._Bentster_3k-AUG_inferno_team-BoitanoN00bsters_r25 1:24 (demo_gototick 382000)
+               x._Bentster_3k-AUG-spread_inferno_team-BoitanoN00bsters_r30 1:03 (demo_gototick 465000)
+
+
+
+**playdemo 41299e95-f152-4b1e-8ee1-e5d62cda9cc7_map1_de_dust2
+
+   x._GaB_4k-pistol_dust2_team-DIPS2_r01 1:41 (demo_gototick 23000)
+   x._kwpus_4k-AK_dust2_team-Accenture#2_r07 0:59 (demo_gototick 89000)
+   x._GaB_1v3-M4_dust2_team-DIPS2_r07 0:26 (demo_gototick 89000)
+   x._aslak_4k-M4_dust2_team-DIPS2_r11 1:11 (demo_gototick 147000)
+   x._Tobben_4k-pistol_dust2_team-DIPS2_r16 1:36 (demo_gototick 220000)
+   x._kwpus_4k-AUG_dust2_team-Accenture#2_r18 1:23 (demo_gototick 243000)
+   x._EmmaRas_4k-M4_dust2_team-Accenture#2_r19 1:36 (demo_gototick 253000)
+
+         ----3k's:
+               x._Tobben_3k-Famas_dust2_team-DIPS2_r02_#ANTIECO 1:42 (demo_gototick 29000)
+               x._GaB_3k-MP9_dust2_team-DIPS2_r03 0:37 (demo_gototick 36000)
+               x._StartupMixology_3k-M4_dust2_team-DIPS2_r05 1:26 (demo_gototick 65000)
+               x._StartupMixology_3k-M4_dust2_team-DIPS2_r08 1:15 (demo_gototick 105000)
+               x._kwpus_3k-AK(1)-M4(2)_dust2_team-Accenture#2_r12 1:18 (demo_gototick 158000)
+               x._godamssj_3k-AUG_dust2_team-Accenture#2_r21 1:22 (demo_gototick 270000)
+               x._Tobben_3k-AK-spread_dust2_team-DIPS2_r21 1:12 (demo_gototick 270000)
+
+
+
+**playdemo 45df48cb-b5a7-463e-b2d0-af14af4a60d0_map1_de_inferno
+
+   x._cevit_1v3-ACE-deagle(1)-AWP(4)_inferno_team-SmartCylinders_r06 1:37 (demo_gototick 78000)
+   x._rosa_4k-M4_inferno_team-Goodtech_r10 1:26 (demo_gototick 138000)
+   x._Dynamike_4k-HE(1)-M4(3)_inferno_team-Goodtech_r13 1:44 (demo_gototick 170000)
+
+         ----3k's:
+               x._fiNN4thewin_3k-AWP_inferno_team-Goodtech_r05 1:19 (demo_gototick 70000)
+               x._Tipzi_3k-M4-fast_inferno_team-Goodtech_r06 1:28 (demo_gototick 78000)
+               x._cevit_3k-AWP_inferno_team-SmartCylinders_r07 0:54 (demo_gototick 94000)
+               x._cevit_3k-AWP(2)-deagle(1)_inferno_team-SmartCylinders_r08 1:35 (demo_gototick 106000)
+               x._fiNN4thewin_3k-M4_inferno_team-Goodtech_r09 1:08 (demo_gototick 120000)
+               x._Simonski123_3k-krieg_inferno_team-SmartCylinders_r10 1:08 (demo_gototick 138000)
+               x._rosa_3k-M4-fast_inferno_team-Goodtech_r11 1:18 (demo_gototick 148000)
+               x._Tipzi_3k-AK_inferno_team-Goodtech_r12 1:02 (demo_gototick 156000)
+               x._cevit_3k-Galil(1)-AK(2)-spread_inferno_team-SmartCylinders_r15 0:51 (demo_gototick 193000)
+               x._Tipzi_3k-M4_inferno_team-Goodtech_r15 0:39 (demo_gototick 193000)
+               x._Dynamike_3k-pistol_inferno_team-Goodtech_r16 1:37 (demo_gototick 213000)
+               x._fiNN4thewin_3k-Galil(2)-AK(1)_inferno_team-Goodtech_r17_#ANTIECO 1:05 (demo_gototick 223000)
+               x._rosa_3k-AK(2)-pistol(1)_inferno_team-Goodtech_r19 0:31 (demo_gototick 253000)
+               x._Dynamike_3k-AWP-spread_inferno_team-Goodtech_r20 1:15 (demo_gototick 272000)
+
+
+
+**playdemo 41299e95-f152-4b1e-8ee1-e5d62cda9cc7_map2_de_inferno
+
+   x._Tobben_4k-pistol(1)-AUG(3)_inferno_team-DIPS2_r17 1:37 (demo_gototick 246000)
+
+         ----3k's:
+               x._World_3k-Unknown-fast_inferno_team-notFound_r01 0:33 (demo_gototick 20000)
+               x._Tobben_3k-M4_inferno_team-DIPS2_r07 1:22 (demo_gototick 96000)
+               x._Syphon_3k-M4_inferno_team-DIPS2_r11 1:11 (demo_gototick 163000)
+               x._Tobben_3k-M4-fast_inferno_team-DIPS2_r12 1:18 (demo_gototick 180000)
+               x._Phunisher_3k-AK-fast_inferno_team-Accenture#2_r13 1:11 (demo_gototick 189000)
+               x._Tobben_3k-M4_inferno_team-DIPS2_r14 1:06 (demo_gototick 205000)
+               x._Syphon_3k-krieg_inferno_team-DIPS2_r18 1:14 (demo_gototick 258000)
+               x._Tobben_3k-AK_inferno_team-DIPS2_r19 1:00 (demo_gototick 269000)
+               x._Tobben_3k-AK-spread_inferno_team-DIPS2_r21 1:30 (demo_gototick 292000)
+
+
+
+**playdemo 45df48cb-b5a7-463e-b2d0-af14af4a60d0_map2_de_nuke
+
+   x._Dynamike_4k-M4_nuke_team-Goodtech_r04 1:25 (demo_gototick 57000)
+   x._fiNN4thewin_4k-AK_nuke_team-Goodtech_r05 1:42 (demo_gototick 67000)
+   x._Simonski123_1v3-pistol_nuke_team-SmartCylinders_r16 1:07 (demo_gototick 179000)
+   x._Dynamike_4k-krieg-spread_nuke_team-Goodtech_r22 1:29 (demo_gototick 240000)
+
+         ----3k's:
+               x._fiNN4thewin_3k-pistol(2)-Knife(1)_nuke_team-Goodtech_r01 1:34 (demo_gototick 21000)
+               x._fiNN4thewin_3k-M4_nuke_team-Goodtech_r03 1:34 (demo_gototick 35000)
+               x._fiNN4thewin_3k-M4-fast_nuke_team-Goodtech_r07 0:29 (demo_gototick 83000)
+               x._SeSa/Seal_3k-M4_nuke_team-Goodtech_r13 1:35 (demo_gototick 144000)
+               x._fiNN4thewin_3k-AK-fast_nuke_team-Goodtech_r15 1:19 (demo_gototick 163000)
+               x._cevit_3k-deagle(1)-AK(2)_nuke_team-SmartCylinders_r15 1:15 (demo_gototick 163000)
+               x._[GÆTTA]Larbohell_3k-M4_nuke_team-SmartCylinders_r19 0:39 (demo_gototick 208000)
+               x._Dynamike_3k-krieg(2)-molotov(1)_nuke_team-Goodtech_r20 1:30 (demo_gototick 222000)
+               x._[GÆTTA]Larbohell_3k-AWP-spread_nuke_team-SmartCylinders_r21 1:45 (demo_gototick 231000)
+
+
+
+**playdemo 46069ab0-05ae-47e9-bbc5-303f50788b36_map1_de_mirage
+
+   x._Heudrik_4k-AUG_mirage_team-DIPS2_r14 1:27 (demo_gototick 173000)
+   x._cevit_4k-pistol_mirage_team-SmartCylinders_r16 1:27 (demo_gototick 191000)
+   x._cevit_4k-AWP_mirage_team-SmartCylinders_r22 1:20 (demo_gototick 264000)
+
+         ----3k's:
+               x._cevit_3k-pistol(1)-P90(2)_mirage_team-SmartCylinders_r02 1:20 (demo_gototick 30000)
+               x._StartupMixology_3k-P90(1)-AK(2)_mirage_team-DIPS2_r03 1:07 (demo_gototick 43000)
+               x._[GÆTTA]Larbohell_3k-AK-fast_mirage_team-SmartCylinders_r07 1:42 (demo_gototick 99000)
+               x._cevit_3k-AK_mirage_team-SmartCylinders_r08 1:29 (demo_gototick 105000)
+               x._Heudrik_3k-AUG-fast_mirage_team-DIPS2_r08 1:17 (demo_gototick 105000)
+               x._StartupMixology_3k-pistol-fast_mirage_team-DIPS2_r11 1:33 (demo_gototick 145000)
+               x._cevit_3k-AK_mirage_team-SmartCylinders_r12 1:37 (demo_gototick 151000)
+               x._Heudrik_3k-molotov(1)-AUG(2)_mirage_team-DIPS2_r15 1:42 (demo_gototick 182000)
+               x._M4gZ_3k-M4_mirage_team-SmartCylinders_r21 0:54 (demo_gototick 247000)
+               x._cevit_3k-AWP-spread_mirage_team-SmartCylinders_r24 1:16 (demo_gototick 290000)
+               x._Tobben_3k-AK_mirage_team-DIPS2_r26 1:10 (demo_gototick 314000)
+
+
+
+**playdemo 46069ab0-05ae-47e9-bbc5-303f50788b36_map2_de_inferno
+
+   x._cevit_1v3-AK-fast_inferno_team-SmartCylinders_r06 1:04 (demo_gototick 75000)
+   x._cevit_4k-AK-spread_inferno_team-SmartCylinders_r14 1:27 (demo_gototick 165000)
+
+         ----3k's:
+               x._Syphon_3k-P90_inferno_team-DIPS2_r04 1:26 (demo_gototick 51000)
+               x._cevit_3k-AK-fast_inferno_team-SmartCylinders_r04 1:16 (demo_gototick 51000)
+               x._Heudrik_3k-AUG_inferno_team-DIPS2_r05 1:04 (demo_gototick 61000)
+               x._StartupMixology_3k-M4_inferno_team-DIPS2_r07 1:27 (demo_gototick 85000)
+               x._M4gZ_3k-HE(1)-AK(2)_inferno_team-SmartCylinders_r09 1:42 (demo_gototick 108000)
+               x._Heudrik_3k-P90(1)-M4(2)_inferno_team-DIPS2_r10 1:33 (demo_gototick 119000)
+               x._M4gZ_3k-AK_inferno_team-SmartCylinders_r11 1:33 (demo_gototick 129000)
+               x._cevit_3k-MAC-10(1)-AK(2)_inferno_team-SmartCylinders_r12 1:17 (demo_gototick 138000)
+               x._Syphon_3k-P90(1)-AK(2)_inferno_team-DIPS2_r15 1:34 (demo_gototick 180000)
+               x._cevit_3k-pistol_inferno_team-SmartCylinders_r16 1:26 (demo_gototick 190000)
+               x._GamesBond_3k-MP7(2)-AK(1)_inferno_team-SmartCylinders_r18 1:42 (demo_gototick 220000)
+               x._Simonski123_3k-M4_inferno_team-SmartCylinders_r20 1:30 (demo_gototick 231000)
+               x._Simonski123_3k-M4_inferno_team-SmartCylinders_r22 0:33 (demo_gototick 248000)
+               x._M4gZ_3k-M4_inferno_team-SmartCylinders_r23 1:34 (demo_gototick 263000)
+
+
+
+**playdemo 472489af-a5cd-4348-8311-d347faa41b2f_map1_de_nuke
+
+   x._GaB_4k-AWP_nuke_team-DIPS2_r04 1:25 (demo_gototick 43000)
+   x._LexSuperior_4k-M4_nuke_team-DHLExpress_r10 1:39 (demo_gototick 121000)
+   x._OMGNinja_4k-AWP_nuke_team-DHLExpress_r11 1:14 (demo_gototick 135000)
+
+         ----3k's:
+               x._ölemann_3k-pistol_nuke_team-DHLExpress_r01 1:34 (demo_gototick 20000)
+               x._Emeruss_3k-M4_nuke_team-DHLExpress_r02_#ANTIECO 1:37 (demo_gototick 27000)
+               x._OMGNinja_3k-AWP_nuke_team-DHLExpress_r05 1:42 (demo_gototick 61000)
+               x._LexSuperior_3k-M4_nuke_team-DHLExpress_r06 1:10 (demo_gototick 70000)
+               x._GaB_3k-AK_nuke_team-DIPS2_r07 1:44 (demo_gototick 80000)
+               x._Emeruss_3k-M4_nuke_team-DHLExpress_r07 1:25 (demo_gototick 80000)
+               x._OMGNinja_3k-AWP_nuke_team-DHLExpress_r09 1:44 (demo_gototick 104000)
+               x._GaB_3k-AK_nuke_team-DIPS2_r12 0:57 (demo_gototick 145000)
+               x._OMGNinja_3k-AWP_nuke_team-DHLExpress_r13 1:14 (demo_gototick 159000)
+               x._OMGNinja_3k-pistol_nuke_team-DHLExpress_r16 1:38 (demo_gototick 194000)
+               x._aslak_3k-Famas_nuke_team-DIPS2_r17 1:32 (demo_gototick 201000)
+
+
+
+**playdemo 472489af-a5cd-4348-8311-d347faa41b2f_map2_de_mirage
+
+   x._Tobben_4k-pistol_mirage_team-DIPS2_r16 1:43 (demo_gototick 229000)
+
+         ----3k's:
+               x._Q(''Q)Bacon!☣_3k-pistol_mirage_team-DHLExpress_r01 1:16 (demo_gototick 22000)
+               x._Tobben_3k-pistol_mirage_team-DIPS2_r01 0:26 (demo_gototick 22000)
+               x._Syphon_3k-M4-fast_mirage_team-DIPS2_r03 1:15 (demo_gototick 48000)
+               x._Q(''Q)Bacon!☣_3k-AK-spread_mirage_team-DHLExpress_r05 1:27 (demo_gototick 74000)
+               x._Q(''Q)Bacon!☣_3k-AK-spread_mirage_team-DHLExpress_r07 1:15 (demo_gototick 106000)
+               x._Emeruss_3k-AWP_mirage_team-DHLExpress_r10 1:42 (demo_gototick 156000)
+               x._Emeruss_3k-AWP_mirage_team-DHLExpress_r12 0:43 (demo_gototick 183000)
+               x._GaB_3k-AK-spread_mirage_team-DIPS2_r17_#ANTIECO 1:27 (demo_gototick 240000)
+               x._DrBlaze_3k-M4_mirage_team-DHLExpress_r18 0:36 (demo_gototick 254000)
+
+
+
+**playdemo 58bbbc50-3a24-41cf-a157-01c30252f4f5_map1_de_overpass
+
+   x._Bentster_ACE-AWP_overpass_team-BoitanoN00bsters_r15 1:24 (demo_gototick 186000)
+
+         ----3k's:
+               x._World_3k-Unknown-fast_overpass_team-notFound_r05 0:48 (demo_gototick 73000)
+               x._Illedan_3k-AUG-spread_overpass_team-BoitanoN00bsters_r06 1:08 (demo_gototick 84000)
+               x._Knekk_3k-Famas(2)-AK(1)_overpass_team-BoitanoN00bsters_r07 1:31 (demo_gototick 99000)
+               x._fhqwhgads_3k-shotgun-fast_overpass_team-DataResponsR&DServic_r09 1:22 (demo_gototick 119000)
+               x._Illedan_3k-shotgun(2)-pistol(1)_overpass_team-BoitanoN00bsters_r14 0:37 (demo_gototick 172000)
+               x._alx_3k-pistol_overpass_team-DataResponsR&DServic_r16 1:32 (demo_gototick 200000)
+               x._Knekk_3k-pistol_overpass_team-BoitanoN00bsters_r16 1:29 (demo_gototick 200000)
+               x._Craxo_3k-AUG_overpass_team-DataResponsR&DServic_r17 1:17 (demo_gototick 216000)
+               x._Muummipappa_3k-Autosniper-fast_overpass_team-DataResponsR&DServic_r20 1:38 (demo_gototick 261000)
+               x._Bentster_3k-AK-fast_overpass_team-BoitanoN00bsters_r20 1:22 (demo_gototick 261000)
+
+
+
+**playdemo 5a93fc0a-cf3a-48c3-ba8f-d56541fcb98e_map1_de_nuke
+
+
+         ----3k's:
+               x._Muummipappa_3k-M4_nuke_team-DataResponsR&DServic_r02 1:00 (demo_gototick 35000)
+               x._World_3k-World(1)-Unknown(2)_nuke_team-notFound_r06 0:25 (demo_gototick 92000)
+               x._Muummipappa_3k-Famas(2)-molotov(1)_nuke_team-DataResponsR&DServic_r08 1:21 (demo_gototick 129000)
+               x._Razorblade_3k-AWP_nuke_team-DataResponsR&DServic_r10 1:39 (demo_gototick 155000)
+               x._Heyword_3k-M4_nuke_team-DataResponsR&DServic_r13 1:33 (demo_gototick 198000)
+               x._CaptCobol_3k-AK-spread_nuke_team-Scelto_r14 0:55 (demo_gototick 209000)
+               x._alx_3k-pistol-spread_nuke_team-DataResponsR&DServic_r16 0:53 (demo_gototick 245000)
+
+
+
+**playdemo 58bbbc50-3a24-41cf-a157-01c30252f4f5_map2_de_vertigo
+
+   x._fhqwhgads_1v4-pistol(3)-scout(1)_vertigo_team-DataResponsR&DServic_r02_#ANTIECO 0:36 (demo_gototick 28000)
+   x._Illedan_4k-MP9-spread_vertigo_team-BoitanoN00bsters_r05 1:37 (demo_gototick 66000)
+
+         ----3k's:
+               x._fhqwhgads_3k-deagle(1)-krieg(2)-spread_vertigo_team-DataResponsR&DServic_r06 1:31 (demo_gototick 80000)
+               x._fhqwhgads_3k-krieg_vertigo_team-DataResponsR&DServic_r08 1:03 (demo_gototick 106000)
+               x._Bentster_3k-krieg-spread_vertigo_team-BoitanoN00bsters_r12 1:33 (demo_gototick 160000)
+               x._fhqwhgads_3k-krieg_vertigo_team-DataResponsR&DServic_r13 1:03 (demo_gototick 174000)
+               x._Muummipappa_3k-AK_vertigo_team-DataResponsR&DServic_r14 1:18 (demo_gototick 189000)
+               x._Bentster_3k-pistol_vertigo_team-BoitanoN00bsters_r16 0:57 (demo_gototick 214000)
+
+
+
+**playdemo 5a93fc0a-cf3a-48c3-ba8f-d56541fcb98e_map2_de_inferno
+
+   x._[SCELTO]Ismslo_ACE-AK(4)-M4(1)_inferno_team-Scelto_r21 1:39 (demo_gototick 276000)
+   x._Razorblade_4k-AWP_inferno_team-DataResponsR&DServic_r26 1:44 (demo_gototick 336000)
+   x._[SCELTO]Ismslo_1v3-krieg_inferno_team-Scelto_r28 0:47 (demo_gototick 359000)
+
+         ----3k's:
+               x._[SCELTO]FuteX_3k-pistol_inferno_team-Scelto_r01 1:31 (demo_gototick 22000)
+               x._[SCELTO]Danduras_3k-M4_inferno_team-Scelto_r05 1:10 (demo_gototick 70000)
+               x._JRProject_3k-M4_inferno_team-Scelto_r06 1:25 (demo_gototick 88000)
+               x._Muummipappa_3k-pistol_inferno_team-DataResponsR&DServic_r10 1:31 (demo_gototick 134000)
+               x._Craxo_3k-AK-spread_inferno_team-DataResponsR&DServic_r13 1:30 (demo_gototick 169000)
+               x._JRProject_3k-AK_inferno_team-Scelto_r18 0:42 (demo_gototick 238000)
+               x._Muummipappa_3k-M4(2)-pistol(1)-fast_inferno_team-DataResponsR&DServic_r20 1:30 (demo_gototick 268000)
+               x._Heyword_3k-M4-fast_inferno_team-DataResponsR&DServic_r22 1:05 (demo_gototick 285000)
+               x._Razorblade_3k-AWP-spread_inferno_team-DataResponsR&DServic_r23 1:44 (demo_gototick 300000)
+               x._Craxo_3k-AK-fast_inferno_team-DataResponsR&DServic_r24_#ANTIECO 1:35 (demo_gototick 313000)
+               x._Razorblade_3k-AWP_inferno_team-DataResponsR&DServic_r28 1:34 (demo_gototick 359000)
+               x._Muummipappa_3k-M4_inferno_team-DataResponsR&DServic_r29 0:30 (demo_gototick 377000)
+               x._Muummipappa_3k-M4-fast_inferno_team-DataResponsR&DServic_r30 1:13 (demo_gototick 393000)
+
+
+
+**playdemo 5e2dbd44-1749-457b-95e1-5f068bdea994_map2_de_mirage
+
+   x._GamesBond_4k-Famas_mirage_team-SmartCylinders_r02 1:32 (demo_gototick 34000)
+   x._Simonski123_1v3-4k-AK_mirage_team-SmartCylinders_r25 1:01 (demo_gototick 343000)
+
+         ----3k's:
+               x._[SCELTO]Jani_3k-pistol-fast_mirage_team-Scelto_r01 1:34 (demo_gototick 25000)
+               x._[GÆTTA]Larbohell_3k-AUG_mirage_team-SmartCylinders_r05 1:25 (demo_gototick 79000)
+               x._[SCELTO]Ismslo_3k-AK_mirage_team-Scelto_r06 1:35 (demo_gototick 88000)
+               x._[SCELTO]Ismslo_3k-AK(2)-M4(1)_mirage_team-Scelto_r07 1:06 (demo_gototick 100000)
+               x._cevit_3k-M4(2)-AK(1)_mirage_team-SmartCylinders_r11 1:39 (demo_gototick 158000)
+               x._Simonski123_3k-AUG_mirage_team-SmartCylinders_r12 1:04 (demo_gototick 172000)
+               x._Simonski123_3k-AUG-spread_mirage_team-SmartCylinders_r15 0:48 (demo_gototick 212000)
+               x._[SCELTO]Jani_3k-pistol_mirage_team-Scelto_r16 1:30 (demo_gototick 233000)
+               x._cevit_3k-pistol(1)-M4(2)_mirage_team-SmartCylinders_r17 1:20 (demo_gototick 244000)
+               x._[SCELTO]Danduras_3k-AWP_mirage_team-Scelto_r27 1:19 (demo_gototick 368000)
+               x._cevit_3k-deagle_mirage_team-SmartCylinders_r28 0:48 (demo_gototick 381000)
+
+
+
+**playdemo 5ebcf128-ea55-444b-b869-d77e6dcecf3d_map1_de_inferno
+
+   x._Xel_4k-AK(2)-HE(1)-pistol(1)-fast_inferno_team-Storebrand_r04 1:43 (demo_gototick 52000)
+   x._ShotgunBoris_4k-AK_inferno_team-Storebrand_r32 0:27 (demo_gototick 436000)
+   x._Xel_4k-M4-spread_inferno_team-Storebrand_r35 1:34 (demo_gototick 481000)
+
+         ----3k's:
+               x._Xel_3k-pistol_inferno_team-Storebrand_r01 1:11 (demo_gototick 19000)
+               x._orjanHessen_3k-HE(2)-Famas(1)-fast_inferno_team-Storebrand_r02_#ANTIECO 1:37 (demo_gototick 34000)
+               x._ShotgunBoris_3k-M4_inferno_team-Storebrand_r06 1:01 (demo_gototick 73000)
+               x._Q(''Q)Bacon!☣_3k-AK_inferno_team-DHLExpress_r07 0:19 (demo_gototick 86000)
+               x._OMGNinja_3k-AWP_inferno_team-DHLExpress_r09 1:42 (demo_gototick 116000)
+               x._Q(''Q)Bacon!☣_3k-AK-spread_inferno_team-DHLExpress_r12 0:33 (demo_gototick 150000)
+               x._Twitch/SuExeC_3k-MP7(2)-pistol(1)-fast_inferno_team-Storebrand_r17_#ANTIECO 0:43 (demo_gototick 231000)
+               x._Q(''Q)Bacon!☣_3k-M4_inferno_team-DHLExpress_r18 1:01 (demo_gototick 244000)
+               x._ShotgunBoris_3k-AK_inferno_team-Storebrand_r20 0:47 (demo_gototick 273000)
+               x._ölemann_3k-HE(1)-AK(2)_inferno_team-DHLExpress_r25 1:44 (demo_gototick 348000)
+               x._Q(''Q)Bacon!☣_3k-M4_inferno_team-DHLExpress_r28 1:36 (demo_gototick 379000)
+               x._ölemann_3k-AK-fast_inferno_team-DHLExpress_r29 1:06 (demo_gototick 394000)
+               x._ölemann_3k-AK_inferno_team-DHLExpress_r30_#ANTIECO 1:21 (demo_gototick 411000)
+
+
+
+**playdemo 5ebcf128-ea55-444b-b869-d77e6dcecf3d_map2_de_overpass
+
+   x._DrBlaze_4k-M4_overpass_team-DHLExpress_r05 0:37 (demo_gototick 82000)
+
+         ----3k's:
+               x._orjanHessen_3k-pistol_overpass_team-Storebrand_r01 0:23 (demo_gototick 20000)
+               x._DrBlaze_3k-M4_overpass_team-DHLExpress_r06 0:33 (demo_gototick 97000)
+               x._ölemann_3k-M4_overpass_team-DHLExpress_r08 1:40 (demo_gototick 124000)
+               x._DrBlaze_3k-deagle(2)-AK(1)_overpass_team-DHLExpress_r12 1:01 (demo_gototick 192000)
+               x._Xel_3k-AK_overpass_team-Storebrand_r14 1:16 (demo_gototick 218000)
+               x._Lembert_3k-M4_overpass_team-Storebrand_r25 1:31 (demo_gototick 358000)
+               x._Xel_3k-AWP-spread_overpass_team-Storebrand_r27 1:43 (demo_gototick 387000)
+               x._orjanHessen_3k-M4-fast_overpass_team-Storebrand_r30 1:36 (demo_gototick 427000)
+               x._Xel_3k-AWP_overpass_team-Storebrand_r31 0:55 (demo_gototick 434000)
+               x._ölemann_3k-M4_overpass_team-DHLExpress_r34 0:53 (demo_gototick 473000)
+               x._ölemann_3k-M4_overpass_team-DHLExpress_r35 0:53 (demo_gototick 491000)
+               x._ShotgunBoris_3k-AK_overpass_team-Storebrand_r36 1:35 (demo_gototick 504000)
+
+
+
+**playdemo 5ed0652d-4f4a-4787-ab6a-0a154aebaceb_map1_de_overpass
+
+    Can't extract highlights from this demo - there's only 0 round in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file and try again.
+
+
+
+**playdemo 5ed0652d-4f4a-4787-ab6a-0a154aebaceb_map2_de_inferno
+
+   x._Xel_4k-MAC-10(2)-molotov(1)-AK(1)_inferno_team-Storebrand_r17_#ANTIECO 1:38 (demo_gototick 250000)
+   x._Xel_4k-AK_inferno_team-Storebrand_r19 1:19 (demo_gototick 277000)
+
+         ----3k's:
+               x._Xel_3k-pistol-spread_inferno_team-Storebrand_r01 1:25 (demo_gototick 21000)
+               x._Xel_3k-pistol(2)-scout(1)-fast_inferno_team-Storebrand_r03 1:18 (demo_gototick 50000)
+               x._Xel_3k-AK-spread_inferno_team-Storebrand_r05 1:39 (demo_gototick 73000)
+               x._JRProject_3k-AK_inferno_team-Scelto_r12 0:53 (demo_gototick 169000)
+               x._Xel_3k-M4_inferno_team-Storebrand_r15 0:42 (demo_gototick 221000)
+               x._Twitch/SuExeC_3k-pistol_inferno_team-Storebrand_r16 1:33 (demo_gototick 239000)
+
+
+
+**playdemo 70b00355-b70b-4a9c-8254-2fc7f6779ca5_map1_de_overpass
+
+   x._ShotgunBoris_4k-M4_overpass_team-Storebrand_r03_#ANTIECO 0:56 (demo_gototick 44000)
+   x._ShotgunBoris_1v3-M4_overpass_team-Storebrand_r09 1:04 (demo_gototick 118000)
+   x._ShotgunBoris_4k-pistol(1)-AWP(3)-spread_overpass_team-Storebrand_r23 1:40 (demo_gototick 313000)
+
+         ----3k's:
+               x._fhqwhgads_3k-deagle(1)-M4(2)_overpass_team-DataResponsR&DServic_r06 1:17 (demo_gototick 78000)
+               x._fhqwhgads_3k-krieg-spread_overpass_team-DataResponsR&DServic_r12 1:28 (demo_gototick 169000)
+               x._fhqwhgads_3k-krieg-fast_overpass_team-DataResponsR&DServic_r13 1:26 (demo_gototick 185000)
+               x._ShotgunBoris_3k-Famas(1)-AK(2)-spread_overpass_team-Storebrand_r14 1:38 (demo_gototick 202000)
+               x._Lembert_3k-AK(2)-pistol(1)_overpass_team-Storebrand_r19 1:04 (demo_gototick 268000)
+
+
+
+**playdemo 70b00355-b70b-4a9c-8254-2fc7f6779ca5_map2_de_inferno
+
+   x._fhqwhgads_4k-AK_inferno_team-DataResponsR&DServic_r10 1:32 (demo_gototick 119000)
+   x._ShotgunBoris_4k-M4_inferno_team-Storebrand_r12 0:44 (demo_gototick 144000)
+   x._ShotgunBoris_4k-M4_inferno_team-Storebrand_r14 0:55 (demo_gototick 175000)
+
+         ----3k's:
+               x._Xel_3k-pistol_inferno_team-Storebrand_r01 1:35 (demo_gototick 21000)
+               x._ShotgunBoris_3k-HE(1)-MP9(2)_inferno_team-Storebrand_r02_#ANTIECO 1:36 (demo_gototick 28000)
+               x._Twitch/SuExeC_3k-HE-fast_inferno_team-Storebrand_r04 0:40 (demo_gototick 49000)
+               x._ShotgunBoris_3k-AK-fast_inferno_team-Storebrand_r06 1:13 (demo_gototick 72000)
+               x._Twitch/SuExeC_3k-M4_inferno_team-Storebrand_r07 1:34 (demo_gototick 81000)
+               x._fhqwhgads_3k-AK-fast_inferno_team-DataResponsR&DServic_r07 1:11 (demo_gototick 81000)
+
+
+
+**playdemo 716f87a5-20f6-406c-a642-d22919e9f83f_map1_de_dust2
+
+   x._psN_4k-molotov(1)-AK(3)_dust2_team-SimradBIL_r07 1:02 (demo_gototick 91000)
+   x._psN_4k-AK_dust2_team-SimradBIL_r08 1:35 (demo_gototick 102000)
+   x._psN_4k-AK_dust2_team-SimradBIL_r10 1:16 (demo_gototick 117000)
+   x._psN_4k-pistol_dust2_team-SimradBIL_r16 1:19 (demo_gototick 197000)
+   x._psN_4k-deagle_dust2_team-SimradBIL_r18 1:18 (demo_gototick 214000)
+
+         ----3k's:
+               x._psN_3k-pistol_dust2_team-SimradBIL_r01 1:28 (demo_gototick 21000)
+               x._psN_3k-AK_dust2_team-SimradBIL_r03 1:37 (demo_gototick 44000)
+               x._Creeds_3k-AK_dust2_team-SimradBIL_r05 1:42 (demo_gototick 66000)
+               x._nANU_3k-AWP_dust2_team-SimradBIL_r09 1:47 (demo_gototick 110000)
+               x._psN_3k-AK_dust2_team-SimradBIL_r11 1:41 (demo_gototick 134000)
+               x._NeseGreven_3k-deagle(2)-AWP(1)_dust2_team-SimradBIL_r12 1:09 (demo_gototick 143000)
+               x._Dynamike_3k-AWP-spread_dust2_team-Goodtech_r15 1:50 (demo_gototick 182000)
+
+
+
+**playdemo 716f87a5-20f6-406c-a642-d22919e9f83f_map2_de_inferno
+
+   x._psN_4k-M4-fast_inferno_team-SimradBIL_r02_#ANTIECO 1:44 (demo_gototick 32000)
+
+         ----3k's:
+               x._NeseGreven_3k-M4_inferno_team-SimradBIL_r04 1:38 (demo_gototick 49000)
+               x._nANU_3k-AK_inferno_team-SimradBIL_r08 1:39 (demo_gototick 91000)
+               x._psN_3k-AWP-spread_inferno_team-SimradBIL_r12 0:55 (demo_gototick 133000)
+               x._psN_3k-AK_inferno_team-SimradBIL_r15 1:28 (demo_gototick 175000)
+               x._psN_3k-pistol_inferno_team-SimradBIL_r16 1:31 (demo_gototick 184000)
+
+
+
+**playdemo 727af82f-52d6-45ed-895c-ab49aad888c7_map1_de_inferno
+
+
+         ----3k's:
+               x._DrBlaze_3k-HE(2)-pistol(1)_inferno_team-DHLExpress_r01 1:42 (demo_gototick 20000)
+               x._DrBlaze_3k-Famas_inferno_team-DHLExpress_r03 1:42 (demo_gototick 33000)
+               x._Tallefjant_3k-AK_inferno_team-DHLExpress_r05 1:33 (demo_gototick 67000)
+               x._DrBlaze_3k-AK_inferno_team-DHLExpress_r06 1:20 (demo_gototick 79000)
+               x._OMGNinja_3k-molotov-fast_inferno_team-DHLExpress_r08 1:25 (demo_gototick 100000)
+               x._Tallefjant_3k-M4_inferno_team-DHLExpress_r11 0:37 (demo_gototick 144000)
+               x._OMGNinja_3k-AK-fast_inferno_team-DHLExpress_r15 1:14 (demo_gototick 197000)
+               x._Magmanthe_3k-pistol(2)-Knife(1)_inferno_team-Accenture#2_r16 0:59 (demo_gototick 207000)
+               x._DrBlaze_3k-AK_inferno_team-DHLExpress_r17_#ANTIECO 1:39 (demo_gototick 221000)
+
+
+
+**playdemo 727af82f-52d6-45ed-895c-ab49aad888c7_map2_de_mirage
+
+   x._Vhess_4k-Famas_mirage_team-DHLExpress_r05 1:43 (demo_gototick 68000)
+
+         ----3k's:
+               x._DrBlaze_3k-HE(1)-AK(2)_mirage_team-DHLExpress_r03 1:38 (demo_gototick 47000)
+               x._Vhess_3k-AWP(1)-pistol(2)_mirage_team-DHLExpress_r06 1:43 (demo_gototick 76000)
+               x._DrBlaze_3k-AK_mirage_team-DHLExpress_r07 1:23 (demo_gototick 90000)
+               x._Tallefjant_3k-AWP_mirage_team-DHLExpress_r10 1:31 (demo_gototick 126000)
+               x._Vhess_3k-AK(2)-HE(1)_mirage_team-DHLExpress_r15 1:20 (demo_gototick 188000)
+
+
+
+**playdemo 819abb07-5608-4919-8c0e-e95bc0446214_map1_de_inferno
+
+   x._ShotgunBoris_4k-AK-spread_inferno_team-Storebrand_r07 1:34 (demo_gototick 105000)
+   x._psN_4k-AWP(2)-AK(2)-spread_inferno_team-SimradBIL_r26 0:48 (demo_gototick 365000)
+   x._Xel_4k-AK_inferno_team-Storebrand_r29 1:39 (demo_gototick 420000)
+
+         ----3k's:
+               x._Creeds_3k-MP7_inferno_team-SimradBIL_r02_#ANTIECO 1:15 (demo_gototick 30000)
+               x._ShotgunBoris_3k-AK_inferno_team-Storebrand_r03 1:06 (demo_gototick 40000)
+               x._psN_3k-M4_inferno_team-SimradBIL_r05 1:43 (demo_gototick 74000)
+               x._psN_3k-M4(2)-pistol(1)-fast_inferno_team-SimradBIL_r07 1:39 (demo_gototick 105000)
+               x._Xel_3k-AK_inferno_team-Storebrand_r14 1:07 (demo_gototick 206000)
+               x._ShotgunBoris_3k-M4-fast_inferno_team-Storebrand_r18 0:51 (demo_gototick 256000)
+               x._Lembert_3k-Famas-spread_inferno_team-Storebrand_r22 1:03 (demo_gototick 307000)
+               x._ShotgunBoris_3k-M4-fast_inferno_team-Storebrand_r26 0:51 (demo_gototick 365000)
+               x._psN_3k-AK_inferno_team-SimradBIL_r27 0:40 (demo_gototick 385000)
+               x._Xel_3k-M4_inferno_team-Storebrand_r31 1:21 (demo_gototick 443000)
+               x._ShotgunBoris_3k-M4_inferno_team-Storebrand_r32 1:19 (demo_gototick 456000)
+               x._Creeds_3k-M4(2)-AWP(1)_inferno_team-SimradBIL_r34 1:05 (demo_gototick 496000)
+               x._psN_3k-HE(1)-AWP(2)_inferno_team-SimradBIL_r37 0:23 (demo_gototick 537000)
+               x._psN_3k-AWP_inferno_team-SimradBIL_r38 0:43 (demo_gototick 568000)
+
+
+
+**playdemo 819abb07-5608-4919-8c0e-e95bc0446214_map2_de_dust2
+
+   x._psN_4k-pistol(1)-Galil(3)_dust2_team-SimradBIL_r02 1:21 (demo_gototick 33000)
+   x._Creeds_4k-M4(3)-pistol(1)_dust2_team-SimradBIL_r04_#ANTIECO 1:42 (demo_gototick 55000)
+   x._nANU_4k-AK_dust2_team-SimradBIL_r05 0:56 (demo_gototick 60000)
+   x._psN_4k-Famas-fast_dust2_team-SimradBIL_r15 1:02 (demo_gototick 193000)
+   x._Xel_ACE-M4-spread_dust2_team-Storebrand_r21 1:30 (demo_gototick 254000)
+   x._psN_4k-AK_dust2_team-SimradBIL_r23 1:44 (demo_gototick 285000)
+   x._ShotgunBoris_ACE-M4_dust2_team-Storebrand_r25 1:32 (demo_gototick 308000)
+   x._ShotgunBoris_4k-M4_dust2_team-Storebrand_r27 0:41 (demo_gototick 331000)
+
+         ----3k's:
+               x._psN_3k-Galil_dust2_team-SimradBIL_r03 1:03 (demo_gototick 43000)
+               x._psN_3k-AWP_dust2_team-SimradBIL_r07 0:26 (demo_gototick 86000)
+               x._Creeds_3k-M4_dust2_team-SimradBIL_r09 1:13 (demo_gototick 119000)
+               x._orjanHessen_3k-AK_dust2_team-Storebrand_r09 1:02 (demo_gototick 119000)
+               x._psN_3k-AWP_dust2_team-SimradBIL_r12 1:05 (demo_gototick 159000)
+               x._ShotgunBoris_3k-AK_dust2_team-Storebrand_r14 1:23 (demo_gototick 182000)
+               x._World_3k-Unknown-fast_dust2_team-notFound_r15 0:50 (demo_gototick 193000)
+               x._psN_3k-AK_dust2_team-SimradBIL_r17_#ANTIECO 1:36 (demo_gototick 214000)
+               x._Xel_3k-M4_dust2_team-Storebrand_r18 1:18 (demo_gototick 224000)
+               x._psN_3k-AK_dust2_team-SimradBIL_r24 1:38 (demo_gototick 294000)
+               x._Xel_3k-M4(2)-AK(1)_dust2_team-Storebrand_r26 1:24 (demo_gototick 316000)
+               x._NeseGreven_3k-AK_dust2_team-SimradBIL_r28 0:42 (demo_gototick 344000)
+
+
+
+**playdemo 821ece65-809d-494a-9d8b-26b6b2d9ebca_map1_de_dust2
+
+   x._GaB_4k-pistol-spread_dust2_team-DIPS2_r01 1:23 (demo_gototick 22000)
+   x._NeseGreven_4k-HE(1)-AWP(1)-deagle(2)_dust2_team-SimradBIL_r07 1:08 (demo_gototick 105000)
+
+         ----3k's:
+               x._nANU_3k-AK_dust2_team-SimradBIL_r03 1:44 (demo_gototick 51000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r08 1:40 (demo_gototick 120000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r09 1:40 (demo_gototick 134000)
+               x._NeseGreven_3k-AWP_dust2_team-SimradBIL_r11 1:10 (demo_gototick 157000)
+               x._World_3k-Unknown-fast_dust2_team-notFound_r12 0:51 (demo_gototick 167000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r13 1:35 (demo_gototick 178000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r14 1:17 (demo_gototick 194000)
+               x._NeseGreven_3k-pistol-fast_dust2_team-SimradBIL_r16 1:31 (demo_gototick 217000)
+               x._nANU_3k-mp5-fast_dust2_team-SimradBIL_r17 1:13 (demo_gototick 226000)
+               x._NeseGreven_3k-MP7(1)-M4(2)_dust2_team-SimradBIL_r19 1:38 (demo_gototick 248000)
+               x._GaB_3k-AK(2)-HE(1)-spread_dust2_team-DIPS2_r19 1:07 (demo_gototick 248000)
+
+
+
+**playdemo 821ece65-809d-494a-9d8b-26b6b2d9ebca_map2_de_inferno
+
+   x._nANU_4k-pistol_inferno_team-SimradBIL_r01 1:37 (demo_gototick 20000)
+   x._nANU_4k-AK_inferno_team-SimradBIL_r03 1:30 (demo_gototick 36000)
+   x._Heudrik_4k-AWP_inferno_team-DIPS2_r08 1:46 (demo_gototick 101000)
+   x._nANU_4k-M4(3)-molotov(1)-spread_inferno_team-SimradBIL_r14 1:20 (demo_gototick 179000)
+
+         ----3k's:
+               x._nANU_3k-AWP_inferno_team-SimradBIL_r06 1:40 (demo_gototick 74000)
+               x._Tobben_3k-M4_inferno_team-DIPS2_r07 1:11 (demo_gototick 86000)
+               x._nANU_3k-AK_inferno_team-SimradBIL_r15 1:38 (demo_gototick 191000)
+               x._nANU_3k-pistol(2)-Knife(1)_inferno_team-SimradBIL_r16 1:28 (demo_gototick 202000)
+               x._nANU_3k-pistol(2)-krieg(1)_inferno_team-SimradBIL_r18 1:09 (demo_gototick 223000)
+               x._nANU_3k-AK_inferno_team-SimradBIL_r19_#ANTIECO 1:01 (demo_gototick 240000)
+               x._nANU_3k-AK-fast_inferno_team-SimradBIL_r20 1:29 (demo_gototick 252000)
+               x._NeseGreven_3k-M4_inferno_team-SimradBIL_r21 1:19 (demo_gototick 258000)
+               x._LeeRoy_3k-AUG_inferno_team-SimradBIL_r23 1:38 (demo_gototick 292000)
+
+
+
+**playdemo 823b0959-60bb-4d4b-8c40-c1f5f7b0a0d7_map1_de_mirage
+
+   x._OMGNinja_4k-AWP_mirage_team-DHLExpress_r07 1:45 (demo_gototick 88000)
+   x._NeseGreven_4k-AK-spread_mirage_team-SimradBIL_r10 1:35 (demo_gototick 125000)
+
+         ----3k's:
+               x._OMGNinja_3k-M4_mirage_team-DHLExpress_r02_#ANTIECO 1:15 (demo_gototick 26000)
+               x._Vhess_3k-UMP_mirage_team-DHLExpress_r03 1:25 (demo_gototick 36000)
+               x._DrBlaze_3k-Famas_mirage_team-DHLExpress_r04 1:16 (demo_gototick 50000)
+               x._Q(''Q)Bacon!☣_3k-M4_mirage_team-DHLExpress_r06 1:24 (demo_gototick 77000)
+               x._Q(''Q)Bacon!☣_3k-M4_mirage_team-DHLExpress_r10 1:36 (demo_gototick 125000)
+               x._NeseGreven_3k-AK_mirage_team-SimradBIL_r11 0:57 (demo_gototick 138000)
+               x._OMGNinja_3k-AWP_mirage_team-DHLExpress_r13 1:28 (demo_gototick 165000)
+               x._OMGNinja_3k-pistol_mirage_team-DHLExpress_r16 1:13 (demo_gototick 200000)
+
+
+
+**playdemo 823b0959-60bb-4d4b-8c40-c1f5f7b0a0d7_map2_de_inferno
+
+   x._nANU_ACE-mp5_inferno_team-SimradBIL_r02_#ANTIECO 1:12 (demo_gototick 28000)
+   x._OMGNinja_ACE-AWP(4)-pistol(1)_inferno_team-DHLExpress_r11 1:36 (demo_gototick 135000)
+   x._NeseGreven_4k-AK_inferno_team-SimradBIL_r12 1:35 (demo_gototick 142000)
+
+         ----3k's:
+               x._Affe_3k-M4_inferno_team-SimradBIL_r05 1:21 (demo_gototick 65000)
+               x._NeseGreven_3k-AK(2)-AWP(1)_inferno_team-SimradBIL_r08 1:12 (demo_gototick 100000)
+               x._OMGNinja_3k-AWP_inferno_team-DHLExpress_r09 1:44 (demo_gototick 116000)
+               x._OMGNinja_3k-AWP_inferno_team-DHLExpress_r10 1:39 (demo_gototick 126000)
+               x._ölemann_3k-M4_inferno_team-DHLExpress_r14 1:06 (demo_gototick 168000)
+               x._LexSuperior_3k-M4(2)-molotov(1)_inferno_team-DHLExpress_r15 1:43 (demo_gototick 182000)
+               x._Q(''Q)Bacon!☣_3k-AK_inferno_team-DHLExpress_r19 1:32 (demo_gototick 230000)
+               x._nANU_3k-AK-spread_inferno_team-SimradBIL_r20 1:28 (demo_gototick 239000)
+               x._nANU_3k-AWP-fast_inferno_team-SimradBIL_r21_#ANTIECO 1:13 (demo_gototick 250000)
+               x._Q(''Q)Bacon!☣_3k-AK-spread_inferno_team-DHLExpress_r22 1:30 (demo_gototick 258000)
+               x._NeseGreven_3k-M4_inferno_team-SimradBIL_r23 1:14 (demo_gototick 277000)
+
+
+
+**playdemo 88094ad9-dce8-416e-8bed-2bad72281720_map1_de_nuke
+
+   x._rosa_4k-AK_nuke_team-Goodtech_r13 0:50 (demo_gototick 164000)
+
+         ----3k's:
+               x._rosa_3k-M4(1)-pistol(2)-fast_nuke_team-Goodtech_r05 1:37 (demo_gototick 69000)
+               x._SeSa/Seal_3k-Galil-fast_nuke_team-Goodtech_r07 1:42 (demo_gototick 86000)
+               x._Arasaith_3k-krieg_nuke_team-BoitanoN00bsters_r14 1:26 (demo_gototick 180000)
+               x._rosa_3k-M4_nuke_team-Goodtech_r15 1:14 (demo_gototick 195000)
+               x._fiNN4thewin_3k-MAC-10_nuke_team-Goodtech_r17 1:37 (demo_gototick 218000)
+
+
+
+**playdemo 88094ad9-dce8-416e-8bed-2bad72281720_map2_de_mirage
+
+   x._Illedan_4k-krieg_mirage_team-BoitanoN00bsters_r14 1:31 (demo_gototick 177000)
+   x._fiNN4thewin_4k-AK_mirage_team-Goodtech_r19 1:20 (demo_gototick 241000)
+
+         ----3k's:
+               x._fiNN4thewin_3k-pistol(1)-AK(2)_mirage_team-Goodtech_r02 1:09 (demo_gototick 31000)
+               x._SeSa/Seal_3k-M4_mirage_team-Goodtech_r03 1:01 (demo_gototick 40000)
+               x._CommanderData_3k-AK_mirage_team-BoitanoN00bsters_r03 0:40 (demo_gototick 40000)
+               x._Tipzi_3k-AK_mirage_team-Goodtech_r05 1:26 (demo_gototick 69000)
+               x._SeSa/Seal_3k-M4_mirage_team-Goodtech_r09 1:27 (demo_gototick 121000)
+               x._rosa_3k-pistol_mirage_team-Goodtech_r16 1:29 (demo_gototick 203000)
+               x._World_3k-Unknown-fast_mirage_team-notFound_r20 0:51 (demo_gototick 252000)
+
+
+
+**playdemo 98a20d8d-aee4-44a5-bce4-45ace9fba9a8_map1_de_mirage
+
+   x._Lembert_4k-AK(2)-AWP(2)_mirage_team-Storebrand_r07 1:37 (demo_gototick 94000)
+
+         ----3k's:
+               x._ShotgunBoris_3k-pistol_mirage_team-Storebrand_r01 1:37 (demo_gototick 23000)
+               x._ShotgunBoris_3k-shotgun_mirage_team-Storebrand_r02_#ANTIECO 1:34 (demo_gototick 30000)
+               x._ShotgunBoris_3k-AK_mirage_team-Storebrand_r03 1:25 (demo_gototick 37000)
+               x._ShotgunBoris_3k-AK_mirage_team-Storebrand_r04 1:19 (demo_gototick 46000)
+               x._Heudrik_3k-M4-spread_mirage_team-DIPS2_r04 1:15 (demo_gototick 46000)
+               x._Lembert_3k-AK_mirage_team-Storebrand_r06 1:31 (demo_gototick 81000)
+               x._Tobben_3k-M4_mirage_team-DIPS2_r09 1:12 (demo_gototick 116000)
+               x._aslak_3k-M4_mirage_team-DIPS2_r11 0:49 (demo_gototick 140000)
+               x._Xel_3k-AK_mirage_team-Storebrand_r12 1:18 (demo_gototick 154000)
+               x._Xel_3k-HE(1)-AK(2)-fast_mirage_team-Storebrand_r13 1:16 (demo_gototick 168000)
+               x._ShotgunBoris_3k-HE(1)-AK(2)-fast_mirage_team-Storebrand_r15 1:17 (demo_gototick 194000)
+               x._Xel_3k-shotgun-fast_mirage_team-Storebrand_r17_#ANTIECO 1:39 (demo_gototick 210000)
+               x._Xel_3k-M4-fast_mirage_team-Storebrand_r18 1:00 (demo_gototick 216000)
+
+
+
+**playdemo 98a20d8d-aee4-44a5-bce4-45ace9fba9a8_map2_de_dust2
+
+   x._ShotgunBoris_4k-M4(2)-AK(2)_dust2_team-Storebrand_r08 1:40 (demo_gototick 86000)
+   x._Xel_ACE-AWP(1)-AUG(3)-pistol(1)_dust2_team-Storebrand_r12 1:47 (demo_gototick 136000)
+   x._Lembert_4k-M4_dust2_team-Storebrand_r13 1:40 (demo_gototick 147000)
+   x._Xel_4k-AUG-fast_dust2_team-Storebrand_r15 1:32 (demo_gototick 170000)
+   x._StartupMixology_ACE-pistol_dust2_team-DIPS2_r16 1:39 (demo_gototick 177000)
+
+         ----3k's:
+               x._Lembert_3k-pistol-fast_dust2_team-Storebrand_r01 1:42 (demo_gototick 20000)
+               x._aslak_3k-pistol_dust2_team-DIPS2_r01 1:39 (demo_gototick 20000)
+               x._Xel_3k-scout-fast_dust2_team-Storebrand_r02 1:31 (demo_gototick 26000)
+               x._orjanHessen_3k-M4_dust2_team-Storebrand_r07 1:39 (demo_gototick 78000)
+               x._ShotgunBoris_3k-AK_dust2_team-Storebrand_r09 1:10 (demo_gototick 95000)
+               x._orjanHessen_3k-AWP_dust2_team-Storebrand_r10 1:41 (demo_gototick 107000)
+               x._Lembert_3k-deagle(2)-M4(1)_dust2_team-Storebrand_r17 1:38 (demo_gototick 188000)
+               x._Heudrik_3k-P90_dust2_team-DIPS2_r17_#ANTIECO 1:28 (demo_gototick 188000)
+
+
+
+**playdemo 9b46474f-120a-499d-83bc-97798c3fee36_map1_de_inferno
+
+   x._[SCELTO]Jani_4k-AK_inferno_team-Scelto_r04 1:27 (demo_gototick 60000)
+   x._kwpus_ACE-AUG_inferno_team-Accenture#2_r09 0:42 (demo_gototick 121000)
+
+         ----3k's:
+               x._kwpus_3k-pistol_inferno_team-Accenture#2_r01 1:23 (demo_gototick 22000)
+               x._[SCELTO]Ismslo_3k-AK_inferno_team-Scelto_r03 0:44 (demo_gototick 47000)
+               x._[SCELTO]Ismslo_3k-krieg_inferno_team-Scelto_r05 1:19 (demo_gototick 71000)
+               x._[SCELTO]Ismslo_3k-krieg_inferno_team-Scelto_r07 1:19 (demo_gototick 92000)
+               x._[SCELTO]Jani_3k-krieg_inferno_team-Scelto_r12 1:07 (demo_gototick 157000)
+               x._Bozza_3k-Famas_inferno_team-Accenture#2_r14 0:50 (demo_gototick 189000)
+               x._[SCELTO]Jani_3k-pistol_inferno_team-Scelto_r16 1:44 (demo_gototick 217000)
+               x._[SCELTO]FuteX_3k-mp5_inferno_team-Scelto_r17_#ANTIECO 1:29 (demo_gototick 224000)
+               x._JRProject_3k-AUG_inferno_team-Scelto_r20 1:31 (demo_gototick 256000)
+
+
+
+**playdemo 9b46474f-120a-499d-83bc-97798c3fee36_map2_de_mirage
+
+   x._[SCELTO]FuteX_4k-mp5_mirage_team-Scelto_r02 1:30 (demo_gototick 29000)
+   x._Vestern_4k-AK-spread_mirage_team-Accenture#2_r06 1:41 (demo_gototick 70000)
+
+         ----3k's:
+               x._JRProject_3k-M4_mirage_team-Scelto_r03_#ANTIECO 1:30 (demo_gototick 36000)
+               x._JRProject_3k-HE(1)-M4(2)_mirage_team-Scelto_r04 1:28 (demo_gototick 49000)
+               x._Vestern_3k-AK_mirage_team-Accenture#2_r08 1:23 (demo_gototick 100000)
+               x._[SCELTO]FuteX_3k-mp5_mirage_team-Scelto_r10 1:26 (demo_gototick 125000)
+               x._[SCELTO]Ismslo_3k-M4_mirage_team-Scelto_r11 1:31 (demo_gototick 137000)
+               x._Vestern_3k-AK_mirage_team-Accenture#2_r12 1:34 (demo_gototick 154000)
+               x._[SCELTO]Ismslo_3k-M4_mirage_team-Scelto_r14 1:17 (demo_gototick 179000)
+               x._[SCELTO]Jani_3k-AK_mirage_team-Scelto_r21 1:09 (demo_gototick 271000)
+               x._kwpus_3k-M4_mirage_team-Accenture#2_r21 0:37 (demo_gototick 271000)
+
+
+
+**playdemo a098a5e6-cae0-429e-98f0-f2d6f0798f1c_map1_de_nuke
+
+   x._Heudrik_4k-pistol-spread_nuke_team-DIPS2_r01 1:34 (demo_gototick 22000)
+   x._alx_1v3-AK(2)-pistol(1)_nuke_team-DataResponsR&DServic_r09 0:36 (demo_gototick 122000)
+   x._Razorblade_4k-AWP_nuke_team-DataResponsR&DServic_r12 1:40 (demo_gototick 159000)
+   x._alx_4k-MP9_nuke_team-DataResponsR&DServic_r18 0:48 (demo_gototick 241000)
+
+         ----3k's:
+               x._Muummipappa_3k-AK_nuke_team-DataResponsR&DServic_r05 1:36 (demo_gototick 73000)
+               x._Tobben_3k-M4_nuke_team-DIPS2_r09 1:25 (demo_gototick 122000)
+               x._Craxo_3k-AK_nuke_team-DataResponsR&DServic_r13 1:31 (demo_gototick 167000)
+               x._Heyword_3k-AK-spread_nuke_team-DataResponsR&DServic_r14 1:35 (demo_gototick 182000)
+               x._Craxo_3k-pistol-spread_nuke_team-DataResponsR&DServic_r16 1:30 (demo_gototick 207000)
+
+
+
+**playdemo a098a5e6-cae0-429e-98f0-f2d6f0798f1c_map2_de_inferno
+
+   x._SlowChips_4k-shotgun-spread_inferno_team-DIPS2_r05 1:30 (demo_gototick 69000)
+   x._Heyword_4k-AK_inferno_team-DataResponsR&DServic_r06 0:33 (demo_gototick 81000)
+   x._Heyword_4k-AK_inferno_team-DataResponsR&DServic_r08 0:52 (demo_gototick 114000)
+   x._Heyword_1v3-4k-AK_inferno_team-DataResponsR&DServic_r15 1:22 (demo_gototick 215000)
+   x._Heudrik_4k-krieg-spread_inferno_team-DIPS2_r24 1:17 (demo_gototick 337000)
+
+         ----3k's:
+               x._Heudrik_3k-pistol-spread_inferno_team-DIPS2_r01 1:39 (demo_gototick 20000)
+               x._Tobben_3k-M4_inferno_team-DIPS2_r09 0:47 (demo_gototick 131000)
+               x._alx_3k-AK_inferno_team-DataResponsR&DServic_r09 0:21 (demo_gototick 131000)
+               x._StartupMixology_3k-AWP_inferno_team-DIPS2_r12 1:20 (demo_gototick 170000)
+               x._Heudrik_3k-M4-fast_inferno_team-DIPS2_r14 0:60 (demo_gototick 204000)
+               x._Tobben_3k-pistol_inferno_team-DIPS2_r16 1:36 (demo_gototick 227000)
+               x._alx_3k-pistol(1)-mp5(2)_inferno_team-DataResponsR&DServic_r17 1:10 (demo_gototick 239000)
+               x._alx_3k-M4_inferno_team-DataResponsR&DServic_r21 1:14 (demo_gototick 296000)
+               x._Tobben_3k-AK_inferno_team-DIPS2_r22 1:03 (demo_gototick 306000)
+               x._Muummipappa_3k-AK_inferno_team-DataResponsR&DServic_r26 0:51 (demo_gototick 368000)
+
+
+
+**playdemo a0ce6963-23fa-4128-b671-89418e6938fc_map1_de_inferno
+
+   x._fiNN4thewin_4k-AK_inferno_team-Goodtech_r09 1:32 (demo_gototick 122000)
+   x._GaB_4k-P90_inferno_team-DIPS2_r15 1:43 (demo_gototick 189000)
+
+         ----3k's:
+               x._SeSa/Seal_3k-pistol(2)-molotov(1)_inferno_team-Goodtech_r02_#ANTIECO 1:42 (demo_gototick 27000)
+               x._fiNN4thewin_3k-M4_inferno_team-Goodtech_r04 1:40 (demo_gototick 51000)
+               x._SeSa/Seal_3k-M4-fast_inferno_team-Goodtech_r10 1:44 (demo_gototick 136000)
+               x._rosa_3k-M4_inferno_team-Goodtech_r13 0:57 (demo_gototick 163000)
+
+
+
+**playdemo a0ce6963-23fa-4128-b671-89418e6938fc_map2_de_dust2
+
+   x._Tobben_4k-AK_dust2_team-DIPS2_r12 1:01 (demo_gototick 176000)
+   x._GaB_4k-scout(1)-pistol(1)-M4(2)-spread_dust2_team-DIPS2_r14 1:24 (demo_gototick 207000)
+   x._SeSa/Seal_4k-Famas(2)-HE(1)-AK(1)_dust2_team-Goodtech_r15 0:26 (demo_gototick 221000)
+   x._fiNN4thewin_4k-AWP(2)-pistol(2)_dust2_team-Goodtech_r21 1:42 (demo_gototick 290000)
+
+         ----3k's:
+               x._rosa_3k-pistol_dust2_team-Goodtech_r01 1:32 (demo_gototick 27000)
+               x._rosa_3k-Famas(2)-HE(1)_dust2_team-Goodtech_r02 1:30 (demo_gototick 37000)
+               x._rosa_3k-M4_dust2_team-Goodtech_r09 1:15 (demo_gototick 130000)
+               x._Tobben_3k-AK-spread_dust2_team-DIPS2_r11 1:10 (demo_gototick 154000)
+               x._SeSa/Seal_3k-AK-spread_dust2_team-Goodtech_r11 0:45 (demo_gototick 154000)
+               x._Tobben_3k-pistol_dust2_team-DIPS2_r16 0:56 (demo_gototick 240000)
+
+
+
+**playdemo abfd4b8c-396d-418d-8837-30643e658862_map1_de_inferno
+
+   x._Twitch/SuExeC_4k-Famas(3)-pistol(1)_inferno_team-Storebrand_r02 1:23 (demo_gototick 30000)
+   x._orjanHessen_4k-AK-fast_inferno_team-Storebrand_r17_#ANTIECO 1:42 (demo_gototick 251000)
+   x._ShotgunBoris_4k-mp5(1)-M4(3)_inferno_team-Storebrand_r18 1:41 (demo_gototick 256000)
+   x._Twitch/SuExeC_1v3-AK_inferno_team-Storebrand_r20 0:28 (demo_gototick 280000)
+
+         ----3k's:
+               x._Esfancool_3k-AUG_inferno_team-Storebrand_r08 1:01 (demo_gototick 123000)
+               x._ShotgunBoris_3k-M4(1)-AK(2)_inferno_team-Storebrand_r09 0:57 (demo_gototick 138000)
+               x._rosa_3k-AK_inferno_team-Goodtech_r10 0:43 (demo_gototick 151000)
+               x._ShotgunBoris_3k-M4-fast_inferno_team-Storebrand_r10 0:35 (demo_gototick 151000)
+               x._Xel_3k-M4_inferno_team-Storebrand_r11 1:15 (demo_gototick 168000)
+               x._rosa_3k-AK-spread_inferno_team-Goodtech_r12 1:20 (demo_gototick 180000)
+               x._EvL_3k-AK(2)-pistol(1)-fast_inferno_team-Goodtech_r13 0:55 (demo_gototick 195000)
+               x._Xel_3k-M4_inferno_team-Storebrand_r14 0:24 (demo_gototick 206000)
+               x._ShotgunBoris_3k-pistol_inferno_team-Storebrand_r16 1:33 (demo_gototick 240000)
+
+
+
+**playdemo abfd4b8c-396d-418d-8837-30643e658862_map2_de_dust2
+
+   x._Xel_4k-Famas(3)-krieg(1)_dust2_team-Storebrand_r03 1:36 (demo_gototick 35000)
+
+         ----3k's:
+               x._ShotgunBoris_3k-pistol-fast_dust2_team-Storebrand_r01 1:24 (demo_gototick 20000)
+               x._ShotgunBoris_3k-shotgun-fast_dust2_team-Storebrand_r02 1:30 (demo_gototick 29000)
+               x._Xel_3k-AWP_dust2_team-Storebrand_r05 1:00 (demo_gototick 55000)
+               x._EvL_3k-scout(2)-AWP(1)-spread_dust2_team-Goodtech_r11 1:37 (demo_gototick 124000)
+               x._Xel_3k-AWP_dust2_team-Storebrand_r13 1:32 (demo_gototick 148000)
+               x._ShotgunBoris_3k-M4_dust2_team-Storebrand_r15 1:39 (demo_gototick 165000)
+               x._orjanHessen_3k-AK_dust2_team-Storebrand_r18 1:25 (demo_gototick 187000)
+
+
+
+**playdemo b0db2b05-02d2-422a-9a65-31d2fbbad61e_map1_de_mirage
+
+   x._rosa_4k-M4(3)-pistol(1)_mirage_team-Goodtech_r22 1:45 (demo_gototick 276000)
+
+         ----3k's:
+               x._[SCELTO]Jani_3k-pistol_mirage_team-Scelto_r01 1:04 (demo_gototick 22000)
+               x._[SCELTO]Ismslo_3k-AUG(2)-HE(1)_mirage_team-Scelto_r03 1:15 (demo_gototick 38000)
+               x._fiNN4thewin_3k-AK(1)-HE(1)-Knife(1)_mirage_team-Goodtech_r05 1:08 (demo_gototick 74000)
+               x._EvL_3k-AK_mirage_team-Goodtech_r06 1:23 (demo_gototick 88000)
+               x._[SCELTO]Danduras_3k-M4_mirage_team-Scelto_r07 1:10 (demo_gototick 96000)
+               x._Dynamike_3k-AK_mirage_team-Goodtech_r09 0:50 (demo_gototick 131000)
+               x._rosa_3k-HE(1)-AK(2)_mirage_team-Goodtech_r10 1:17 (demo_gototick 144000)
+               x._JRProject_3k-Famas_mirage_team-Scelto_r11 0:53 (demo_gototick 154000)
+               x._[SCELTO]FuteX_3k-M4(2)-HE(1)_mirage_team-Scelto_r12 1:33 (demo_gototick 170000)
+               x._[SCELTO]Danduras_3k-AWP-fast_mirage_team-Scelto_r13 1:27 (demo_gototick 177000)
+               x._[SCELTO]Ismslo_3k-M4_mirage_team-Scelto_r15 1:30 (demo_gototick 192000)
+               x._EvL_3k-M4_mirage_team-Goodtech_r18 0:49 (demo_gototick 217000)
+               x._fiNN4thewin_3k-M4-fast_mirage_team-Goodtech_r25 0:22 (demo_gototick 317000)
+               x._Dynamike_3k-M4_mirage_team-Goodtech_r26 1:35 (demo_gototick 332000)
+               x._[SCELTO]Jani_3k-AK_mirage_team-Scelto_r26 1:27 (demo_gototick 332000)
+
+
+
+**playdemo b0db2b05-02d2-422a-9a65-31d2fbbad61e_map2_de_dust2
+
+   x._EvL_1v3-M4_dust2_team-Goodtech_r04 1:16 (demo_gototick 47000)
+   x._[SCELTO]Danduras_4k-pistol_dust2_team-Scelto_r16 1:29 (demo_gototick 233000)
+
+         ----3k's:
+               x._[SCELTO]Danduras_3k-pistol_dust2_team-Scelto_r01 1:29 (demo_gototick 22000)
+               x._Dynamike_3k-AUG_dust2_team-Goodtech_r03 1:41 (demo_gototick 36000)
+               x._Tipzi_3k-pistol_dust2_team-Goodtech_r06 1:04 (demo_gototick 72000)
+               x._fiNN4thewin_3k-AWP-spread_dust2_team-Goodtech_r07 1:24 (demo_gototick 85000)
+               x._rosa_3k-M4_dust2_team-Goodtech_r09 1:39 (demo_gototick 130000)
+               x._rosa_3k-HE(1)-M4(2)_dust2_team-Goodtech_r11 0:57 (demo_gototick 154000)
+               x._Dynamike_3k-M4_dust2_team-Goodtech_r12 1:42 (demo_gototick 167000)
+               x._[SCELTO]Jani_3k-AK_dust2_team-Scelto_r13 0:50 (demo_gototick 183000)
+               x._rosa_3k-M4_dust2_team-Goodtech_r13 0:47 (demo_gototick 183000)
+               x._JRProject_3k-AWP-spread_dust2_team-Scelto_r15 1:19 (demo_gototick 215000)
+               x._[SCELTO]Jani_3k-M4-fast_dust2_team-Scelto_r18 0:50 (demo_gototick 256000)
+               x._fiNN4thewin_3k-AWP(2)-pistol(1)_dust2_team-Goodtech_r19 1:12 (demo_gototick 271000)
+
+
+
+**playdemo bd609042-7c4e-4569-8231-e50cdb7a3173_map1_de_inferno
+
+   x._fiNN4thewin_4k-AK_inferno_team-Goodtech_r18_#ANTIECO 1:25 (demo_gototick 264000)
+   x._rosa_1v3-AK(2)-AWP(1)_inferno_team-Goodtech_r21 0:51 (demo_gototick 289000)
+   x._Razorblade_4k-AWP_inferno_team-DataResponsR&DServic_r22 1:46 (demo_gototick 304000)
+   x._Razorblade_4k-AWP_inferno_team-DataResponsR&DServic_r24 1:37 (demo_gototick 321000)
+
+         ----3k's:
+               x._Muummipappa_3k-Galil(2)-M4(1)_inferno_team-DataResponsR&DServic_r05 1:31 (demo_gototick 72000)
+               x._fhqwhgads_3k-AK_inferno_team-DataResponsR&DServic_r07 0:35 (demo_gototick 102000)
+               x._World_3k-Unknown-fast_inferno_team-notFound_r08 0:36 (demo_gototick 121000)
+               x._fhqwhgads_3k-AK_inferno_team-DataResponsR&DServic_r11 0:53 (demo_gototick 160000)
+               x._Tipzi_3k-Famas_inferno_team-Goodtech_r12 0:25 (demo_gototick 178000)
+               x._Razorblade_3k-AWP_inferno_team-DataResponsR&DServic_r15 0:25 (demo_gototick 218000)
+               x._World_3k-Unknown-fast_inferno_team-notFound_r16 0:44 (demo_gototick 236000)
+               x._Razorblade_3k-pistol(1)-Galil(1)-AK(1)_inferno_team-DataResponsR&DServic_r18 1:32 (demo_gototick 264000)
+               x._Muummipappa_3k-M4_inferno_team-DataResponsR&DServic_r19 1:19 (demo_gototick 276000)
+               x._Craxo_3k-molotov(2)-M4(1)-fast_inferno_team-DataResponsR&DServic_r20 1:37 (demo_gototick 284000)
+               x._Tipzi_3k-pistol(2)-AWP(1)_inferno_team-Goodtech_r23 1:41 (demo_gototick 311000)
+               x._Tipzi_3k-pistol(1)-AWP(2)_inferno_team-Goodtech_r25 1:40 (demo_gototick 332000)
+               x._fhqwhgads_3k-M4_inferno_team-DataResponsR&DServic_r29_#ANTIECO 1:40 (demo_gototick 375000)
+               x._rosa_3k-AK-spread_inferno_team-Goodtech_r30 0:42 (demo_gototick 381000)
+               x._alx_3k-M4_inferno_team-DataResponsR&DServic_r33 1:36 (demo_gototick 431000)
+               x._Craxo_3k-AK_inferno_team-DataResponsR&DServic_r34 0:45 (demo_gototick 450000)
+
+
+
+**playdemo bd609042-7c4e-4569-8231-e50cdb7a3173_map2_de_nuke
+
+
+         ----3k's:
+               x._fhqwhgads_3k-pistol(1)-M4(2)_nuke_team-DataResponsR&DServic_r02 1:27 (demo_gototick 33000)
+               x._fiNN4thewin_3k-MP9_nuke_team-Goodtech_r02 1:26 (demo_gototick 33000)
+               x._fiNN4thewin_3k-M4(2)-AK(1)_nuke_team-Goodtech_r08 1:27 (demo_gototick 107000)
+               x._Tipzi_3k-M4_nuke_team-Goodtech_r11 1:04 (demo_gototick 147000)
+               x._rosa_3k-M4_nuke_team-Goodtech_r12 1:01 (demo_gototick 164000)
+               x._fhqwhgads_3k-AK_nuke_team-DataResponsR&DServic_r13 1:28 (demo_gototick 175000)
+               x._fiNN4thewin_3k-M4_nuke_team-Goodtech_r15 0:12 (demo_gototick 197000)
+               x._Dynamike_3k-krieg_nuke_team-Goodtech_r20 1:30 (demo_gototick 266000)
+               x._Craxo_3k-M4_nuke_team-DataResponsR&DServic_r23 0:58 (demo_gototick 309000)
+
+
+
+**playdemo bf03196b-fd94-4eda-8d0c-2c4f3e231ca5_map1_de_inferno
+
+   x._[SCELTO]FuteX_4k-pistol_inferno_team-Scelto_r01 1:26 (demo_gototick 23000)
+   x._GaB_4k-AK_inferno_team-DIPS2_r06 0:31 (demo_gototick 102000)
+   x._[SCELTO]FuteX_4k-molotov(1)-AUG(2)-HE(1)_inferno_team-Scelto_r10 1:19 (demo_gototick 171000)
+
+         ----3k's:
+               x._[SCELTO]FuteX_3k-AUG_inferno_team-Scelto_r02 1:43 (demo_gototick 34000)
+               x._StartupMixology_3k-AK-fast_inferno_team-DIPS2_r04 0:-9 (demo_gototick 64000)
+               x._Tobben_3k-AK_inferno_team-DIPS2_r05 0:37 (demo_gototick 83000)
+               x._Tobben_3k-AK_inferno_team-DIPS2_r08 0:15 (demo_gototick 136000)
+               x._Tobben_3k-MP7(2)-M4(1)_inferno_team-DIPS2_r11 0:37 (demo_gototick 188000)
+               x._[SCELTO]FuteX_3k-M4(2)-molotov(1)_inferno_team-Scelto_r12 0:32 (demo_gototick 207000)
+               x._[SCELTO]Danduras_3k-M4_inferno_team-Scelto_r14 1:31 (demo_gototick 242000)
+               x._[SCELTO]Jani_3k-AK_inferno_team-Scelto_r15 0:18 (demo_gototick 249000)
+               x._GaB_3k-M4_inferno_team-DIPS2_r21 1:27 (demo_gototick 337000)
+
+
+
+**playdemo bf03196b-fd94-4eda-8d0c-2c4f3e231ca5_map2_de_dust2
+
+   x._[SCELTO]FuteX_4k-molotov(1)-krieg(3)-spread_dust2_team-Scelto_r22 1:03 (demo_gototick 326000)
+
+         ----3k's:
+               x._World_3k-Unknown-fast_dust2_team-notFound_r01 0:25 (demo_gototick 26000)
+               x._GaB_3k-scout_dust2_team-DIPS2_r02 0:54 (demo_gototick 41000)
+               x._[SCELTO]Danduras_3k-AWP_dust2_team-Scelto_r05 1:39 (demo_gototick 92000)
+               x._[SCELTO]Jani_3k-M4_dust2_team-Scelto_r12 0:58 (demo_gototick 175000)
+               x._StartupMixology_3k-AK_dust2_team-DIPS2_r12 0:47 (demo_gototick 175000)
+               x._GaB_3k-AWP-spread_dust2_team-DIPS2_r13 1:31 (demo_gototick 191000)
+               x._Tobben_3k-AK_dust2_team-DIPS2_r15 0:31 (demo_gototick 220000)
+               x._GaB_3k-M4(1)-AWP(2)_dust2_team-DIPS2_r23 1:28 (demo_gototick 344000)
+               x._[SCELTO]Danduras_3k-AWP_dust2_team-Scelto_r24 0:55 (demo_gototick 355000)
+
+
+
+**playdemo c99be04f-9c2f-46a8-a37c-7b4dac26f45a_map1_de_dust2
+
+   x._Dynamike_4k-AWP_dust2_team-Goodtech_r14 1:41 (demo_gototick 178000)
+
+         ----3k's:
+               x._Vestern_3k-pistol_dust2_team-Accenture#2_r01 1:40 (demo_gototick 20000)
+               x._World_3k-Unknown-fast_dust2_team-notFound_r01 0:42 (demo_gototick 20000)
+               x._Vestern_3k-AK-spread_dust2_team-Accenture#2_r08 1:40 (demo_gototick 99000)
+               x._fiNN4thewin_3k-AK_dust2_team-Goodtech_r08 0:41 (demo_gototick 99000)
+               x._fiNN4thewin_3k-M4_dust2_team-Goodtech_r09 1:12 (demo_gototick 118000)
+               x._Dynamike_3k-AWP_dust2_team-Goodtech_r15 1:22 (demo_gototick 187000)
+               x._fiNN4thewin_3k-pistol_dust2_team-Goodtech_r16 1:37 (demo_gototick 200000)
+               x._rosa_3k-AK_dust2_team-Goodtech_r18_#ANTIECO 1:27 (demo_gototick 214000)
+
+
+
+**playdemo c99be04f-9c2f-46a8-a37c-7b4dac26f45a_map2_de_inferno
+
+   x._fiNN4thewin_4k-AK_inferno_team-Goodtech_r11 1:39 (demo_gototick 136000)
+
+         ----3k's:
+               x._fiNN4thewin_3k-pistol_inferno_team-Goodtech_r01 1:32 (demo_gototick 22000)
+               x._fiNN4thewin_3k-AK_inferno_team-Goodtech_r04 1:40 (demo_gototick 53000)
+               x._Tipzi_3k-AK-spread_inferno_team-Goodtech_r07 1:20 (demo_gototick 89000)
+               x._Dynamike_3k-AWP_inferno_team-Goodtech_r14 1:37 (demo_gototick 160000)
+               x._godamssj_3k-M4_inferno_team-Accenture#2_r15 1:29 (demo_gototick 168000)
+               x._rosa_3k-AK_inferno_team-Goodtech_r19 1:35 (demo_gototick 205000)
+
+
+
+**playdemo cec500ea-cdc9-4082-86df-82d2a3067d8a_map1_de_inferno
+
+   x._psN_4k-M4_inferno_team-SimradBIL_r09 0:53 (demo_gototick 111000)
+   x._psN_4k-AK_inferno_team-SimradBIL_r13 0:56 (demo_gototick 162000)
+   x._nANU_ACE-AK_inferno_team-SimradBIL_r14 1:32 (demo_gototick 174000)
+   x._psN_ACE-pistol_inferno_team-SimradBIL_r16 1:37 (demo_gototick 192000)
+
+         ----3k's:
+               x._cevit_3k-deagle(1)-Galil(2)_inferno_team-SmartCylinders_r03 1:22 (demo_gototick 40000)
+               x._cevit_3k-AK_inferno_team-SmartCylinders_r05 1:41 (demo_gototick 60000)
+               x._LarsLarsLarsLarsLars_3k-MP9(2)-AK(1)_inferno_team-SimradBIL_r06 0:55 (demo_gototick 73000)
+               x._nANU_3k-M4_inferno_team-SimradBIL_r07 1:06 (demo_gototick 86000)
+               x._cevit_3k-AK_inferno_team-SmartCylinders_r10 1:08 (demo_gototick 129000)
+               x._cevit_3k-AK-fast_inferno_team-SmartCylinders_r11 1:42 (demo_gototick 143000)
+               x._psN_3k-AK-spread_inferno_team-SimradBIL_r22 1:33 (demo_gototick 265000)
+
+
+
+**playdemo cec500ea-cdc9-4082-86df-82d2a3067d8a_map2_de_dust2
+
+   x._Creeds_4k-AWP_dust2_team-SimradBIL_r04 1:50 (demo_gototick 47000)
+   x._Einar_4k-AWP_dust2_team-SimradBIL_r12 1:32 (demo_gototick 121000)
+   x._nANU_ACE-AK_dust2_team-SimradBIL_r24 0:44 (demo_gototick 262000)
+
+         ----3k's:
+               x._Creeds_3k-deagle(2)-scout(1)-fast_dust2_team-SimradBIL_r02_#ANTIECO 1:36 (demo_gototick 30000)
+               x._Simonski123_3k-AK_dust2_team-SmartCylinders_r06 1:31 (demo_gototick 66000)
+               x._cevit_3k-AK_dust2_team-SmartCylinders_r07 -527 (demo_gototick 75000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r09 1:24 (demo_gototick 92000)
+               x._nANU_3k-M4-fast_dust2_team-SimradBIL_r11 1:10 (demo_gototick 112000)
+               x._cevit_3k-Galil(1)-M4(2)_dust2_team-SmartCylinders_r13 1:45 (demo_gototick 135000)
+               x._Creeds_3k-AWP_dust2_team-SimradBIL_r14 1:50 (demo_gototick 151000)
+               x._cevit_3k-scout_dust2_team-SmartCylinders_r17 1:14 (demo_gototick 184000)
+               x._M4gZ_3k-M4_dust2_team-SmartCylinders_r19 1:29 (demo_gototick 205000)
+               x._[GÆTTA]Larbohell_3k-M4(1)-AUG(2)_dust2_team-SmartCylinders_r20 1:05 (demo_gototick 215000)
+               x._nANU_3k-AK_dust2_team-SimradBIL_r22 1:45 (demo_gototick 244000)
+
+
+
+**playdemo d8702ef2-66b0-4195-91cc-ecd843939943_map1_de_nuke
+
+   x._Illedan_4k-shotgun_nuke_team-BoitanoN00bsters_r08 1:24 (demo_gototick 112000)
+   x._Bentster_4k-AUG-spread_nuke_team-BoitanoN00bsters_r09 1:30 (demo_gototick 124000)
+   x._[SCELTO]Jani_ACE-AK-spread_nuke_team-Scelto_r15 1:30 (demo_gototick 213000)
+   x._Illedan_4k-shotgun_nuke_team-BoitanoN00bsters_r15 1:20 (demo_gototick 213000)
+   x._[SCELTO]Jani_4k-pistol_nuke_team-Scelto_r16 1:24 (demo_gototick 228000)
+
+         ----3k's:
+               x._Illedan_3k-pistol_nuke_team-BoitanoN00bsters_r01 1:23 (demo_gototick 20000)
+               x._Illedan_3k-shotgun_nuke_team-BoitanoN00bsters_r02_#ANTIECO 1:42 (demo_gototick 29000)
+               x._[SCELTO]Ismslo_3k-AK-spread_nuke_team-Scelto_r04 1:33 (demo_gototick 51000)
+               x._Bentster_3k-AUG-spread_nuke_team-BoitanoN00bsters_r07 1:01 (demo_gototick 96000)
+               x._[SCELTO]FuteX_3k-krieg_nuke_team-Scelto_r08 1:28 (demo_gototick 112000)
+               x._Molester_3k-AK_nuke_team-Scelto_r10 1:40 (demo_gototick 138000)
+               x._[SCELTO]FuteX_3k-scout(2)-pistol(1)_nuke_team-Scelto_r13 1:03 (demo_gototick 182000)
+               x._Knekk_3k-M4_nuke_team-BoitanoN00bsters_r14 1:13 (demo_gototick 196000)
+               x._Illedan_3k-shotgun-spread_nuke_team-BoitanoN00bsters_r20 1:33 (demo_gototick 276000)
+               x._[SCELTO]FuteX_3k-scout(1)-M4(2)-spread_nuke_team-Scelto_r20 1:12 (demo_gototick 276000)
+               x._Illedan_3k-shotgun_nuke_team-BoitanoN00bsters_r21 1:23 (demo_gototick 289000)
+
+
+
+**playdemo d8702ef2-66b0-4195-91cc-ecd843939943_map2_de_inferno
+
+   x._[SCELTO]Jani_ACE-mp5(2)-AUG(1)-M4(2)_inferno_team-Scelto_r26 1:24 (demo_gototick 399000)
+
+         ----3k's:
+               x._Guahtdim_3k-pistol_inferno_team-BoitanoN00bsters_r01 1:15 (demo_gototick 18000)
+               x._CommanderData_3k-AK_inferno_team-BoitanoN00bsters_r02_#ANTIECO 0:28 (demo_gototick 30000)
+               x._Illedan_3k-scout_inferno_team-BoitanoN00bsters_r04 1:20 (demo_gototick 65000)
+               x._[SCELTO]FuteX_3k-shotgun(2)-krieg(1)_inferno_team-Scelto_r07 1:33 (demo_gototick 103000)
+               x._[SCELTO]Ismslo_3k-M4_inferno_team-Scelto_r08 0:56 (demo_gototick 120000)
+               x._[SCELTO]FuteX_3k-AUG-fast_inferno_team-Scelto_r11 0:57 (demo_gototick 170000)
+               x._[SCELTO]FuteX_3k-AUG-fast_inferno_team-Scelto_r12_#ANTIECO 1:15 (demo_gototick 187000)
+               x._[SCELTO]FuteX_3k-AUG_inferno_team-Scelto_r14 0:33 (demo_gototick 215000)
+               x._Bentster_3k-pistol_inferno_team-BoitanoN00bsters_r16 1:33 (demo_gototick 250000)
+               x._[SCELTO]Jani_3k-pistol_inferno_team-Scelto_r16 1:12 (demo_gototick 250000)
+               x._[SCELTO]FuteX_3k-shotgun(2)-Famas(1)_inferno_team-Scelto_r18 1:08 (demo_gototick 275000)
+               x._[SCELTO]Jani_3k-mp5(1)-AK(2)_inferno_team-Scelto_r21 0:35 (demo_gototick 316000)
+               x._[SCELTO]Jani_3k-AK-spread_inferno_team-Scelto_r22 1:37 (demo_gototick 338000)
+               x._Bentster_3k-MP9_inferno_team-BoitanoN00bsters_r23 1:38 (demo_gototick 357000)
+               x._Illedan_3k-HE(1)-scout(2)_inferno_team-BoitanoN00bsters_r25 1:38 (demo_gototick 391000)
+               x._Knekk_3k-M4_inferno_team-BoitanoN00bsters_r29 0:21 (demo_gototick 455000)
+
+
+
+**playdemo dbba67de-f92d-4f5e-8251-c5b3777e6f17_map1_de_overpass
+
+   x._Q(''Q)Bacon!☣_4k-AK_overpass_team-DHLExpress_r09 1:19 (demo_gototick 138000)
+
+         ----3k's:
+               x._Q(''Q)Bacon!☣_3k-pistol-fast_overpass_team-DHLExpress_r01 1:26 (demo_gototick 20000)
+               x._OMGNinja_3k-scout_overpass_team-DHLExpress_r02 1:27 (demo_gototick 29000)
+               x._Muummipappa_3k-AK_overpass_team-DataResponsR&DServic_r05 0:32 (demo_gototick 82000)
+               x._ölemann_3k-M4(1)-AK(2)_overpass_team-DHLExpress_r06 1:30 (demo_gototick 100000)
+               x._Vhess_3k-AK_overpass_team-DHLExpress_r08 1:35 (demo_gototick 130000)
+               x._Q(''Q)Bacon!☣_3k-AK_overpass_team-DHLExpress_r11 1:25 (demo_gototick 162000)
+               x._Vhess_3k-M4(2)-HE(1)-fast_overpass_team-DHLExpress_r12 1:30 (demo_gototick 172000)
+               x._Vhess_3k-M4_overpass_team-DHLExpress_r13 1:33 (demo_gototick 180000)
+               x._Q(''Q)Bacon!☣_3k-AK_overpass_team-DHLExpress_r15 1:14 (demo_gototick 203000)
+
+
+
+**playdemo dbba67de-f92d-4f5e-8251-c5b3777e6f17_map2_de_nuke
+
+   x._fhqwhgads_4k-M4-spread_nuke_team-DataResponsR&DServic_r20 1:31 (demo_gototick 269000)
+   x._fhqwhgads_4k-krieg_nuke_team-DataResponsR&DServic_r21 0:46 (demo_gototick 283000)
+
+         ----3k's:
+               x._ölemann_3k-pistol_nuke_team-DHLExpress_r01 1:41 (demo_gototick 21000)
+               x._ölemann_3k-M4(2)-pistol(1)-spread_nuke_team-DHLExpress_r02_#ANTIECO 0:54 (demo_gototick 28000)
+               x._Vhess_3k-M4-spread_nuke_team-DHLExpress_r05 1:14 (demo_gototick 71000)
+               x._Q(''Q)Bacon!☣_3k-AK_nuke_team-DHLExpress_r06 0:37 (demo_gototick 85000)
+               x._Q(''Q)Bacon!☣_3k-M4_nuke_team-DHLExpress_r11 1:09 (demo_gototick 150000)
+               x._Q(''Q)Bacon!☣_3k-M4_nuke_team-DHLExpress_r13 1:23 (demo_gototick 184000)
+               x._fhqwhgads_3k-deagle_nuke_team-DataResponsR&DServic_r14 0:37 (demo_gototick 194000)
+               x._ölemann_3k-M4-spread_nuke_team-DHLExpress_r15 1:29 (demo_gototick 211000)
+               x._ölemann_3k-UMP_nuke_team-DHLExpress_r17 1:10 (demo_gototick 238000)
+               x._DrBlaze_3k-AK_nuke_team-DHLExpress_r22 1:43 (demo_gototick 300000)
+               x._Vhess_3k-AK_nuke_team-DHLExpress_r23 0:20 (demo_gototick 307000)
+
+
+
+**playdemo e76331e2-0eda-4aa4-9bba-8a4bb49f183a_map1_de_mirage
+
+
+         ----3k's:
+               x._Q(''Q)Bacon!☣_3k-Famas_mirage_team-DHLExpress_r02_#ANTIECO 1:42 (demo_gototick 27000)
+               x._Q(''Q)Bacon!☣_3k-AK_mirage_team-DHLExpress_r05 0:49 (demo_gototick 63000)
+               x._Emeruss_3k-AWP-fast_mirage_team-DHLExpress_r05 0:06 (demo_gototick 63000)
+               x._SeSa/Seal_3k-AK_mirage_team-Goodtech_r05 0:50 (demo_gototick 63000)
+               x._Q(''Q)Bacon!☣_3k-M4_mirage_team-DHLExpress_r06 0:28 (demo_gototick 93000)
+               x._OMGNinja_3k-M4(1)-AK(2)_mirage_team-DHLExpress_r07 1:14 (demo_gototick 113000)
+               x._Emeruss_3k-M4_mirage_team-DHLExpress_r08 1:43 (demo_gototick 124000)
+               x._Q(''Q)Bacon!☣_3k-M4_mirage_team-DHLExpress_r12 0:48 (demo_gototick 180000)
+               x._DrBlaze_3k-AK-fast_mirage_team-DHLExpress_r13 1:36 (demo_gototick 195000)
+               x._Vhess_3k-pistol-spread_mirage_team-DHLExpress_r15 1:13 (demo_gototick 228000)
+
+
+
+**playdemo e76331e2-0eda-4aa4-9bba-8a4bb49f183a_map2_de_inferno
+
+   x._fiNN4thewin_4k-HE(1)-AK(3)_inferno_team-Goodtech_r04 1:26 (demo_gototick 79000)
+   x._Tipzi_4k-M4_inferno_team-Goodtech_r12 0:42 (demo_gototick 179000)
+   x._OMGNinja_4k-AK-fast_inferno_team-DHLExpress_r21 1:39 (demo_gototick 308000)
+   x._SeSa/Seal_4k-AK_inferno_team-Goodtech_r32 1:43 (demo_gototick 464000)
+   x._Emeruss_4k-AK_inferno_team-DHLExpress_r38 1:03 (demo_gototick 545000)
+
+         ----3k's:
+               x._DrBlaze_3k-pistol_inferno_team-DHLExpress_r02 1:24 (demo_gototick 48000)
+               x._DrBlaze_3k-AK_inferno_team-DHLExpress_r04 1:42 (demo_gototick 79000)
+               x._SeSa/Seal_3k-MP9-fast_inferno_team-Goodtech_r07 0:44 (demo_gototick 109000)
+               x._Dynamike_3k-M4-fast_inferno_team-Goodtech_r09 0:40 (demo_gototick 137000)
+               x._Emeruss_3k-AK(2)-AWP(1)_inferno_team-DHLExpress_r12 0:17 (demo_gototick 179000)
+               x._Tipzi_3k-M4-fast_inferno_team-Goodtech_r13 1:14 (demo_gototick 197000)
+               x._OMGNinja_3k-AWP_inferno_team-DHLExpress_r14 0:37 (demo_gototick 206000)
+               x._OMGNinja_3k-M4(1)-AK(2)_inferno_team-DHLExpress_r20_#ANTIECO 0:48 (demo_gototick 291000)
+               x._Emeruss_3k-M4-fast_inferno_team-DHLExpress_r24_#ANTIECO 0:42 (demo_gototick 335000)
+               x._Tallefjant_3k-M4_inferno_team-DHLExpress_r27 1:33 (demo_gototick 391000)
+               x._Emeruss_3k-M4_inferno_team-DHLExpress_r30 1:01 (demo_gototick 432000)
+               x._Emeruss_3k-M4_inferno_team-DHLExpress_r31 0:43 (demo_gototick 449000)
+               x._DrBlaze_3k-AK_inferno_team-DHLExpress_r34 1:11 (demo_gototick 488000)
+               x._OMGNinja_3k-AK_inferno_team-DHLExpress_r39 1:14 (demo_gototick 559000)
+
+
+
+**playdemo ea831699-3c12-42a4-b630-0136455e6bda_map1_de_mirage
+
+    Can't extract highlights from this demo - there's only 10 rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file and try again.
+
+
+
+**playdemo ea831699-3c12-42a4-b630-0136455e6bda_map2_de_inferno
+
+    Can't extract highlights from this demo - there's only 9 rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file and try again.
+
+
+
+**playdemo f871be7d-f719-4ca8-8743-f12487c766d9_map1_de_mirage
+
+   x._TurboKuken_ACE-HE(1)-AK(4)_mirage_team-SimradBIL_r03 1:26 (demo_gototick 38000)
+   x._Affe_4k-AK_mirage_team-SimradBIL_r07 1:21 (demo_gototick 81000)
+   x._TurboKuken_4k-pistol-fast_mirage_team-SimradBIL_r16 1:33 (demo_gototick 169000)
+
+         ----3k's:
+               x._TurboKuken_3k-pistol_mirage_team-SimradBIL_r01 1:37 (demo_gototick 21000)
+               x._Einar_3k-AK_mirage_team-SimradBIL_r02_#ANTIECO 1:43 (demo_gototick 30000)
+               x._LeeRoy_3k-krieg_mirage_team-SimradBIL_r11 1:39 (demo_gototick 121000)
+               x._kwpus_3k-M4_mirage_team-Accenture#2_r11 1:38 (demo_gototick 121000)
+               x._TurboKuken_3k-AK_mirage_team-SimradBIL_r14 1:39 (demo_gototick 153000)
+               x._TurboKuken_3k-M4(2)-pistol(1)_mirage_team-SimradBIL_r17_#ANTIECO 1:38 (demo_gototick 175000)
+
+
+
+**playdemo f871be7d-f719-4ca8-8743-f12487c766d9_map2_de_inferno
+
+   x._kwpus_4k-krieg-spread_inferno_team-Accenture#2_r14 1:40 (demo_gototick 246000)
+   x._LeeRoy_4k-pistol_inferno_team-SimradBIL_r17 1:33 (demo_gototick 284000)
+   x._LeeRoy_4k-M4_inferno_team-SimradBIL_r18_#ANTIECO 1:42 (demo_gototick 291000)
+
+         ----3k's:
+               x._Guliing_3k-pistol_inferno_team-Accenture#2_r01 1:13 (demo_gototick 22000)
+               x._kwpus_3k-AUG-spread_inferno_team-Accenture#2_r07 1:22 (demo_gototick 151000)
+               x._ShilaVisual_3k-krieg_inferno_team-SimradBIL_r07 1:12 (demo_gototick 151000)
+               x._LeeRoy_3k-krieg_inferno_team-SimradBIL_r10 1:29 (demo_gototick 196000)
+               x._kwpus_3k-pistol(1)-krieg(2)_inferno_team-Accenture#2_r13 0:56 (demo_gototick 231000)
+               x._godamssj_3k-pistol_inferno_team-Accenture#2_r16 1:38 (demo_gototick 273000)
+
+
+
+**playdemo f9fb2379-1d8f-4c33-b927-ea592e7a3818_map1_de_mirage
+
+   x._Vhess_ACE-AWP(4)-pistol(1)_mirage_team-DHLExpress_r06 1:23 (demo_gototick 81000)
+   x._Vhess_4k-AWP_mirage_team-DHLExpress_r12 1:25 (demo_gototick 156000)
+
+         ----3k's:
+               x._DrBlaze_3k-pistol_mirage_team-DHLExpress_r01 1:35 (demo_gototick 22000)
+               x._DrBlaze_3k-Famas_mirage_team-DHLExpress_r02 0:19 (demo_gototick 32000)
+               x._Vhess_3k-AK_mirage_team-DHLExpress_r03 1:46 (demo_gototick 49000)
+               x._DrBlaze_3k-AK(2)-HE(1)_mirage_team-DHLExpress_r04 1:13 (demo_gototick 57000)
+               x._Illedan_3k-Galil_mirage_team-BoitanoN00bsters_r10 1:26 (demo_gototick 134000)
+               x._Vhess_3k-AWP_mirage_team-DHLExpress_r15 0:32 (demo_gototick 193000)
+               x._Tallefjant_3k-pistol_mirage_team-DHLExpress_r16 1:41 (demo_gototick 210000)
+               x._Vhess_3k-UMP_mirage_team-DHLExpress_r17_#ANTIECO 1:25 (demo_gototick 224000)
+               x._Grumpy(심술)_3k-Galil_mirage_team-DHLExpress_r18 1:32 (demo_gototick 235000)
+
+
+
+**playdemo f9fb2379-1d8f-4c33-b927-ea592e7a3818_map2_de_nuke
+
+   x._OMGNinja_ACE-AWP_nuke_team-DHLExpress_r10 1:42 (demo_gototick 141000)
+
+         ----3k's:
+               x._Vhess_3k-M4_nuke_team-DHLExpress_r02_#ANTIECO 1:12 (demo_gototick 37000)
+               x._CommanderData_3k-Galil_nuke_team-BoitanoN00bsters_r03 1:14 (demo_gototick 52000)
+               x._Grumpy(심술)_3k-M4-fast_nuke_team-DHLExpress_r07 1:39 (demo_gototick 107000)
+               x._Grumpy(심술)_3k-M4_nuke_team-DHLExpress_r12 1:13 (demo_gototick 158000)
+               x._Vhess_3k-M4_nuke_team-DHLExpress_r13 1:12 (demo_gototick 168000)
+
+
+
+**playdemo fde7ddd9-9ce0-404f-bc46-30cb53de1b42_map1_de_dust2
+
+    Can't extract highlights from this demo - there's only 5 rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file and try again.
+
+
+
+**playdemo ffa3e0cf-020d-4b96-ad9e-3d04a9a35b29_map1_de_mirage
+
+   x._cevit_4k-AWP_mirage_team-SmartCylinders_r05 1:33 (demo_gototick 69000)
+
+         ----3k's:
+               x._M4gZ_3k-pistol_mirage_team-SmartCylinders_r01 1:24 (demo_gototick 21000)
+               x._cevit_3k-AK_mirage_team-SmartCylinders_r03_#ANTIECO 1:33 (demo_gototick 42000)
+               x._Magmanthe_3k-AK_mirage_team-Accenture#2_r04 0:41 (demo_gototick 52000)
+               x._M4gZ_3k-M4_mirage_team-SmartCylinders_r06 1:21 (demo_gototick 83000)
+               x._cevit_3k-AWP_mirage_team-SmartCylinders_r10 1:21 (demo_gototick 136000)
+               x._cevit_3k-AWP-spread_mirage_team-SmartCylinders_r11 1:46 (demo_gototick 144000)
+               x._cevit_3k-Autosniper_mirage_team-SmartCylinders_r15 1:45 (demo_gototick 203000)
+
+
+
+**playdemo ffa3e0cf-020d-4b96-ad9e-3d04a9a35b29_map2_de_inferno
+
+   x._cevit_4k-AWP_inferno_team-SmartCylinders_r19 1:45 (demo_gototick 216000)
+
+         ----3k's:
+               x._cevit_3k-MAC-10(2)-molotov(1)_inferno_team-SmartCylinders_r02_#ANTIECO 1:39 (demo_gototick 28000)
+               x._cevit_3k-AK_inferno_team-SmartCylinders_r06 1:36 (demo_gototick 71000)
+               x._cevit_3k-krieg_inferno_team-SmartCylinders_r09 1:00 (demo_gototick 101000)
+               x._cevit_3k-AK-fast_inferno_team-SmartCylinders_r12 1:33 (demo_gototick 138000)
+               x._[GÆTTA]Larbohell_3k-AK_inferno_team-SmartCylinders_r14 1:08 (demo_gototick 164000)
+               x._kwpus_3k-pistol_inferno_team-Accenture#2_r16 1:34 (demo_gototick 188000)
+               x._GamesBond_3k-M4-fast_inferno_team-SmartCylinders_r20 1:39 (demo_gototick 224000)
+
+
+
