@@ -23,18 +23,21 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 ```
 **playdemo g2-vs-navi_map1-inferno
 
-   x._NiKo_4k-Famas_inferno_team-G2_r08 0:40 (demo_gototick 100000)
+   x._NiKo_4k-Famas_inferno_team-G2_r08 0:39 (demo_gototick 100000)
    x._s1mple_4k-AK-spread_inferno_team-navi_r10 1:42 (demo_gototick 121000)
-   x._nexa_ACE-P90-fast_inferno_team-G2_r17_#ANTIECO 1:04 (demo_gototick 209000)
+   x._nexa_ACE-M4-fast_inferno_team-G2_r17_#ANTIECO 1:04 (demo_gototick 209000)
    x._s1mple_ACE-AWP(4)-deagle(1)_inferno_team-navi_r19 1:45 (demo_gototick 236000)
    x._s1mple_1v3-4k-MP9_inferno_team-navi_r21 1:20 (demo_gototick 273000)
-   x._NiKo_4k-AK-fast_inferno_team-G2_r23 0:38 (demo_gototick 288000)
 
          ----3k's:
-               x._nexa_3k-pistol(1)-AK(2)_inferno_team-G2_r02 1:29 (demo_gototick 31000)
                x._electronic_3k-AK_inferno_team-navi_r02_#ANTIECO 1:08 (demo_gototick 31000)
                x._Amanek_3k-M4_inferno_team-G2_r04 1:00 (demo_gototick 53000)
-               x._nexa_3k-M4-spread_inferno_team-G2_r05 1:32 (demo_gototick 64000)
+               
+               
+**playdemo astralis-vs-gambit_map2-nuke
+
+   x._gla1ve_3k-pistol_nuke_team-astralis_r168 1:34 (demo_gototick 223000)
+   x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)
 ```
   - <b>spread</b> (as in the frags being "spread out") is labelled for any 3k, 4k or ACE where at least 15 seconds elapsed between two or more of the kills. 
   - <b>fast</b> is labelled for any frag where all the kills happen within six seconds.
@@ -49,8 +52,9 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 
 1. Make sure you have [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) installed.
 2. Download or clone this repo.
-3. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, rick click and select "Export JSON". Move the files to the [json](json) folder.
-4. Open your terminal in the root folder of this repo and write `npm start`. The text file will be created in the [exports](exports) folder.  
+3. Delete the [example.json](json/example.json) file in the [json](json) folder.
+4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
+5. Open your terminal in the root folder of this repo and write `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.  
  
 <i>If you want to run the script again with different JSON files, move the already exported text file to a different location to prevent it from being overwritten.</i>
 
