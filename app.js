@@ -1,10 +1,12 @@
 const getFrags = require("./lib/get-frags.js");
 const createFiles = require("./lib/create-files.js");
 
-getFrags("./json")
-  .then(highlights => {
-    createFiles(highlights).then(() => {
-      console.log("files created!");
-    });
-  })
-  .catch(err => console.log(err.message));
+(async function () {
+  try {
+    const highlights = await getFrags("./json");
+    await createFiles(highlights);
+    console.log("files created!");
+  } catch (e) {
+    console.log("something went wrong:", e.message);
+  }
+})();

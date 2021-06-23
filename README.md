@@ -36,10 +36,10 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
                
 **playdemo astralis-vs-gambit_map2-nuke
 
-   x._gla1ve_3k-pistol_nuke_team-astralis_r168 1:34 (demo_gototick 223000)
+   x._gla1ve_3k-pistol_nuke_team-astralis_r16 1:34 (demo_gototick 223000)
    x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)
 ```
-  - <b>spread</b> (as in the frags being "spread out") is labelled for any 3k, 4k or ACE where at least 15 seconds elapsed between two or more of the kills. 
+  - <b>spread</b> (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the kills. 
   - <b>fast</b> is labelled for any frag where all the kills happen within six seconds.
   - The <b>timestamp</b> listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
   - The <b>tick</b> listed at the end of each frag is the very end of the round prior (1000 ticks before the start of the target round to be precise). This is to prevent potential player model lags that can occur when using the "start of the round" button. Taking you to right before the round starts allows you to use the "next round" button instead, potentially preventing such lag. Including "demo_gototick" is meant for easier copy/paste to the ingame console.
@@ -51,17 +51,12 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 ## How to use ##
 
 1. Make sure you have [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) installed.
-2. Download or clone this repo.
+2. [Download](https://github.com/HenB13/frag-finder/archive/refs/heads/master.zip) or [clone](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) this repo.
 3. Delete the [example.json](json/example.json) file in the [json](json) folder.
 4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
 5. Open your terminal in the root folder of this repo and write `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.  
  
 <i>If you want to run the script again with different JSON files, move the already exported text file to a different location to prevent it from being overwritten.</i>
-
-## Requirements ##
-
-* [Node](https://nodejs.org/en/)
-* [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
 
 ## Options ##
 
@@ -70,13 +65,12 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
   ```javascript
   getFrags("./json", "76561198036024464");
   ```
-- You can change the name of the exported file in the [create-files](lib/create-files.js) file:
-  ```javascript
-   fs.appendFile(
-      "./exports/highlights.txt",
-      matchText.join("") + "\n\n\n"
-    );
-  ```
+  
+## Requirements ##
+
+* [Node](https://nodejs.org/en/)
+* [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
+
 
 ## Example ##
 
