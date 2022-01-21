@@ -1,5 +1,6 @@
 .vscode
 node_modules
-test.js
 exports/highlights.txt
 TODO
+test.js
+text.txt
