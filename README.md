@@ -21,10 +21,10 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 ## Example output and explanation ###
 
 ```
-**playdemo g2-vs-navi_map1-inferno
+**playdemo g2-vs-navi_map1-inferno@123000
 
-   x._NiKo_4k-Famas_inferno_team-G2_r08 0:39 (demo_gototick 100000)
-   x._s1mple_4k-AK-spread_inferno_team-navi_r10 1:42 (demo_gototick 121000)
+   x._NiKo_4k-Famas_inferno_team-G2_r08 0:39 (demo_gototick 123000)
+   x._s1mple_4k-AK-spread_inferno_team-navi_r10 1:42 (demo_gototick 171000)
    x._nexa_ACE-M4-fast_inferno_team-G2_r17_#ANTIECO 1:04 (demo_gototick 209000)
    x._s1mple_ACE-AWP(4)-deagle(1)_inferno_team-navi_r19 1:45 (demo_gototick 236000)
    x._s1mple_1v3-4k-MP9_inferno_team-navi_r21 1:20 (demo_gototick 273000)
@@ -43,6 +43,7 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
   - <b>fast</b> is labelled for any frag where all the kills happen within six seconds.
   - The <b>timestamp</b> listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
   - The <b>tick</b> listed at the end of each frag is the very end of the round prior (1000 ticks before the start of the target round to be precise). This is to prevent potential player model lags that can occur when using the "start of the round" button. Taking you to right before the round starts allows you to use the "next round" button instead, potentially preventing such lag. Including "demo_gototick" is meant for easier copy/paste to the ingame console.
+    - The tick after the demo name (@123000) makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
   - The <b>round number</b> is shown at the end of each highlight string, for example <i>r25</i> for round 25.
   - the <b>x._</b> preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example: 
     
