@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "commonjs",
   "devDependencies": {
-    "eslint": "^7.14.0"
+    "eslint": "^7.14.0",
+    "jest": "^27.4.7"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "node test/test.js"
   },
   "author": "https://github.com/HenB13",
   "license": "MIT"

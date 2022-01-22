@@ -44,7 +44,7 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
   - The <b>timestamp</b> listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
   - The <b>tick</b> listed at the end of each frag is the very end of the round prior (1000 ticks before the start of the target round to be precise). This is to prevent potential player model lags that can occur when using the "start of the round" button. Taking you to right before the round starts allows you to use the "next round" button instead, potentially preventing such lag. Including "demo_gototick" is meant for easier copy/paste to the ingame console.
   - The <b>round number</b> is shown at the end of each highlight string, for example <i>r25</i> for round 25.
-  - the <b>x._</b> preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole highlight text appropriate as a file name for your video file. The information provided in the name will then be easily searchable in your editing software, serving as helpful tags. For example: 
+  - the <b>x._</b> preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example: 
     
     <img src="./img/editing-software-example.png">
 
