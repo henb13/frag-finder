@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "node test/test.js"
+    "test": "jest"
   },
   "author": "https://github.com/HenB13",
   "license": "MIT"
