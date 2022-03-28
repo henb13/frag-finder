@@ -16,6 +16,7 @@
       "removeComments": true,
       "forceConsistentCasingInFileNames": true,
       "skipLibCheck": true,
+      "baseUrl": "./"
 
     },
     "include": ["./src/**/*"]
