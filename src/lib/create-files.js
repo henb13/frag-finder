@@ -1,8 +1,9 @@
 const fs = require("fs").promises;
-const { CSGO_ROUND_LENGTH } = require("../lib/utils/constants.js");
-const { camelizeIsh } = require("../lib/utils/utils.js");
+const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
+const { camelizeIsh } = require("./utils/utils.js");
 
-async function createFiles(data, dir = "exports") {
+async function createFiles(data) {
+    const dir = __dirname + "../../../exports";
     await fs.writeFile(dir + "/highlights.txt", "\n");
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];

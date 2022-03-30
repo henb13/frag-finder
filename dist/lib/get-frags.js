@@ -1,11 +1,12 @@
 const fs = require("fs").promises;
 const path = require("path");
-async function getFrags(pathToJsonFiles, playerChosen = false) {
+async function getFrags(playerChosen = null) {
+    const dir = __dirname + "../../../json";
     const demosHighlights = [];
-    const files = await fs.readdir(pathToJsonFiles);
+    const files = await fs.readdir(dir);
     const demoFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
     for (let i = 0; i < demoFiles.length; i++) {
-        const data = await fs.readFile(`${pathToJsonFiles}/${demoFiles[i]}`);
+        const data = await fs.readFile(`${dir}/${demoFiles[i]}`);
         const matchData = await JSON.parse(data);
         console.log("analyzing", matchData.name);
         demosHighlights.push({
@@ -33,6 +34,7 @@ async function getFrags(pathToJsonFiles, playerChosen = false) {
         })
             .filter((player) => player.length)
             .flat();
+        console.log("allNotableClutchesInMatch: ", allNotableClutchesInMatch);
         matchData.rounds.forEach((currentRound, roundIndex) => {
             demosHighlights[i].roundsWithHighlights.push({
                 roundNumber: currentRound.number,
@@ -50,6 +52,7 @@ async function getFrags(pathToJsonFiles, playerChosen = false) {
                 }
                 return acc;
             }, {});
+            console.log("roundkillsPerPlayer:", roundkillsPerPlayer);
             if (playerChosen) {
                 roundkillsPerPlayer = Object.fromEntries(Object.entries(roundkillsPerPlayer).filter(([_, val]) => val.steamId === playerChosen));
             }
@@ -85,6 +88,7 @@ async function getFrags(pathToJsonFiles, playerChosen = false) {
             }
         });
     }
+    console.log("demosHighlights: ", demosHighlights);
     return demosHighlights;
 }
 function demoIsBroken(matchData) {
@@ -104,6 +108,7 @@ function hasDeagleHs(kills) {
     return kills.some((kill) => kill.weapon.weapon_name === "Desert Eagle" && kill.is_headshot);
 }
 function isAntieco(playerKills, matchData, roundNr) {
+    console.log("playerKills: ", playerKills);
     const killedSteamIds = playerKills.map((kill) => kill.killed_steamid);
     const enemyPlayers = matchData.players.filter((player) => killedSteamIds.includes(player.steamid));
     return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNr] < 1000) &&

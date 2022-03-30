@@ -1,8 +1,8 @@
-const getFrags = require("./lib/get-frags.js");
-const createFiles = require("./lib/create-files.js");
+const { getFrags } = require("./lib/get-frags.js");
+const { createFiles } = require("./lib/create-files.js");
 (async function () {
     try {
-        const highlights = await getFrags("json");
+        const highlights = await getFrags();
         await createFiles(highlights);
         console.log("files created!");
     }

@@ -61,10 +61,10 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 
 ## Options ##
 
-- If you want to get frags of a single player only, add their STEAMID64 as a second argument to `getFrags` in the [app.js](app.js) file:
+- If you want to get frags of a single player only, add their STEAMID64 as an argument to `getFrags` in the [app.js](app.js) file:
 
   ```javascript
-  getFrags("./json", "76561198036024464");
+  getFrags("76561198036024464");
   ```
   
 ## Requirements ##
