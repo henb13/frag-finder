@@ -10,7 +10,7 @@ async function getFrags(playerChosen = null) {
     for (let i = 0; i < demoFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${demoFiles[i]}`);
         const matchData = await JSON.parse(data);
-        console.log("analyzing", matchData.name);
+        console.log("analyzing demo: ", matchData.name);
 
         demosHighlights.push({
             demoName: matchData.name.replace(".dem", ""),
@@ -44,26 +44,44 @@ async function getFrags(playerChosen = null) {
             })
             .filter((player) => player.length)
             .flat();
-        console.log("allNotableClutchesInMatch: ", allNotableClutchesInMatch);
+        console.log(
+            "allNotableClutchesInMatch: ",
+            JSON.stringify(allNotableClutchesInMatch, null, 4)
+        );
         matchData.rounds.forEach((currentRound, roundIndex) => {
             demosHighlights[i].roundsWithHighlights.push({
                 roundNumber: currentRound.number,
                 frags: [],
             });
 
-            let roundkillsPerPlayer = currentRound.kills.reduce((acc, kill) => {
-                if (acc[kill.killer_name]) {
-                    acc[kill.killer_name].kills.push(kill);
-                } else {
-                    acc[kill.killer_name] = {
-                        kills: [kill],
-                        steamId: kill.killer_steamid,
+            let roundkillsPerPlayer = currentRound.kills
+                .map((kill) => {
+                    return {
+                        killerName: kill.killer_name,
+                        tick: kill.tick,
+                        killerTeam: kill.killer_team,
+                        timeOfKill: kill.time_death_seconds,
+                        weapon: {
+                            type: kill.weapon.type,
+                            name: kill.weapon.weapon_name,
+                        },
+                        isHeadshot: kill.is_headshot,
+                        killedPlayerSteamId: kill.killed_steamid,
                     };
-                }
-                return acc;
-            }, {});
+                })
+                .reduce((acc, kill) => {
+                    if (acc[kill.killerName]) {
+                        acc[kill.killerName].allKillsThatRoundForPlayer.push(kill);
+                    } else {
+                        acc[kill.killerName] = {
+                            steamId: kill.killedPlayerSteamId,
+                            allKillsThatRoundForPlayer: [kill],
+                        };
+                    }
+                    return acc;
+                }, {});
 
-            console.log("roundkillsPerPlayer:", roundkillsPerPlayer);
+            console.log("roundkillsPerPlayer:", JSON.stringify(roundkillsPerPlayer, null, 4));
 
             if (playerChosen) {
                 // Filter out all players except chosen user
@@ -76,23 +94,27 @@ async function getFrags(playerChosen = null) {
             }
 
             for (const player in roundkillsPerPlayer) {
-                const { kills, steamId } = roundkillsPerPlayer[player];
-                const tickFirstKill = kills[0].tick - 200;
+                const { allKillsThatRoundForPlayer, steamId } = roundkillsPerPlayer[player];
+                const tickFirstKill = allKillsThatRoundForPlayer[0].tick - 200;
                 const clutch = allNotableClutchesInMatch.find(
                     ({ roundNumber, player }) =>
                         roundNumber === currentRound.number && player === player
                 );
 
-                const fragType = getFragtype(kills, clutch);
+                const fragType = getFragtype(allKillsThatRoundForPlayer, clutch);
 
-                if (kills.length >= 3 || fragType.includes("deagle")) {
+                if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
                     const fragCategory =
-                        clutch || kills.length > 3 ? 1 : fragType.includes("deagle") ? 2 : 3;
+                        clutch || allKillsThatRoundForPlayer.length > 3
+                            ? 1
+                            : fragType.includes("deagle")
+                            ? 2
+                            : 3;
 
-                    const team = kills[0].killer_team
-                        ? kills[0].killer_team.includes("]")
-                            ? kills[0].killer_team.split("]")[1].trim()
-                            : kills[0].killer_team.trim()
+                    const team = allKillsThatRoundForPlayer[0].killerTeam
+                        ? allKillsThatRoundForPlayer[0].killerTeam.includes("]")
+                            ? allKillsThatRoundForPlayer[0].killerTeam.split("]")[1].trim()
+                            : allKillsThatRoundForPlayer[0].killerTeam.trim()
                         : "not found";
 
                     demosHighlights[i].roundsWithHighlights[roundIndex].frags.push({
@@ -102,20 +124,24 @@ async function getFrags(playerChosen = null) {
                         fragType,
                         fragCategory,
                         ...(clutch ? { clutchOpponents: clutch.opponentCount } : {}),
-                        antieco: isAntieco(kills, matchData, currentRound),
-                        killAmount: kills.length,
+                        antieco: isAntieco(
+                            allKillsThatRoundForPlayer,
+                            matchData,
+                            currentRound
+                        ),
+                        killAmount: allKillsThatRoundForPlayer.length,
                         tick: tickFirstKill,
-                        individualKills: kills.map(({ time_death_seconds, weapon }) => ({
-                            timestamp: time_death_seconds,
-                            weapon: weapon.weapon_name,
-                            weaponType: weapon.type,
+                        individualKills: allKillsThatRoundForPlayer.map((kill) => ({
+                            timestamp: kill.timeOfKill,
+                            weapon: kill.weapon.weaponName,
+                            weaponType: kill.weapon.type,
                         })),
                     });
                 }
             }
         });
     }
-    console.log("demosHighlights: ", demosHighlights);
+    console.log("demosHighlights: ", JSON.stringify(demosHighlights, null, 4));
     return demosHighlights;
 }
 
@@ -128,7 +154,7 @@ function getFragtype(kills, clutch) {
         return clutch ? "clutch" : `${kills.length}k`;
     }
     if (hasDeagleHs(kills)) {
-        const deagleKills = kills.filter((kill) => kill.weapon.weapon_name === "Desert Eagle");
+        const deagleKills = kills.filter((kill) => kill.weapon.name === "Desert Eagle");
 
         return `deagle${deagleKills.length}k`;
     }
@@ -136,14 +162,11 @@ function getFragtype(kills, clutch) {
 }
 
 function hasDeagleHs(kills) {
-    return kills.some(
-        (kill) => kill.weapon.weapon_name === "Desert Eagle" && kill.is_headshot
-    );
+    return kills.some((kill) => kill.weapon.name === "Desert Eagle" && kill.isHeadshot);
 }
 
 function isAntieco(playerKills, matchData, roundNr) {
-    console.log("playerKills: ", playerKills);
-    const killedSteamIds = playerKills.map((kill) => kill.killed_steamid);
+    const killedSteamIds = playerKills.map((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = matchData.players.filter((player) =>
         killedSteamIds.includes(player.steamid)
     );
