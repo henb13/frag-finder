@@ -18,7 +18,7 @@ async function createFiles(data) {
                     player,
                     fragType,
                     fragCategory,
-                    individualKills,
+                    allKillsThatRoundForPlayer: individualKills,
                     clutchOpponents,
                     team,
                     antieco,

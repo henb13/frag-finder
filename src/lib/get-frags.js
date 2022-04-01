@@ -126,7 +126,7 @@ async function getFrags(playerChosen = null) {
                             matchData,
                             currentRound
                         ),
-                        individualKills: allKillsThatRoundForPlayer,
+                        allKillsThatRoundForPlayer,
                     });
                 }
             }
