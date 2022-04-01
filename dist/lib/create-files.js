@@ -7,12 +7,13 @@ async function createFiles(data) {
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];
         const matchPrintFormat = [];
-        match.roundsWithHighlights.forEach(({ roundNumber, frags }) => {
+        match.roundsWithHighlights.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr = roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
-            frags.forEach(({ killAmount, fragType, fragCategory, clutchOpponents, individualKills, team, antieco, player, tick, steamId, }) => {
+            highlights.forEach(({ player, fragType, fragCategory, individualKills, clutchOpponents, team, antieco, steamId, }) => {
                 const playerCamelized = camelizeIsh(player);
                 const teamCamelized = camelizeIsh(team);
                 const weaponsUsed = getWeaponsUsed(individualKills);
+                const killAmount = individualKills.length;
                 const fragTypeDetails = fragType === "clutch"
                     ? clutchOpponents === killAmount
                         ? `1v${clutchOpponents}`
@@ -24,19 +25,19 @@ async function createFiles(data) {
                                 ? fragType
                                 : `${fragType}-${killAmount}k`
                             : fragType;
-                const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].timestamp + 1;
-                const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].timestamp + 1;
+                const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
+                const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
                 const firstKillTimeStr = firstKillTimestamp - 60 > 0
                     ? `1:${Math.trunc(firstKillTimestamp - 60)
                         .toString()
                         .padStart(2, "0")}`
                     : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
+                const tickFirstKill = individualKills[0].tick - 200;
                 const fragSpeed = firstKillTimestamp - lastKillTimestamp < 6
                     ? "-fast"
                     : individualKills.filter((kill, i) => {
                         if (i + 1 != killAmount) {
-                            return (individualKills[i + 1].timestamp - kill.timestamp >
-                                15);
+                            return individualKills[i + 1].time - kill.time > 15;
                         }
                     }).length >= 2
                         ? "-spread"
@@ -45,8 +46,8 @@ async function createFiles(data) {
                     fragType,
                     fragCategory,
                     steamId,
-                    tick,
-                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${antieco ? "_#ANTIECO" : ""} ${firstKillTimeStr} (demo_gototick ${tick})`,
+                    tickFirstKill,
+                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${antieco ? "_#ANTIECO" : ""} ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
                 });
             });
         });
@@ -71,13 +72,13 @@ async function createFiles(data) {
                 : `${addSpaces(3)}no frags found. \n`);
         }
         if (matchPrintFormat[0])
-            matchText[0] += `@${matchPrintFormat[0].tick}\n\n`;
+            matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
         await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
     }
 }
 function getWeaponsUsed(kills) {
     const killsPerWeapon = kills
-        .map((kill) => [kill.weapon, kill.weaponType])
+        .map((kill) => [kill.weaponName, kill.weaponType])
         .reduce((acc, curr) => {
         switch (curr[0]) {
             case "AK-47":

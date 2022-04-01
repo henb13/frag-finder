@@ -16,7 +16,7 @@ async function getFrags(playerChosen = null) {
         });
         if (demoIsBroken(matchData)) {
             const len = matchData.rounds.length;
-            const breakMsg = `Unable to extract highlights from this demo. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file, and try again.`;
+            const breakMsg = `Unable to extract highlights from this demo. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
             demosHighlights[i].breakMsg = breakMsg;
             continue;
         }
@@ -38,19 +38,17 @@ async function getFrags(playerChosen = null) {
         matchData.rounds.forEach((currentRound, roundIndex) => {
             demosHighlights[i].roundsWithHighlights.push({
                 roundNumber: currentRound.number,
-                frags: [],
+                highlights: [],
             });
             let roundkillsPerPlayer = currentRound.kills
                 .map((kill) => {
                 return {
                     killerName: kill.killer_name,
-                    tick: kill.tick,
                     killerTeam: kill.killer_team,
-                    timeOfKill: kill.time_death_seconds,
-                    weapon: {
-                        type: kill.weapon.type,
-                        name: kill.weapon.weapon_name,
-                    },
+                    tick: kill.tick,
+                    time: kill.time_death_seconds,
+                    weaponType: kill.weapon.type,
+                    weaponName: kill.weapon.weapon_name,
                     isHeadshot: kill.is_headshot,
                     killedPlayerSteamId: kill.killed_steamid,
                 };
@@ -73,7 +71,6 @@ async function getFrags(playerChosen = null) {
             }
             for (const player in roundkillsPerPlayer) {
                 const { allKillsThatRoundForPlayer, steamId } = roundkillsPerPlayer[player];
-                const tickFirstKill = allKillsThatRoundForPlayer[0].tick - 200;
                 const clutch = allNotableClutchesInMatch.find(({ roundNumber, player }) => roundNumber === currentRound.number && player === player);
                 const fragType = getFragtype(allKillsThatRoundForPlayer, clutch);
                 if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
@@ -87,7 +84,7 @@ async function getFrags(playerChosen = null) {
                             ? allKillsThatRoundForPlayer[0].killerTeam.split("]")[1].trim()
                             : allKillsThatRoundForPlayer[0].killerTeam.trim()
                         : "not found";
-                    demosHighlights[i].roundsWithHighlights[roundIndex].frags.push({
+                    demosHighlights[i].roundsWithHighlights[roundIndex].highlights.push({
                         player,
                         steamId,
                         team,
@@ -95,13 +92,7 @@ async function getFrags(playerChosen = null) {
                         fragCategory,
                         ...(clutch ? { clutchOpponents: clutch.opponentCount } : {}),
                         antieco: isAntieco(allKillsThatRoundForPlayer, matchData, currentRound),
-                        killAmount: allKillsThatRoundForPlayer.length,
-                        tick: tickFirstKill,
-                        individualKills: allKillsThatRoundForPlayer.map((kill) => ({
-                            timestamp: kill.timeOfKill,
-                            weapon: kill.weapon.weaponName,
-                            weaponType: kill.weapon.type,
-                        })),
+                        individualKills: allKillsThatRoundForPlayer,
                     });
                 }
             }
@@ -114,19 +105,17 @@ function demoIsBroken(matchData) {
     return matchData.rounds.length <= 15;
 }
 function getFragtype(kills, clutch) {
-    console.clear();
-    console.log("kills", kills);
     if (kills.length >= 3) {
         return clutch ? "clutch" : `${kills.length}k`;
     }
     if (hasDeagleHs(kills)) {
-        const deagleKills = kills.filter((kill) => kill.weapon.name === "Desert Eagle");
+        const deagleKills = kills.filter((kill) => kill.weaponName === "Desert Eagle");
         return `deagle${deagleKills.length}k`;
     }
     return `${kills.length}k`;
 }
 function hasDeagleHs(kills) {
-    return kills.some((kill) => kill.weapon.name === "Desert Eagle" && kill.isHeadshot);
+    return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 function isAntieco(playerKills, matchData, roundNr) {
     const killedSteamIds = playerKills.map((kill) => kill.killedPlayerSteamId);

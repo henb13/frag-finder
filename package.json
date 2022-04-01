@@ -2,7 +2,7 @@
   "name": "frag-finder",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "dist/app.js",
   "type": "commonjs",
   "devDependencies": {
     "@types/node": "^17.0.23",
@@ -12,6 +12,7 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "rm -rf dist && tsc --noEmitOnError",
+    "build-and-run": "npm run build && npm start",
     "test": "jest"
   },
   "author": "https://github.com/HenB13",

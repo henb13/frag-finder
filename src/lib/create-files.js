@@ -9,28 +9,28 @@ async function createFiles(data) {
         const matchText = [`**playdemo ${match.demoName}`];
         const matchPrintFormat = [];
 
-        match.roundsWithHighlights.forEach(({ roundNumber, frags }) => {
+        match.roundsWithHighlights.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr =
                 roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
 
-            frags.forEach(
+            highlights.forEach(
                 ({
-                    killAmount,
+                    player,
                     fragType,
                     fragCategory,
-                    clutchOpponents,
                     individualKills,
+                    clutchOpponents,
                     team,
                     antieco,
-                    player,
-                    tick,
                     steamId,
                 }) => {
                     const playerCamelized = camelizeIsh(player);
                     const teamCamelized = camelizeIsh(team);
                     const weaponsUsed = getWeaponsUsed(individualKills);
+                    const killAmount = individualKills.length;
 
-                    //i.e. 1v3-4k vs just 4k
+                    // TODO: Extract to own function
+                    //e.g. 1v3-4k vs just 4k
                     const fragTypeDetails =
                         fragType === "clutch"
                             ? clutchOpponents === killAmount
@@ -46,12 +46,12 @@ async function createFiles(data) {
                                 : `${fragType}-${killAmount}k`
                             : fragType;
 
-                    const firstKillTimestamp =
-                        CSGO_ROUND_LENGTH - individualKills[0].timestamp + 1;
+                    const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
 
                     const lastKillTimestamp =
-                        CSGO_ROUND_LENGTH - individualKills[killAmount - 1].timestamp + 1;
+                        CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
 
+                    // e.g. 0:54, 1:32 etc.
                     const firstKillTimeStr =
                         firstKillTimestamp - 60 > 0
                             ? `1:${Math.trunc(firstKillTimestamp - 60)
@@ -59,15 +59,14 @@ async function createFiles(data) {
                                   .padStart(2, "0")}`
                             : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
 
+                    const tickFirstKill = individualKills[0].tick - 200;
+
                     const fragSpeed =
                         firstKillTimestamp - lastKillTimestamp < 6
                             ? "-fast"
                             : individualKills.filter((kill, i) => {
                                   if (i + 1 != killAmount) {
-                                      return (
-                                          individualKills[i + 1].timestamp - kill.timestamp >
-                                          15
-                                      );
+                                      return individualKills[i + 1].time - kill.time > 15;
                                   }
                               }).length >= 2
                             ? "-spread"
@@ -77,12 +76,12 @@ async function createFiles(data) {
                         fragType,
                         fragCategory,
                         steamId,
-                        tick,
+                        tickFirstKill,
                         fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
                             !fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""
                         }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
                             antieco ? "_#ANTIECO" : ""
-                        } ${firstKillTimeStr} (demo_gototick ${tick})`,
+                        } ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
                     });
                 }
             );
@@ -115,7 +114,7 @@ async function createFiles(data) {
             );
         }
 
-        if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tick}\n\n`;
+        if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
 
         await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
     }
@@ -123,7 +122,7 @@ async function createFiles(data) {
 
 function getWeaponsUsed(kills) {
     const killsPerWeapon = kills
-        .map((kill) => [kill.weapon, kill.weaponType])
+        .map((kill) => [kill.weaponName, kill.weaponType])
         .reduce((acc, curr) => {
             switch (curr[0]) {
                 case "AK-47":
