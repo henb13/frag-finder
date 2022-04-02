@@ -11,7 +11,7 @@ export interface IRound {
 }
 
 export interface IHighlight {
-    player: string;
+    playerName: string;
     team: string;
     fragType: string;
     fragCategory: IFragCategory;
@@ -29,12 +29,9 @@ export interface IKill {
     killedPlayerSteamId: Steamid;
 }
 
-//TODO Partial i get-frags
-export interface IRoundKillPlayerSingle {
+export interface IRoundKillPlayerSingle
+    extends Pick<IHighlight, "playerName" | "team" | "allKillsThatRoundForPlayer"> {
     steamid: Steamid;
-    killerName: string;
-    killerTeam: string;
-    allKillsThatRoundForPlayer: IKill[];
 }
 
 export interface IClutch {

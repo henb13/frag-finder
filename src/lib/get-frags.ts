@@ -34,7 +34,7 @@ async function getFrags(playerChosenSteamid = null) {
                         (clutch: IMatchDataClutch) =>
                             clutch.has_won && clutch.opponent_count >= 3
                     )
-                    ?.map((clutch: IMatchDataClutch) => {
+                    .map((clutch: IMatchDataClutch) => {
                         return {
                             playerSteamid: player.steamid,
                             opponentCount: clutch.opponent_count,
@@ -71,8 +71,8 @@ async function getFrags(playerChosenSteamid = null) {
                     } else {
                         acc.push({
                             steamid: kill.killer_steamid,
-                            killerName: kill.killer_name,
-                            killerTeam: kill.killer_team,
+                            playerName: kill.killer_name,
+                            team: kill.killer_team,
                             allKillsThatRoundForPlayer: [killMapped],
                         });
                     }
@@ -83,12 +83,17 @@ async function getFrags(playerChosenSteamid = null) {
 
             if (playerChosenSteamid) {
                 roundkillsPerPlayer = roundkillsPerPlayer.filter(
-                    (player) => player.steamid === playerChosenSteamid
+                    (player: IRoundKillPlayerSingle) => player.steamid === playerChosenSteamid
                 );
             }
 
             for (const player of roundkillsPerPlayer) {
-                const { allKillsThatRoundForPlayer, steamid, killerTeam, killerName } = player;
+                const {
+                    allKillsThatRoundForPlayer,
+                    steamid,
+                    team: playerTeam,
+                    playerName,
+                } = player;
 
                 const clutch = allNotableClutchesInMatch.find(
                     (clutch) =>
@@ -108,10 +113,10 @@ async function getFrags(playerChosenSteamid = null) {
                             ? 2
                             : 3;
 
-                    const team = killerTeam
-                        ? killerTeam.includes("]")
-                            ? killerTeam.split("]")[1].trim()
-                            : killerTeam.trim()
+                    const team = playerTeam
+                        ? playerTeam.includes("]")
+                            ? playerTeam.split("]")[1].trim()
+                            : playerTeam.trim()
                         : "not found";
 
                     const isAntieco = isHighlightAntieco(
@@ -121,7 +126,7 @@ async function getFrags(playerChosenSteamid = null) {
                     );
 
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
-                        player: killerName,
+                        playerName,
                         team,
                         fragType,
                         fragCategory,

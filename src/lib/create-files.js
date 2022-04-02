@@ -15,7 +15,7 @@ async function createFiles(data) {
 
             highlights.forEach(
                 ({
-                    player,
+                    playerName,
                     team,
                     fragType,
                     fragCategory,
@@ -23,7 +23,7 @@ async function createFiles(data) {
                     isAntieco,
                     allKillsThatRoundForPlayer: individualKills,
                 }) => {
-                    const playerCamelized = camelizeIsh(player);
+                    const playerCamelized = camelizeIsh(playerName);
                     const teamCamelized = camelizeIsh(team);
                     const weaponsUsed = getWeaponsUsed(individualKills);
                     const killAmount = individualKills.length;
