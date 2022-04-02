@@ -9,7 +9,7 @@ async function createFiles(data) {
         const matchText = [`**playdemo ${match.demoName}`];
         const matchPrintFormat = [];
 
-        match.roundsWithHighlights.forEach(({ roundNumber, highlights }) => {
+        match.rounds.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr =
                 roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
 
@@ -104,7 +104,7 @@ async function createFiles(data) {
             }
         });
 
-        if (!match.roundsWithHighlights.length) {
+        if (!match.rounds.length) {
             matchText.splice(
                 1,
                 0,

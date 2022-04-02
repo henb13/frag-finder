@@ -1,7 +1,7 @@
 interface Match {
     demo: string;
     map: string;
-    roundsWithHighlights: Round[];
+    rounds: Round[];
 }
 
 interface Round {

@@ -7,9 +7,9 @@ async function createFiles(data) {
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];
         const matchPrintFormat = [];
-        match.roundsWithHighlights.forEach(({ roundNumber, highlights }) => {
+        match.rounds.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr = roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
-            highlights.forEach(({ player, fragType, fragCategory, individualKills, clutchOpponents, team, antieco, steamId, }) => {
+            highlights.forEach(({ player, fragType, fragCategory, allKillsThatRoundForPlayer: individualKills, clutchOpponents, team, antieco, steamId, }) => {
                 const playerCamelized = camelizeIsh(player);
                 const teamCamelized = camelizeIsh(team);
                 const weaponsUsed = getWeaponsUsed(individualKills);
@@ -66,7 +66,7 @@ async function createFiles(data) {
                 matchText.push(`${addSpaces(3)}${fragPrintFormat}\n`);
             }
         });
-        if (!match.roundsWithHighlights.length) {
+        if (!match.rounds.length) {
             matchText.splice(1, 0, match.breakMsg
                 ? `\n\n${addSpaces(4)}${match.breakMsg}\n`
                 : `${addSpaces(3)}no frags found. \n`);

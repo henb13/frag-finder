@@ -1,6 +1,5 @@
 const fs = require("fs").promises;
 const path = require("path");
-
 async function getFrags(playerChosen = null) {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
@@ -15,7 +14,7 @@ async function getFrags(playerChosen = null) {
         matchesAnalyzed.push({
             demoName: matchData.name.replace(".dem", ""),
             map: matchData.map_name.replace("de_", ""),
-            roundsWithHighlights: [],
+            rounds: [],
         });
 
         if (demoIsBroken(matchData)) {
@@ -49,7 +48,7 @@ async function getFrags(playerChosen = null) {
             JSON.stringify(allNotableClutchesInMatch, null, 4)
         );
         matchData.rounds.forEach((currentRound, roundIndex) => {
-            matchesAnalyzed[i].roundsWithHighlights.push({
+            matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
                 highlights: [],
             });
@@ -114,7 +113,7 @@ async function getFrags(playerChosen = null) {
                             : allKillsThatRoundForPlayer[0].killerTeam.trim()
                         : "not found";
 
-                    matchesAnalyzed[i].roundsWithHighlights[roundIndex].highlights.push({
+                    matchesAnalyzed[i].rounds[roundIndex].highlights.push({
                         player,
                         steamId,
                         team,
