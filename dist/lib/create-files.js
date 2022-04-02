@@ -9,7 +9,7 @@ async function createFiles(data) {
         const matchPrintFormat = [];
         match.rounds.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr = roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
-            highlights.forEach(({ player, fragType, fragCategory, allKillsThatRoundForPlayer: individualKills, clutchOpponents, team, antieco, steamId, }) => {
+            highlights.forEach(({ player, team, fragType, fragCategory, clutchOpponents, isAntieco, allKillsThatRoundForPlayer: individualKills, }) => {
                 const playerCamelized = camelizeIsh(player);
                 const teamCamelized = camelizeIsh(team);
                 const weaponsUsed = getWeaponsUsed(individualKills);
@@ -45,9 +45,8 @@ async function createFiles(data) {
                 matchPrintFormat.push({
                     fragType,
                     fragCategory,
-                    steamId,
                     tickFirstKill,
-                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${antieco ? "_#ANTIECO" : ""} ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
+                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${isAntieco ? "_#ANTIECO" : ""} ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
                 });
             });
         });

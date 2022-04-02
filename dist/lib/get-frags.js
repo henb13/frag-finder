@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
-async function getFrags(playerChosen = null) {
+async function getFrags(playerChosenSteamid = null) {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
@@ -24,7 +24,7 @@ async function getFrags(playerChosen = null) {
                 .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
                 ?.map((clutch) => {
                 return {
-                    player: player.name,
+                    playerSteamid: player.steamid,
                     opponentCount: clutch.opponent_count,
                     roundNumber: clutch.round_number,
                 };
@@ -37,11 +37,8 @@ async function getFrags(playerChosen = null) {
                 roundNumber: currentRound.number,
                 highlights: [],
             });
-            let roundkillsPerPlayer = currentRound.kills
-                .map((kill) => {
-                return {
-                    killerName: kill.killer_name,
-                    killerTeam: kill.killer_team,
+            let roundkillsPerPlayer = currentRound.kills.reduce((acc, kill) => {
+                const killMapped = {
                     tick: kill.tick,
                     time: kill.time_death_seconds,
                     weaponType: kill.weapon.type,
@@ -49,25 +46,26 @@ async function getFrags(playerChosen = null) {
                     isHeadshot: kill.is_headshot,
                     killedPlayerSteamId: kill.killed_steamid,
                 };
-            })
-                .reduce((acc, kill) => {
-                if (acc[kill.killerName]) {
-                    acc[kill.killerName].allKillsThatRoundForPlayer.push(kill);
+                const player = acc.find((player) => player.steamid === kill.killer_steamid);
+                if (player) {
+                    player.allKillsThatRoundForPlayer.push(killMapped);
                 }
                 else {
-                    acc[kill.killerName] = {
-                        steamId: kill.killedPlayerSteamId,
-                        allKillsThatRoundForPlayer: [kill],
-                    };
+                    acc.push({
+                        steamid: kill.killer_steamid,
+                        killerName: kill.killer_name,
+                        killerTeam: kill.killer_team,
+                        allKillsThatRoundForPlayer: [killMapped],
+                    });
                 }
                 return acc;
-            }, {});
-            if (playerChosen) {
-                roundkillsPerPlayer = Object.fromEntries(Object.entries(roundkillsPerPlayer).filter(([_, val]) => val.steamId === playerChosen));
+            }, []);
+            if (playerChosenSteamid) {
+                roundkillsPerPlayer = roundkillsPerPlayer.filter((player) => player.steamid === playerChosenSteamid);
             }
-            for (const player in roundkillsPerPlayer) {
-                const { allKillsThatRoundForPlayer, steamId } = roundkillsPerPlayer[player];
-                const clutch = allNotableClutchesInMatch.find(({ roundNumber, player }) => roundNumber === currentRound.number && player === player);
+            for (const player of roundkillsPerPlayer) {
+                const { allKillsThatRoundForPlayer, steamid, killerTeam, killerName } = player;
+                const clutch = allNotableClutchesInMatch.find(({ roundNumber, playerSteamid }) => roundNumber === currentRound.number && playerSteamid === steamid);
                 const fragType = getFragtype(allKillsThatRoundForPlayer, clutch);
                 if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
                     const fragCategory = clutch || allKillsThatRoundForPlayer.length > 3
@@ -75,19 +73,18 @@ async function getFrags(playerChosen = null) {
                         : fragType.includes("deagle")
                             ? 2
                             : 3;
-                    const team = allKillsThatRoundForPlayer[0].killerTeam
-                        ? allKillsThatRoundForPlayer[0].killerTeam.includes("]")
-                            ? allKillsThatRoundForPlayer[0].killerTeam.split("]")[1].trim()
-                            : allKillsThatRoundForPlayer[0].killerTeam.trim()
+                    const team = killerTeam
+                        ? killerTeam.includes("]")
+                            ? killerTeam.split("]")[1].trim()
+                            : killerTeam.trim()
                         : "not found";
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
-                        player,
-                        steamId,
+                        player: killerName,
                         team,
                         fragType,
                         fragCategory,
                         ...(clutch ? { clutchOpponents: clutch.opponentCount } : {}),
-                        antieco: isAntieco(allKillsThatRoundForPlayer, matchData, currentRound),
+                        isAntieco: isAntieco(allKillsThatRoundForPlayer, matchData, currentRound),
                         allKillsThatRoundForPlayer,
                     });
                 }

@@ -12,20 +12,15 @@ interface Round {
 
 interface Highlight {
     player: string;
-    steamId: string;
     team: string;
     fragType: string;
     fragCategory: 1 | 2 | 3;
-    clutch?: {
-        clutchOpponents: number;
-    };
+    clutchOpponents?: number;
     antieco: boolean;
-    individualKills: kill[];
+    allKillsThatRoundForPlayer: kill[];
 }
 
 interface kill {
-    killerName: string;
-    killerTeam: string;
     tick: number;
     time: number;
     weaponType: number;
@@ -34,7 +29,11 @@ interface kill {
     killedPlayerSteamId: string;
 }
 
-/* 
-//TODO: Union on fragType
-//TODO: remove kilelrName from roundKill and move killerTeam up to Highlight.
-*/
+interface roundKillPerPlayerSingle {
+    steamid: number;
+    allKillsThatRoundForPlayer: kill[];
+}
+
+type Fragtype = "5k" | "4k" | "3k" | "2k" | "1k" | "clutch";
+
+//TODO: FragtypeDetails
