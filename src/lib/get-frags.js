@@ -3,16 +3,16 @@ const path = require("path");
 
 async function getFrags(playerChosen = null) {
     const dir = __dirname + "../../../json";
-    const demosHighlights = [];
     const files = await fs.readdir(dir);
-    const demoFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
+    const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
+    const matchesAnalyzed = [];
 
-    for (let i = 0; i < demoFiles.length; i++) {
-        const data = await fs.readFile(`${dir}/${demoFiles[i]}`);
+    for (let i = 0; i < jsonFiles.length; i++) {
+        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
         const matchData = await JSON.parse(data);
-        console.log("analyzing demo: ", matchData.name);
+        console.log("analyzing match: ", matchData.name);
 
-        demosHighlights.push({
+        matchesAnalyzed.push({
             demoName: matchData.name.replace(".dem", ""),
             map: matchData.map_name.replace("de_", ""),
             roundsWithHighlights: [],
@@ -20,13 +20,13 @@ async function getFrags(playerChosen = null) {
 
         if (demoIsBroken(matchData)) {
             const len = matchData.rounds.length;
-            const breakMsg = `Unable to extract highlights from this demo. There ${
+            const breakMsg = `Unable to extract highlights from this match. There ${
                 len === 1 ? "is" : "are"
             } ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${
                 len === 1 ? "" : "s"
             } in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
 
-            demosHighlights[i].breakMsg = breakMsg;
+            matchesAnalyzed[i].breakMsg = breakMsg;
             continue;
         }
 
@@ -49,7 +49,7 @@ async function getFrags(playerChosen = null) {
             JSON.stringify(allNotableClutchesInMatch, null, 4)
         );
         matchData.rounds.forEach((currentRound, roundIndex) => {
-            demosHighlights[i].roundsWithHighlights.push({
+            matchesAnalyzed[i].roundsWithHighlights.push({
                 roundNumber: currentRound.number,
                 highlights: [],
             });
@@ -114,7 +114,7 @@ async function getFrags(playerChosen = null) {
                             : allKillsThatRoundForPlayer[0].killerTeam.trim()
                         : "not found";
 
-                    demosHighlights[i].roundsWithHighlights[roundIndex].highlights.push({
+                    matchesAnalyzed[i].roundsWithHighlights[roundIndex].highlights.push({
                         player,
                         steamId,
                         team,
@@ -132,8 +132,8 @@ async function getFrags(playerChosen = null) {
             }
         });
     }
-    console.log("demosHighlights: ", JSON.stringify(demosHighlights, null, 4));
-    return demosHighlights;
+    console.log("matchesAnalyzed: ", JSON.stringify(matchesAnalyzed, null, 4));
+    return matchesAnalyzed;
 }
 
 function demoIsBroken(matchData) {
