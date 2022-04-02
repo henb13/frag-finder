@@ -18,14 +18,7 @@ async function getFrags(playerChosen = null) {
         });
 
         if (demoIsBroken(matchData)) {
-            const len = matchData.rounds.length;
-            const breakMsg = `Unable to extract highlights from this match. There ${
-                len === 1 ? "is" : "are"
-            } ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${
-                len === 1 ? "" : "s"
-            } in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
-
-            matchesAnalyzed[i].breakMsg = breakMsg;
+            matchesAnalyzed[i].errorMessage = getErrorMessage(matchData);
             continue;
         }
 
@@ -43,10 +36,12 @@ async function getFrags(playerChosen = null) {
             })
             .filter((player) => player.length)
             .flat();
-        console.log(
-            "allNotableClutchesInMatch: ",
-            JSON.stringify(allNotableClutchesInMatch, null, 4)
-        );
+
+        // console.log(
+        //     "allNotableClutchesInMatch: ",
+        //     JSON.stringify(allNotableClutchesInMatch, null, 4)
+        // );
+
         matchData.rounds.forEach((currentRound, roundIndex) => {
             matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
@@ -78,7 +73,7 @@ async function getFrags(playerChosen = null) {
                     return acc;
                 }, {});
 
-            console.log("roundkillsPerPlayer:", JSON.stringify(roundkillsPerPlayer, null, 4));
+            // console.log("roundkillsPerPlayer:", JSON.stringify(roundkillsPerPlayer, null, 4));
 
             if (playerChosen) {
                 // Filter out all players except chosen user
@@ -166,6 +161,17 @@ function isAntieco(playerKills, matchData, roundNr) {
         enemyPlayers.every((player) => player.equipement_value_rounds[roundNr] < 1000) &&
         ![1, 16].includes(roundNr)
     );
+}
+
+function getErrorMessage(matchData) {
+    const len = matchData.rounds.length;
+    const errorMessage = `Unable to extract highlights from this match. There ${
+        len === 1 ? "is" : "are"
+    } ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${
+        len === 1 ? "" : "s"
+    } in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
+
+    return errorMessage;
 }
 
 module.exports = {

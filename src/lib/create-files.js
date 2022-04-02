@@ -108,8 +108,8 @@ async function createFiles(data) {
             matchText.splice(
                 1,
                 0,
-                match.breakMsg
-                    ? `\n\n${addSpaces(4)}${match.breakMsg}\n`
+                match.errorMessage
+                    ? `\n\n${addSpaces(4)}${match.errorMessage}\n`
                     : `${addSpaces(3)}no frags found. \n`
             );
         }

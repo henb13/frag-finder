@@ -67,8 +67,8 @@ async function createFiles(data) {
             }
         });
         if (!match.rounds.length) {
-            matchText.splice(1, 0, match.breakMsg
-                ? `\n\n${addSpaces(4)}${match.breakMsg}\n`
+            matchText.splice(1, 0, match.errorMessage
+                ? `\n\n${addSpaces(4)}${match.errorMessage}\n`
                 : `${addSpaces(3)}no frags found. \n`);
         }
         if (matchPrintFormat[0])

@@ -2,6 +2,7 @@ interface Match {
     demo: string;
     map: string;
     rounds: Round[];
+    errorMessage?: string;
 }
 
 interface Round {
@@ -19,10 +20,10 @@ interface Highlight {
         clutchOpponents: number;
     };
     antieco: boolean;
-    individualKills: RoundKill[];
+    individualKills: kill[];
 }
 
-interface RoundKill {
+interface kill {
     killerName: string;
     killerTeam: string;
     tick: number;
@@ -35,5 +36,5 @@ interface RoundKill {
 
 /* 
 //TODO: Union on fragType
-//TODO: remove kilelrName from Roundkill and move killerTeam up to Highlight.
+//TODO: remove kilelrName from roundKill and move killerTeam up to Highlight.
 */
