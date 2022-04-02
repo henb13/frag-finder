@@ -1,10 +1,15 @@
+import { IMatch, IKill, IRoundKillPlayerSingle, IClutch, IMatchDataClutch } from "./types";
+
 const fs = require("fs").promises;
 const path = require("path");
+
 async function getFrags(playerChosenSteamid = null) {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
-    const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
-    const matchesAnalyzed = [];
+    const jsonFiles = files.filter(
+        (file: any) => path.extname(file).toLowerCase() === ".json"
+    );
+    const matchesAnalyzed: IMatch[] = [];
 
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
@@ -22,11 +27,14 @@ async function getFrags(playerChosenSteamid = null) {
             continue;
         }
 
-        const allNotableClutchesInMatch = matchData.players
-            .map((player) => {
+        const allNotableClutchesInMatch: IClutch[] = matchData.players
+            .map((player: any) => {
                 return player.clutches
-                    .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
-                    ?.map((clutch) => {
+                    .filter(
+                        (clutch: IMatchDataClutch) =>
+                            clutch.has_won && clutch.opponent_count >= 3
+                    )
+                    ?.map((clutch: IMatchDataClutch) => {
                         return {
                             playerSteamid: player.steamid,
                             opponentCount: clutch.opponent_count,
@@ -34,47 +42,44 @@ async function getFrags(playerChosenSteamid = null) {
                         };
                     });
             })
-            .filter((player) => player.length)
+            .filter((player: IClutch[]) => player.length)
             .flat();
 
-        // console.log(
-        //     "allNotableClutchesInMatch: ",
-        //     JSON.stringify(allNotableClutchesInMatch, null, 4)
-        // );
-
-        matchData.rounds.forEach((currentRound, roundIndex) => {
+        matchData.rounds.forEach((currentRound: any, roundIndex: number) => {
             matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
                 highlights: [],
             });
 
-            //TODO: Type partial Highlight & steamid?
-            let roundkillsPerPlayer = currentRound.kills.reduce((acc, kill) => {
-                const killMapped = {
-                    tick: kill.tick,
-                    time: kill.time_death_seconds,
-                    weaponType: kill.weapon.type,
-                    weaponName: kill.weapon.weapon_name,
-                    isHeadshot: kill.is_headshot,
-                    killedPlayerSteamId: kill.killed_steamid,
-                };
+            let roundkillsPerPlayer: IRoundKillPlayerSingle[] = currentRound.kills.reduce(
+                (acc: IRoundKillPlayerSingle[], kill: any) => {
+                    const killMapped = {
+                        tick: kill.tick,
+                        time: kill.time_death_seconds,
+                        weaponType: kill.weapon.type,
+                        weaponName: kill.weapon.weapon_name,
+                        isHeadshot: kill.is_headshot,
+                        killedPlayerSteamId: kill.killed_steamid,
+                    };
 
-                const player = acc.find((player) => player.steamid === kill.killer_steamid);
+                    const player = acc.find(
+                        (player) => player.steamid === kill.killer_steamid
+                    );
 
-                if (player) {
-                    player.allKillsThatRoundForPlayer.push(killMapped);
-                } else {
-                    acc.push({
-                        steamid: kill.killer_steamid,
-                        killerName: kill.killer_name,
-                        killerTeam: kill.killer_team,
-                        allKillsThatRoundForPlayer: [killMapped],
-                    });
-                }
-                return acc;
-            }, []);
-
-            // console.log("roundkillsPerPlayer:", JSON.stringify(roundkillsPerPlayer, null, 4));
+                    if (player) {
+                        player.allKillsThatRoundForPlayer.push(killMapped);
+                    } else {
+                        acc.push({
+                            steamid: kill.killer_steamid,
+                            killerName: kill.killer_name,
+                            killerTeam: kill.killer_team,
+                            allKillsThatRoundForPlayer: [killMapped],
+                        });
+                    }
+                    return acc;
+                },
+                []
+            );
 
             if (playerChosenSteamid) {
                 roundkillsPerPlayer = roundkillsPerPlayer.filter(
@@ -86,11 +91,14 @@ async function getFrags(playerChosenSteamid = null) {
                 const { allKillsThatRoundForPlayer, steamid, killerTeam, killerName } = player;
 
                 const clutch = allNotableClutchesInMatch.find(
-                    ({ roundNumber, playerSteamid }) =>
-                        roundNumber === currentRound.number && playerSteamid === steamid
+                    (clutch) =>
+                        clutch.roundNumber === currentRound.number &&
+                        clutch.playerSteamid === steamid
                 );
 
-                const fragType = getFragtype(allKillsThatRoundForPlayer, clutch);
+                const fragType: string = clutch
+                    ? "clutch"
+                    : getFragtype(allKillsThatRoundForPlayer);
 
                 if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
                     const fragCategory =
@@ -106,35 +114,37 @@ async function getFrags(playerChosenSteamid = null) {
                             : killerTeam.trim()
                         : "not found";
 
+                    const isAntieco = isHighlightAntieco(
+                        allKillsThatRoundForPlayer,
+                        matchData,
+                        currentRound
+                    );
+
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
                         player: killerName,
                         team,
                         fragType,
                         fragCategory,
                         ...(clutch ? { clutchOpponents: clutch.opponentCount } : {}),
-                        isAntieco: isAntieco(
-                            allKillsThatRoundForPlayer,
-                            matchData,
-                            currentRound
-                        ),
+                        isAntieco,
                         allKillsThatRoundForPlayer,
                     });
                 }
             }
         });
     }
-    console.log("matchesAnalyzed: ", JSON.stringify(matchesAnalyzed, null, 4));
     return matchesAnalyzed;
 }
 
-function demoIsBroken(matchData) {
+function demoIsBroken(matchData: any): boolean {
     return matchData.rounds.length <= 15;
 }
 
-function getFragtype(kills, clutch) {
+function getFragtype(kills: IKill[]): string {
     if (kills.length >= 3) {
-        return clutch ? "clutch" : `${kills.length}k`;
+        return `${kills.length}k`;
     }
+
     if (hasDeagleHs(kills)) {
         const deagleKills = kills.filter((kill) => kill.weaponName === "Desert Eagle");
 
@@ -143,23 +153,23 @@ function getFragtype(kills, clutch) {
     return `${kills.length}k`;
 }
 
-function hasDeagleHs(kills) {
+function hasDeagleHs(kills: IKill[]) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 
-function isAntieco(playerKills, matchData, roundNr) {
-    const killedSteamIds = playerKills.map((kill) => kill.killedPlayerSteamId);
-    const enemyPlayers = matchData.players.filter((player) =>
+function isHighlightAntieco(kills: IKill[], matchData: any, roundNr: number) {
+    const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
+    const enemyPlayers = matchData.players.filter((player: any) =>
         killedSteamIds.includes(player.steamid)
     );
 
     return (
-        enemyPlayers.every((player) => player.equipement_value_rounds[roundNr] < 1000) &&
+        enemyPlayers.every((player: any) => player.equipement_value_rounds[roundNr] < 1000) &&
         ![1, 16].includes(roundNr)
     );
 }
 
-function getErrorMessage(matchData) {
+function getErrorMessage(matchData: any) {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${
         len === 1 ? "is" : "are"
@@ -175,5 +185,5 @@ module.exports = {
     demoIsBroken,
     getFragtype,
     hasDeagleHs,
-    isAntieco,
+    isAntieco: isHighlightAntieco,
 };
