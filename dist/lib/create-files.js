@@ -1,3 +1,4 @@
+"use strict";
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
 const { camelizeIsh } = require("./utils/utils.js");
@@ -9,8 +10,8 @@ async function createFiles(data) {
         const matchPrintFormat = [];
         match.rounds.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr = roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
-            highlights.forEach(({ player, team, fragType, fragCategory, clutchOpponents, isAntieco, allKillsThatRoundForPlayer: individualKills, }) => {
-                const playerCamelized = camelizeIsh(player);
+            highlights.forEach(({ playerName, team, fragType, fragCategory, clutchOpponents, isAntieco, allKillsThatRoundForPlayer: individualKills, }) => {
+                const playerCamelized = camelizeIsh(playerName);
                 const teamCamelized = camelizeIsh(team);
                 const weaponsUsed = getWeaponsUsed(individualKills);
                 const killAmount = individualKills.length;

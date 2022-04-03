@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs").promises;
 const path = require("path");
 async function getFrags(playerChosenSteamid = null) {
@@ -22,7 +24,7 @@ async function getFrags(playerChosenSteamid = null) {
             .map((player) => {
             return player.clutches
                 .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
-                ?.map((clutch) => {
+                .map((clutch) => {
                 return {
                     playerSteamid: player.steamid,
                     opponentCount: clutch.opponent_count,
@@ -53,8 +55,8 @@ async function getFrags(playerChosenSteamid = null) {
                 else {
                     acc.push({
                         steamid: kill.killer_steamid,
-                        killerName: kill.killer_name,
-                        killerTeam: kill.killer_team,
+                        playerName: kill.killer_name,
+                        team: kill.killer_team,
                         allKillsThatRoundForPlayer: [killMapped],
                     });
                 }
@@ -64,42 +66,45 @@ async function getFrags(playerChosenSteamid = null) {
                 roundkillsPerPlayer = roundkillsPerPlayer.filter((player) => player.steamid === playerChosenSteamid);
             }
             for (const player of roundkillsPerPlayer) {
-                const { allKillsThatRoundForPlayer, steamid, killerTeam, killerName } = player;
-                const clutch = allNotableClutchesInMatch.find(({ roundNumber, playerSteamid }) => roundNumber === currentRound.number && playerSteamid === steamid);
-                const fragType = getFragtype(allKillsThatRoundForPlayer, clutch);
+                const { allKillsThatRoundForPlayer, steamid, team: playerTeam, playerName, } = player;
+                const clutch = allNotableClutchesInMatch.find((clutch) => clutch.roundNumber === currentRound.number &&
+                    clutch.playerSteamid === steamid);
+                const fragType = clutch
+                    ? "clutch"
+                    : getFragtype(allKillsThatRoundForPlayer);
                 if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
                     const fragCategory = clutch || allKillsThatRoundForPlayer.length > 3
                         ? 1
                         : fragType.includes("deagle")
                             ? 2
                             : 3;
-                    const team = killerTeam
-                        ? killerTeam.includes("]")
-                            ? killerTeam.split("]")[1].trim()
-                            : killerTeam.trim()
+                    const team = playerTeam
+                        ? playerTeam.includes("]")
+                            ? playerTeam.split("]")[1].trim()
+                            : playerTeam.trim()
                         : "not found";
+                    const isAntieco = isHighlightAntieco(allKillsThatRoundForPlayer, matchData, currentRound);
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
-                        player: killerName,
+                        playerName,
                         team,
                         fragType,
                         fragCategory,
                         ...(clutch ? { clutchOpponents: clutch.opponentCount } : {}),
-                        isAntieco: isAntieco(allKillsThatRoundForPlayer, matchData, currentRound),
+                        isAntieco,
                         allKillsThatRoundForPlayer,
                     });
                 }
             }
         });
     }
-    console.log("matchesAnalyzed: ", JSON.stringify(matchesAnalyzed, null, 4));
     return matchesAnalyzed;
 }
 function demoIsBroken(matchData) {
     return matchData.rounds.length <= 15;
 }
-function getFragtype(kills, clutch) {
+function getFragtype(kills) {
     if (kills.length >= 3) {
-        return clutch ? "clutch" : `${kills.length}k`;
+        return `${kills.length}k`;
     }
     if (hasDeagleHs(kills)) {
         const deagleKills = kills.filter((kill) => kill.weaponName === "Desert Eagle");
@@ -110,8 +115,8 @@ function getFragtype(kills, clutch) {
 function hasDeagleHs(kills) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
-function isAntieco(playerKills, matchData, roundNr) {
-    const killedSteamIds = playerKills.map((kill) => kill.killedPlayerSteamId);
+function isHighlightAntieco(kills, matchData, roundNr) {
+    const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = matchData.players.filter((player) => killedSteamIds.includes(player.steamid));
     return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNr] < 1000) &&
         ![1, 16].includes(roundNr));
@@ -126,5 +131,5 @@ module.exports = {
     demoIsBroken,
     getFragtype,
     hasDeagleHs,
-    isAntieco,
+    isAntieco: isHighlightAntieco,
 };

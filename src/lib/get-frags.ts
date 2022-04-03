@@ -3,7 +3,7 @@ import { IMatch, IKill, IRoundKillPlayerSingle, IClutch, IMatchDataClutch } from
 const fs = require("fs").promises;
 const path = require("path");
 
-async function getFrags(playerChosenSteamid = null) {
+async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter(

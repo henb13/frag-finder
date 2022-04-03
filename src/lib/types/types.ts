@@ -40,6 +40,12 @@ export interface IClutch {
     roundNumber: number;
 }
 
+export interface IMatchPrintFormatSingle
+    extends Pick<IHighlight, "fragType" | "fragCategory"> {
+    tickFirstKill: number;
+    fragPrintFormat: string;
+}
+
 export type IFragCategory = 1 | 2 | 3;
 
 type Steamid = string;

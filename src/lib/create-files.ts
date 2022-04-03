@@ -1,13 +1,15 @@
+import { IHighlight, IKill, IMatch, IMatchPrintFormatSingle } from "./types";
+
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
 const { camelizeIsh } = require("./utils/utils.js");
 
-async function createFiles(data) {
+async function createFiles(data: IMatch[]) {
     const dir = __dirname + "../../../exports";
     await fs.writeFile(dir + "/highlights.txt", "\n");
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];
-        const matchPrintFormat = [];
+        const matchPrintFormat: IMatchPrintFormatSingle[] = [];
 
         match.rounds.forEach(({ roundNumber, highlights }) => {
             const roundNumberStr =
@@ -22,7 +24,7 @@ async function createFiles(data) {
                     clutchOpponents,
                     isAntieco,
                     allKillsThatRoundForPlayer: individualKills,
-                }) => {
+                }: IHighlight) => {
                     const playerCamelized = camelizeIsh(playerName);
                     const teamCamelized = camelizeIsh(team);
                     const weaponsUsed = getWeaponsUsed(individualKills);
@@ -40,7 +42,7 @@ async function createFiles(data) {
                             : fragType === "5k"
                             ? "ACE"
                             : fragType.includes("deagle")
-                            ? fragType.match(/[0-9]+/g)[0] == killAmount
+                            ? Number(fragType.match(/[0-9]+/g)?.[0]) === killAmount
                                 ? fragType
                                 : `${fragType}-${killAmount}k`
                             : fragType;
@@ -113,13 +115,13 @@ async function createFiles(data) {
         }
 
         if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
-
+        console.log("matchPrintFormat", matchPrintFormat);
         await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
     }
 }
 
-function getWeaponsUsed(kills) {
-    const killsPerWeapon = kills
+function getWeaponsUsed(kills: IKill[]): string {
+    const killsPerWeapon: { [key: string]: number } = kills
         .map((kill) => [kill.weaponName, kill.weaponType])
         .reduce((acc, curr) => {
             switch (curr[0]) {
@@ -190,11 +192,11 @@ function getWeaponsUsed(kills) {
               .join("");
 }
 
-function setWeaponName(name, obj) {
+function setWeaponName(name: string, obj: { [key: string]: number }) {
     obj[name] = obj[name] + 1 || 1;
 }
 
-function addSpaces(amount) {
+function addSpaces(amount: number) {
     return " ".repeat(amount);
 }
 
