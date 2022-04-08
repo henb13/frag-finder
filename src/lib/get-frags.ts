@@ -7,7 +7,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter(
-        (file: any) => path.extname(file).toLowerCase() === ".json"
+        (file: string) => path.extname(file).toLowerCase() === ".json"
     );
     const matchesAnalyzed: IMatch[] = [];
 
@@ -83,7 +83,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
 
             if (playerChosenSteamid) {
                 roundkillsPerPlayer = roundkillsPerPlayer.filter(
-                    (player: IRoundKillPlayerSingle) => player.steamid === playerChosenSteamid
+                    (player) => player.steamid === playerChosenSteamid
                 );
             }
 
@@ -163,7 +163,7 @@ function hasDeagleHs(kills: IKill[]) {
 }
 
 function isHighlightAntieco(kills: IKill[], matchData: any, roundNr: number) {
-    const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
+    const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = matchData.players.filter((player: any) =>
         killedSteamIds.includes(player.steamid)
     );
@@ -174,7 +174,7 @@ function isHighlightAntieco(kills: IKill[], matchData: any, roundNr: number) {
     );
 }
 
-function getErrorMessage(matchData: any) {
+function getErrorMessage(matchData: any): string {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${
         len === 1 ? "is" : "are"
@@ -189,6 +189,7 @@ module.exports = {
     getFrags,
     demoIsBroken,
     getFragtype,
+    getErrorMessage,
     hasDeagleHs,
-    isAntieco: isHighlightAntieco,
+    isHighlightAntieco,
 };

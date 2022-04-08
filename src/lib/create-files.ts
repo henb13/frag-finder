@@ -30,58 +30,32 @@ async function createFiles(data: IMatch[]) {
                     const weaponsUsed = getWeaponsUsed(individualKills);
                     const killAmount = individualKills.length;
 
-                    // TODO: Extract to own function
-                    //e.g. 1v3-4k vs just 4k
-                    const fragTypeDetails =
-                        fragType === "clutch"
-                            ? clutchOpponents === killAmount
-                                ? `1v${clutchOpponents}`
-                                : `1v${clutchOpponents}-${
-                                      killAmount == 5 ? "ACE" : killAmount + "k"
-                                  }`
-                            : fragType === "5k"
-                            ? "ACE"
-                            : fragType.includes("deagle")
-                            ? Number(fragType.match(/[0-9]+/g)?.[0]) === killAmount
-                                ? fragType
-                                : `${fragType}-${killAmount}k`
-                            : fragType;
+                    const fragTypeDetails = getFragTypeDetails(
+                        fragType,
+                        killAmount,
+                        clutchOpponents
+                    );
 
-                    const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
-
-                    const lastKillTimestamp =
-                        CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
-
-                    // e.g. 0:54, 1:32 etc.
-                    const firstKillTimeStr =
-                        firstKillTimestamp - 60 > 0
-                            ? `1:${Math.trunc(firstKillTimestamp - 60)
-                                  .toString()
-                                  .padStart(2, "0")}`
-                            : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
+                    const clockTimeFirstKill = getIngameClockTime(
+                        CSGO_ROUND_LENGTH - individualKills[0].time + 1
+                    );
 
                     const tickFirstKill = individualKills[0].tick - 200;
 
-                    const fragSpeed =
-                        firstKillTimestamp - lastKillTimestamp < 6
-                            ? "-fast"
-                            : individualKills.filter((kill, i) => {
-                                  if (i + 1 != killAmount) {
-                                      return individualKills[i + 1].time - kill.time > 15;
-                                  }
-                              }).length >= 2
-                            ? "-spread"
-                            : "";
+                    const fragSpeed = getFragSpeed(individualKills);
+                    const fragSpeedStr = fragSpeed ? "-" + fragSpeed : "";
 
                     matchPrintFormat.push({
                         fragType,
                         fragCategory,
                         tickFirstKill,
                         fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
-                            !fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""
+                            !fragType.includes("deagle")
+                                ? "-" + weaponsUsed + fragSpeedStr
+                                : ""
                         }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
                             isAntieco ? "_#ANTIECO" : ""
-                        } ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
+                        } ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
                     });
                 }
             );
@@ -121,9 +95,9 @@ async function createFiles(data: IMatch[]) {
 }
 
 function getWeaponsUsed(kills: IKill[]): string {
-    const killsPerWeapon: { [key: string]: number } = kills
-        .map((kill) => [kill.weaponName, kill.weaponType])
-        .reduce((acc, curr) => {
+    const killsPerWeapon = kills
+        .map<[string, number]>((kill) => [kill.weaponName, kill.weaponType])
+        .reduce<{ [key: string]: number }>((acc, curr) => {
             switch (curr[0]) {
                 case "AK-47":
                 case "M4A4":
@@ -188,12 +162,66 @@ function getWeaponsUsed(kills: IKill[]): string {
     return keys.length === 1
         ? keys[0]
         : keys
-              .map((weapon, i) => `${i === 0 ? "" : "-"}${weapon}(${killsPerWeapon[weapon]})`)
+              .map<string>(
+                  (weapon, i) => `${i === 0 ? "" : "-"}${weapon}(${killsPerWeapon[weapon]})`
+              )
               .join("");
 }
 
 function setWeaponName(name: string, obj: { [key: string]: number }) {
     obj[name] = obj[name] + 1 || 1;
+}
+
+function getFragTypeDetails(
+    fragType: IHighlight["fragType"],
+    killAmount: number,
+    clutchOpponents: number | undefined
+) {
+    if (fragType === "clutch") {
+        return clutchOpponents === killAmount
+            ? `1v${clutchOpponents}`
+            : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : killAmount + "k"}`;
+    }
+    if (fragType === "5k") {
+        return "ACE";
+    }
+    if (fragType.includes("deagle") && Number(fragType.match(/[0-9]+/g)?.[0]) !== killAmount) {
+        return `${fragType}-${killAmount}k`;
+    }
+    return fragType;
+}
+
+//e.g. 1v3-4k vs just 4k etc
+function getFragSpeed(individualKills: IKill[]): "fast" | "spread" | null {
+    const FAST_KILL_SEC_THRESHOLD = 6;
+    const SPREAD_KILL_SEC_THRESHOLD = 15;
+
+    const killAmount = individualKills.length;
+    const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
+    const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
+
+    if (firstKillTimestamp - lastKillTimestamp < FAST_KILL_SEC_THRESHOLD) {
+        return "fast";
+    }
+
+    const killsWithSomeTimeBetween = individualKills.filter((kill, i) => {
+        return individualKills[i + 1]?.time - kill.time > SPREAD_KILL_SEC_THRESHOLD || false;
+    });
+
+    if (killsWithSomeTimeBetween.length >= 2) {
+        return "spread";
+    }
+
+    return null;
+}
+
+// e.g. 0:54, 1:32 etc.
+function getIngameClockTime(firstKillTimestamp: number): string {
+    return firstKillTimestamp - 60 > 0
+        ? `1:${Math.trunc(firstKillTimestamp - 60)
+              .toString()
+              .padStart(2, "0")}`
+        : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
 }
 
 function addSpaces(amount: number) {
@@ -204,5 +232,8 @@ module.exports = {
     createFiles,
     getWeaponsUsed,
     setWeaponName,
+    getFragTypeDetails,
+    getFragSpeed,
+    getIngameClockTime,
     addSpaces,
 };

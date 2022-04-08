@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
 const { camelizeIsh } = require("./utils/utils.js");
@@ -15,39 +16,18 @@ async function createFiles(data) {
                 const teamCamelized = camelizeIsh(team);
                 const weaponsUsed = getWeaponsUsed(individualKills);
                 const killAmount = individualKills.length;
-                const fragTypeDetails = fragType === "clutch"
-                    ? clutchOpponents === killAmount
-                        ? `1v${clutchOpponents}`
-                        : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : killAmount + "k"}`
-                    : fragType === "5k"
-                        ? "ACE"
-                        : fragType.includes("deagle")
-                            ? fragType.match(/[0-9]+/g)[0] == killAmount
-                                ? fragType
-                                : `${fragType}-${killAmount}k`
-                            : fragType;
-                const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
-                const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
-                const firstKillTimeStr = firstKillTimestamp - 60 > 0
-                    ? `1:${Math.trunc(firstKillTimestamp - 60)
-                        .toString()
-                        .padStart(2, "0")}`
-                    : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
+                const fragTypeDetails = getFragTypeDetails(fragType, killAmount, clutchOpponents);
+                const clockTimeFirstKill = getIngameClockTime(CSGO_ROUND_LENGTH - individualKills[0].time + 1);
                 const tickFirstKill = individualKills[0].tick - 200;
-                const fragSpeed = firstKillTimestamp - lastKillTimestamp < 6
-                    ? "-fast"
-                    : individualKills.filter((kill, i) => {
-                        if (i + 1 != killAmount) {
-                            return individualKills[i + 1].time - kill.time > 15;
-                        }
-                    }).length >= 2
-                        ? "-spread"
-                        : "";
+                const fragSpeed = getFragSpeed(individualKills);
+                const fragSpeedStr = fragSpeed ? "-" + fragSpeed : "";
                 matchPrintFormat.push({
                     fragType,
                     fragCategory,
                     tickFirstKill,
-                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeed : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${isAntieco ? "_#ANTIECO" : ""} ${firstKillTimeStr} (demo_gototick ${tickFirstKill})`,
+                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${!fragType.includes("deagle")
+                        ? "-" + weaponsUsed + fragSpeedStr
+                        : ""}_${match.map}_team-${teamCamelized}_r${roundNumberStr}${isAntieco ? "_#ANTIECO" : ""} ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
                 });
             });
         });
@@ -73,6 +53,7 @@ async function createFiles(data) {
         }
         if (matchPrintFormat[0])
             matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
+        console.log("matchPrintFormat", matchPrintFormat);
         await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
     }
 }
@@ -142,6 +123,44 @@ function getWeaponsUsed(kills) {
 function setWeaponName(name, obj) {
     obj[name] = obj[name] + 1 || 1;
 }
+function getFragTypeDetails(fragType, killAmount, clutchOpponents) {
+    if (fragType === "clutch") {
+        return clutchOpponents === killAmount
+            ? `1v${clutchOpponents}`
+            : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : killAmount + "k"}`;
+    }
+    if (fragType === "5k") {
+        return "ACE";
+    }
+    if (fragType.includes("deagle") && Number(fragType.match(/[0-9]+/g)?.[0]) !== killAmount) {
+        return `${fragType}-${killAmount}k`;
+    }
+    return fragType;
+}
+function getFragSpeed(individualKills) {
+    const FAST_KILL_SEC_THRESHOLD = 6;
+    const SPREAD_KILL_SEC_THRESHOLD = 15;
+    const killAmount = individualKills.length;
+    const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
+    const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
+    if (firstKillTimestamp - lastKillTimestamp < FAST_KILL_SEC_THRESHOLD) {
+        return "fast";
+    }
+    const killsWithSomeTimeBetween = individualKills.filter((kill, i) => {
+        return individualKills[i + 1]?.time - kill.time > SPREAD_KILL_SEC_THRESHOLD || false;
+    });
+    if (killsWithSomeTimeBetween.length >= 2) {
+        return "spread";
+    }
+    return null;
+}
+function getIngameClockTime(firstKillTimestamp) {
+    return firstKillTimestamp - 60 > 0
+        ? `1:${Math.trunc(firstKillTimestamp - 60)
+            .toString()
+            .padStart(2, "0")}`
+        : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
+}
 function addSpaces(amount) {
     return " ".repeat(amount);
 }
@@ -149,5 +168,8 @@ module.exports = {
     createFiles,
     getWeaponsUsed,
     setWeaponName,
+    getFragTypeDetails,
+    getFragSpeed,
+    getIngameClockTime,
     addSpaces,
 };

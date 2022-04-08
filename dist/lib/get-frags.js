@@ -130,6 +130,7 @@ module.exports = {
     getFrags,
     demoIsBroken,
     getFragtype,
+    getErrorMessage,
     hasDeagleHs,
-    isAntieco: isHighlightAntieco,
+    isHighlightAntieco,
 };
