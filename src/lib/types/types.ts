@@ -29,7 +29,7 @@ export interface IKill {
     killedPlayerSteamId: Steamid;
 }
 
-export interface IRoundKillPlayerSingle
+export interface IRoundKillPlayer
     extends Pick<IHighlight, "playerName" | "team" | "allKillsThatRoundForPlayer"> {
     steamid: Steamid;
 }

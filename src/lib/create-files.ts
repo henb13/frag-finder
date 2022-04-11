@@ -194,7 +194,7 @@ function getFragTypeDetails(
 //e.g. 1v3-4k vs just 4k etc
 function getFragSpeed(individualKills: IKill[]): "fast" | "spread" | null {
     const FAST_KILL_SEC_THRESHOLD = 6;
-    const SPREAD_KILL_SEC_THRESHOLD = 15;
+    const SPREAD_KILL_SEC_THRESHOLD = 15; // time elapsed between kills
 
     const killAmount = individualKills.length;
     const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;

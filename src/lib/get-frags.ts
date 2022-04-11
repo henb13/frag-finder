@@ -1,4 +1,13 @@
-import { IMatch, IKill, IRoundKillPlayerSingle, IClutch, IMatchDataClutch } from "./types";
+import {
+    IMatch,
+    IKill,
+    IRoundKillPlayer,
+    IClutch,
+    IClutchJSON,
+    IMatchDataJSON,
+    IPlayerJSON,
+    IRoundJSON,
+} from "./types";
 
 const fs = require("fs").promises;
 const path = require("path");
@@ -13,7 +22,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
 
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
-        const matchData = await JSON.parse(data);
+        const matchData: IMatchDataJSON = await JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
 
         matchesAnalyzed.push({
@@ -27,14 +36,12 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
             continue;
         }
 
+        //TODO: remove all any
         const allNotableClutchesInMatch: IClutch[] = matchData.players
-            .map((player: any) => {
+            .map((player: IPlayerJSON) => {
                 return player.clutches
-                    .filter(
-                        (clutch: IMatchDataClutch) =>
-                            clutch.has_won && clutch.opponent_count >= 3
-                    )
-                    .map((clutch: IMatchDataClutch) => {
+                    .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
+                    .map((clutch) => {
                         return {
                             playerSteamid: player.steamid,
                             opponentCount: clutch.opponent_count,
@@ -45,14 +52,14 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
             .filter((player: IClutch[]) => player.length)
             .flat();
 
-        matchData.rounds.forEach((currentRound: any, roundIndex: number) => {
+        matchData.rounds.forEach((currentRound: IRoundJSON, roundIndex: number) => {
             matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
                 highlights: [],
             });
 
-            let roundkillsPerPlayer: IRoundKillPlayerSingle[] = currentRound.kills.reduce(
-                (acc: IRoundKillPlayerSingle[], kill: any) => {
+            let roundkillsPerPlayer = currentRound.kills.reduce(
+                (acc: IRoundKillPlayer[], kill: any) => {
                     const killMapped = {
                         tick: kill.tick,
                         time: kill.time_death_seconds,
@@ -121,8 +128,8 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
 
                     const isAntieco = isHighlightAntieco(
                         allKillsThatRoundForPlayer,
-                        matchData,
-                        currentRound
+                        matchData.players,
+                        currentRound.number
                     );
 
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
@@ -141,7 +148,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
     return matchesAnalyzed;
 }
 
-function demoIsBroken(matchData: any): boolean {
+function demoIsBroken(matchData: IMatchDataJSON): boolean {
     return matchData.rounds.length <= 15;
 }
 
@@ -162,19 +169,21 @@ function hasDeagleHs(kills: IKill[]) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 
-function isHighlightAntieco(kills: IKill[], matchData: any, roundNr: number) {
+function isHighlightAntieco(kills: IKill[], players: IPlayerJSON[], roundNumber: number) {
+    const THRESHOLD = 1000;
     const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
-    const enemyPlayers = matchData.players.filter((player: any) =>
+    const enemyPlayers = players.filter((player: any) =>
         killedSteamIds.includes(player.steamid)
     );
 
     return (
-        enemyPlayers.every((player: any) => player.equipement_value_rounds[roundNr] < 1000) &&
-        ![1, 16].includes(roundNr)
+        enemyPlayers.every(
+            (player: any) => player.equipement_value_rounds[roundNumber] < THRESHOLD
+        ) && ![1, 16].includes(roundNumber)
     );
 }
 
-function getErrorMessage(matchData: any): string {
+function getErrorMessage(matchData: IMatchDataJSON): string {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${
         len === 1 ? "is" : "are"
@@ -189,7 +198,7 @@ module.exports = {
     getFrags,
     demoIsBroken,
     getFragtype,
-    getErrorMessage,
     hasDeagleHs,
     isHighlightAntieco,
+    getErrorMessage,
 };

@@ -83,7 +83,7 @@ async function getFrags(playerChosenSteamid = null) {
                             ? playerTeam.split("]")[1].trim()
                             : playerTeam.trim()
                         : "not found";
-                    const isAntieco = isHighlightAntieco(allKillsThatRoundForPlayer, matchData, currentRound);
+                    const isAntieco = isHighlightAntieco(allKillsThatRoundForPlayer, matchData, currentRound.number);
                     matchesAnalyzed[i].rounds[roundIndex].highlights.push({
                         playerName,
                         team,
@@ -115,11 +115,10 @@ function getFragtype(kills) {
 function hasDeagleHs(kills) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
-function isHighlightAntieco(kills, matchData, roundNr) {
+function isHighlightAntieco(kills, matchData, roundNumber) {
     const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = matchData.players.filter((player) => killedSteamIds.includes(player.steamid));
-    return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNr] < 1000) &&
-        ![1, 16].includes(roundNr));
+    return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNumber] < 1000) && ![1, 16].includes(roundNumber));
 }
 function getErrorMessage(matchData) {
     const len = matchData.rounds.length;
@@ -130,7 +129,7 @@ module.exports = {
     getFrags,
     demoIsBroken,
     getFragtype,
-    getErrorMessage,
     hasDeagleHs,
     isHighlightAntieco,
+    getErrorMessage,
 };
