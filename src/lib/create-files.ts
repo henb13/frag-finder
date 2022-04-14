@@ -89,7 +89,6 @@ async function createFiles(data: IMatch[]) {
         }
 
         if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
-        console.log("matchPrintFormat", matchPrintFormat);
         await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
     }
 }
@@ -204,11 +203,11 @@ function getFragSpeed(individualKills: IKill[]): "fast" | "spread" | null {
         return "fast";
     }
 
-    const killsWithSomeTimeBetween = individualKills.filter((kill, i) => {
+    const killsWithNotableTimeBetween = individualKills.filter((kill, i) => {
         return individualKills[i + 1]?.time - kill.time > SPREAD_KILL_SEC_THRESHOLD || false;
     });
 
-    if (killsWithSomeTimeBetween.length >= 2) {
+    if (killsWithNotableTimeBetween.length >= 2) {
         return "spread";
     }
 

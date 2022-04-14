@@ -6,13 +6,12 @@ import {
     IMatchDataJSON,
     IPlayerJSON,
     IRoundJSON,
-    IKillJSON,
 } from "./types";
 
 const fs = require("fs").promises;
 const path = require("path");
 
-async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
+async function getFrags(playerChosenSteamid: string | null = null): Promise<IMatch[]> {
     const dir = __dirname + "../../../json";
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter(
@@ -36,9 +35,8 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
             continue;
         }
 
-        //TODO: remove all any
         const allNotableClutchesInMatch: IClutch[] = matchData.players
-            .map((player: IPlayerJSON) => {
+            .map((player) => {
                 return player.clutches
                     .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
                     .map((clutch) => {
@@ -59,7 +57,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
             });
 
             let roundkillsPerPlayer = currentRound.kills.reduce(
-                (acc: IRoundKillPlayer[], kill: IKillJSON) => {
+                (acc: IRoundKillPlayer[], kill) => {
                     const killMapped = {
                         tick: kill.tick,
                         time: kill.time_death_seconds,
@@ -170,13 +168,11 @@ function hasDeagleHs(kills: IKill[]) {
 function isHighlightAntieco(kills: IKill[], players: IPlayerJSON[], roundNumber: number) {
     const THRESHOLD = 1000;
     const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
-    const enemyPlayers = players.filter((player: any) =>
-        killedSteamIds.includes(player.steamid)
-    );
+    const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
 
     return (
         enemyPlayers.every(
-            (player: any) => player.equipement_value_rounds[roundNumber] < THRESHOLD
+            (player) => player.equipement_value_rounds[roundNumber] < THRESHOLD
         ) && ![1, 16].includes(roundNumber)
     );
 }
