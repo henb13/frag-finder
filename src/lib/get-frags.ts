@@ -3,10 +3,10 @@ import {
     IKill,
     IRoundKillPlayer,
     IClutch,
-    IClutchJSON,
     IMatchDataJSON,
     IPlayerJSON,
     IRoundJSON,
+    IKillJSON,
 } from "./types";
 
 const fs = require("fs").promises;
@@ -49,7 +49,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
                         };
                     });
             })
-            .filter((player: IClutch[]) => player.length)
+            .filter((player) => player.length)
             .flat();
 
         matchData.rounds.forEach((currentRound: IRoundJSON, roundIndex: number) => {
@@ -59,7 +59,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
             });
 
             let roundkillsPerPlayer = currentRound.kills.reduce(
-                (acc: IRoundKillPlayer[], kill: any) => {
+                (acc: IRoundKillPlayer[], kill: IKillJSON) => {
                     const killMapped = {
                         tick: kill.tick,
                         time: kill.time_death_seconds,
@@ -108,9 +108,7 @@ async function getFrags(playerChosenSteamid = null): Promise<IMatch[]> {
                         clutch.playerSteamid === steamid
                 );
 
-                const fragType: string = clutch
-                    ? "clutch"
-                    : getFragtype(allKillsThatRoundForPlayer);
+                const fragType = clutch ? "clutch" : getFragtype(allKillsThatRoundForPlayer);
 
                 if (allKillsThatRoundForPlayer.length >= 3 || fragType.includes("deagle")) {
                     const fragCategory =

@@ -12,7 +12,7 @@ export interface IRound {
 
 export interface IHighlight {
     playerName: string;
-    team: string;
+    team: string | null;
     fragType: string;
     fragCategory: IFragCategory;
     clutchOpponents?: number;
