@@ -15,50 +15,38 @@ async function createFiles(data: IMatch[]) {
             const roundNumberStr =
                 roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
 
-            highlights.forEach(
-                ({
-                    playerName,
-                    team,
-                    fragType,
-                    fragCategory,
-                    clutchOpponents,
-                    isAntieco,
-                    allKillsThatRoundForPlayer: individualKills,
-                }: IHighlight) => {
-                    const playerCamelized = camelizeIsh(playerName);
-                    const teamCamelized = camelizeIsh(team);
-                    const weaponsUsed = getWeaponsUsed(individualKills);
-                    const killAmount = individualKills.length;
+            highlights.forEach((h: IHighlight) => {
+                const playerCamelized = camelizeIsh(h.playerName);
+                const teamCamelized = camelizeIsh(h.team);
+                const weaponsUsed = getWeaponsUsed(h.allKillsThatRoundForPlayer);
+                const killAmount = h.allKillsThatRoundForPlayer.length;
 
-                    const fragTypeDetails = getFragTypeDetails(
-                        fragType,
-                        killAmount,
-                        clutchOpponents
-                    );
+                const fragTypeDetails = getFragTypeDetails(
+                    h.fragType,
+                    killAmount,
+                    h.clutchOpponents
+                );
 
-                    const clockTimeFirstKill = getIngameClockTime(
-                        CSGO_ROUND_LENGTH - individualKills[0].time + 1
-                    );
+                const clockTimeFirstKill = getIngameClockTime(
+                    CSGO_ROUND_LENGTH - h.allKillsThatRoundForPlayer[0].time + 1
+                );
 
-                    const tickFirstKill = individualKills[0].tick - 200;
+                const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - 200;
 
-                    const fragSpeed = getFragSpeed(individualKills);
-                    const fragSpeedStr = fragSpeed ? "-" + fragSpeed : "";
+                const fragSpeed = getFragSpeed(h.allKillsThatRoundForPlayer);
+                const fragSpeedStr = fragSpeed ? "-" + fragSpeed : "";
 
-                    matchPrintFormat.push({
-                        fragType,
-                        fragCategory,
-                        tickFirstKill,
-                        fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
-                            !fragType.includes("deagle")
-                                ? "-" + weaponsUsed + fragSpeedStr
-                                : ""
-                        }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
-                            isAntieco ? "_#ANTIECO" : ""
-                        } ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
-                    });
-                }
-            );
+                matchPrintFormat.push({
+                    fragType: h.fragType,
+                    fragCategory: h.fragCategory,
+                    tickFirstKill,
+                    fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
+                        !h.fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeedStr : ""
+                    }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
+                        h.isAntieco ? "_#ANTIECO" : ""
+                    } ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
+                });
+            });
         });
 
         matchPrintFormat.sort((a, b) => {
@@ -191,20 +179,24 @@ function getFragTypeDetails(
 }
 
 //e.g. 1v3-4k vs just 4k etc
-function getFragSpeed(individualKills: IKill[]): "fast" | "spread" | null {
+function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | null {
     const FAST_KILL_SEC_THRESHOLD = 6;
     const SPREAD_KILL_SEC_THRESHOLD = 15; // time elapsed between kills
 
-    const killAmount = individualKills.length;
-    const lastKillTimestamp = CSGO_ROUND_LENGTH - individualKills[killAmount - 1].time + 1;
-    const firstKillTimestamp = CSGO_ROUND_LENGTH - individualKills[0].time + 1;
+    const killAmount = allKillsThatRoundForPlayer.length;
+    const lastKillTimestamp =
+        CSGO_ROUND_LENGTH - allKillsThatRoundForPlayer[killAmount - 1].time + 1;
+    const firstKillTimestamp = CSGO_ROUND_LENGTH - allKillsThatRoundForPlayer[0].time + 1;
 
     if (firstKillTimestamp - lastKillTimestamp < FAST_KILL_SEC_THRESHOLD) {
         return "fast";
     }
 
-    const killsWithNotableTimeBetween = individualKills.filter((kill, i) => {
-        return individualKills[i + 1]?.time - kill.time > SPREAD_KILL_SEC_THRESHOLD || false;
+    const killsWithNotableTimeBetween = allKillsThatRoundForPlayer.filter((kill, i) => {
+        return (
+            allKillsThatRoundForPlayer[i + 1]?.time - kill.time > SPREAD_KILL_SEC_THRESHOLD ||
+            false
+        );
     });
 
     if (killsWithNotableTimeBetween.length >= 2) {

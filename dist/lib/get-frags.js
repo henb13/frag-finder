@@ -101,9 +101,6 @@ function demoIsBroken(matchData) {
     return matchData.rounds.length <= 15;
 }
 function getFragtype(kills) {
-    if (kills.length > 5) {
-        console.log("KILL MORE THAN FIVE: ", kills.length);
-    }
     if (kills.length >= 3) {
         return `${kills.length}k`;
     }
