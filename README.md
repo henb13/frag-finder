@@ -1,10 +1,9 @@
 
+<div align="center" text-align="center">
 
 # frag-finder
 
 Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and spits out readable highlights meant as helpful filenames for CS:GO fragmovie recording.
-
-&#xa0;
 
 <p>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/HenB13/frag-finder?color=#85C740">
@@ -17,6 +16,7 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
   <a href="#example">Example</a> &#xa0;
 </p>
 
+</div>
 
 ## Example output and explanation ###
 

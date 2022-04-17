@@ -55,9 +55,9 @@ async function createFiles(data: IMatch[]) {
 
         matchPrintFormat.forEach(({ fragType, fragPrintFormat }) => {
             if (fragType === "3k") {
-                const text3ks = `\n${addSpaces(9)}----3k's:\n`;
-                if (!matchText.includes(text3ks)) {
-                    matchText.push(text3ks);
+                const headlineText3ks = `\n${addSpaces(9)}----3k's:\n`;
+                if (!matchText.includes(headlineText3ks)) {
+                    matchText.push(headlineText3ks);
                 }
 
                 matchText.push(`${addSpaces(15)}${fragPrintFormat}\n`);

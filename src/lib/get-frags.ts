@@ -3,9 +3,9 @@ import {
     IKill,
     IRoundKillPlayer,
     IClutch,
-    IMatchDataJSON,
-    IPlayerJSON,
-    IRoundJSON,
+    IMatchDataDTO,
+    IPlayerDTO,
+    IRoundDTO,
 } from "./types";
 
 const fs = require("fs").promises;
@@ -21,7 +21,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
 
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
-        const matchData: IMatchDataJSON = await JSON.parse(data);
+        const matchData: IMatchDataDTO = await JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
 
         matchesAnalyzed.push({
@@ -50,7 +50,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
             .filter((player) => player.length)
             .flat();
 
-        matchData.rounds.forEach((currentRound: IRoundJSON, roundIndex: number) => {
+        matchData.rounds.forEach((currentRound: IRoundDTO, roundIndex: number) => {
             matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
                 highlights: [],
@@ -144,7 +144,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
     return matchesAnalyzed;
 }
 
-function demoIsBroken(matchData: IMatchDataJSON): boolean {
+function demoIsBroken(matchData: IMatchDataDTO): boolean {
     return matchData.rounds.length <= 15;
 }
 
@@ -165,7 +165,7 @@ function hasDeagleHs(kills: IKill[]) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 
-function isHighlightAntieco(kills: IKill[], players: IPlayerJSON[], roundNumber: number) {
+function isHighlightAntieco(kills: IKill[], players: IPlayerDTO[], roundNumber: number) {
     const THRESHOLD = 1000;
     const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
@@ -177,7 +177,7 @@ function isHighlightAntieco(kills: IKill[], players: IPlayerJSON[], roundNumber:
     );
 }
 
-function getErrorMessage(matchData: IMatchDataJSON): string {
+function getErrorMessage(matchData: IMatchDataDTO): string {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${
         len === 1 ? "is" : "are"

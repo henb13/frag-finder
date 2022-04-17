@@ -1,4 +1,6 @@
-export interface IMatchDataJSON {
+/* This file represent the JSON data */
+
+export interface IMatchDataDTO {
     id: string;
     name: string;
     NameWithoutExtension: string;
@@ -27,24 +29,24 @@ export interface IMatchDataJSON {
     "3k_count": number;
     "2k_count": number;
     "1k_count": number;
-    team_ct: ITeamJSON;
-    team_t: ITeamJSON;
+    team_ct: ITeamDTO;
+    team_t: ITeamDTO;
     team_surrender: null;
-    team_winner: ITeamJSON;
-    rounds: IRoundJSON[];
-    players: IPlayerJSON[];
-    most_killing_weapon: IWeaponJSON;
-    overtimes: IOvertimeJSON[];
-    most_headshot_player: IMostJSON;
-    most_bomb_planted_player: IMostJSON;
-    most_entry_kill: IMostJSON;
-    bomb_planted: IBombJSON[];
+    team_winner: ITeamDTO;
+    rounds: IRoundDTO[];
+    players: IPlayerDTO[];
+    most_killing_weapon: IWeaponDTO;
+    overtimes: IOvertimeDTO[];
+    most_headshot_player: IMostDTO;
+    most_bomb_planted_player: IMostDTO;
+    most_entry_kill: IMostDTO;
+    bomb_planted: IBombDTO[];
     bomb_defused: any[];
-    bomb_exploded: IBombJSON[];
-    kills: IKillJSON[];
-    weapon_fired: IWeaponFiredJSON[];
-    player_blinded_events: IPlayerBlindedEventJSON[];
-    player_hurted: IPlayerHurtJSON[];
+    bomb_exploded: IBombDTO[];
+    kills: IKillDTO[];
+    weapon_fired: IWeaponFiredDTO[];
+    player_blinded_events: IPlayerBlindedEventDTO[];
+    player_hurted: IPlayerHurtDTO[];
     kill_count: number;
     clutch_count: number;
     trade_kill_count: number;
@@ -57,9 +59,9 @@ export interface IMatchDataJSON {
     decoy_thrown_count: number;
     molotov_thrown_count: number;
     incendiary_thrown_count: number;
-    decoys: IUtilityEventJSON[];
-    incendiaries: IUtilityEventJSON[];
-    molotovs: IUtilityEventJSON[];
+    decoys: IUtilityEventDTO[];
+    incendiaries: IUtilityEventDTO[];
+    molotovs: IUtilityEventDTO[];
     damage_health_count: number;
     damage_armor_count: number;
     average_health_damage: number;
@@ -84,53 +86,53 @@ export interface IMatchDataJSON {
     chat_messages: string[];
 }
 
-export interface IBombJSON {
-    site: Site;
+export interface IBombDTO {
+    site: ISiteDTO;
     planter_steamid: string;
     planter_name: string;
     tick: number;
     seconds: number;
 }
 
-export enum Site {
+export enum ISiteDTO {
     A = "A",
     B = "B",
 }
 
-export interface IUtilityEventJSON {
+export interface IUtilityEventDTO {
     thrower_steamid: string;
     thrower_name: string;
-    thrower_side: TeamSides;
-    heatmap_point: IHeatmapPointJSON;
+    thrower_side: ITeamSidesDTO;
+    heatmap_point: IHeatmapPointDTO;
     round_number: number;
     tick: number;
     seconds: number;
     flashed_players_steamid?: string[];
 }
 
-export interface IHeatmapPointJSON {
+export interface IHeatmapPointDTO {
     X: number;
     Y: number;
 }
 
-export enum TeamSides {
+export enum ITeamSidesDTO {
     CT = "CT",
     T = "T",
     Empty = "",
 }
 
-export interface IKillJSON {
+export interface IKillDTO {
     killer_steamid: string;
     killed_steamid: string;
     assister_steamid: string;
-    weapon: IWeaponJSON;
-    heatmap_point: IKillHeatmapPointJSON;
+    weapon: IWeaponDTO;
+    heatmap_point: IKillHeatmapPointDTO;
     killer_vel_x: number;
     killer_vel_y: number;
     killer_vel_z: number;
-    killer_side: TeamSides;
+    killer_side: ITeamSidesDTO;
     killer_team: string | null;
-    killed_side: TeamSides;
+    killed_side: ITeamSidesDTO;
     killed_team: string;
     killer_name: string;
     killed_name: string;
@@ -149,14 +151,14 @@ export interface IKillJSON {
     seconds: number;
 }
 
-export interface IKillHeatmapPointJSON extends IHeatmapPointJSON {
+export interface IKillHeatmapPointDTO extends IHeatmapPointDTO {
     killer_x: number;
     killer_y: number;
     victim_x: number;
     victim_y: number;
 }
 
-export interface IWeaponJSON {
+export interface IWeaponDTO {
     element: number;
     type: number;
     weapon_name: CommonWeaponNames | string;
@@ -191,7 +193,7 @@ export enum CommonWeaponNames { //TODO: Replace i getWeaponName
     ZeusTazer = "Zeus (Tazer)",
 }
 
-export interface IMostJSON {
+export interface IMostDTO {
     $id: string;
     steamid: string;
     name: string;
@@ -233,13 +235,13 @@ export interface IMostJSON {
     equipement_value_rounds: { [key: string]: number };
     rounds_money_earned: { [key: string]: number };
     time_death_rounds: { [key: string]: number };
-    entry_kills: IEntryKillJSON[];
-    entry_hold_kills: IEntryKillJSON[];
-    kills: IKillJSON[];
-    deaths: IKillJSON[];
-    assits: IKillJSON[];
-    players_hurted: IPlayerHurtJSON[];
-    clutches: IClutchJSON[];
+    entry_kills: IEntryKillDTO[];
+    entry_hold_kills: IEntryKillDTO[];
+    kills: IKillDTO[];
+    deaths: IKillDTO[];
+    assits: IKillDTO[];
+    players_hurted: IPlayerHurtDTO[];
+    clutches: IClutchDTO[];
     rank_old: number;
     rank_new: number;
     win_count: number;
@@ -278,7 +280,7 @@ export interface IMostJSON {
     avg_time_death: number;
 }
 
-export interface IClutchJSON {
+export interface IClutchDTO {
     opponent_count: number;
     has_won: boolean;
     round_number: number;
@@ -286,29 +288,29 @@ export interface IClutchJSON {
     seconds: number;
 }
 
-export interface IEntryKillJSON {
+export interface IEntryKillDTO {
     round_number: number;
     killer_steamid: string;
     killer_name: string;
-    killer_side: TeamSides;
+    killer_side: ITeamSidesDTO;
     killed_steamid: string;
     killed_name: string;
-    killed_side: TeamSides;
-    weapon: IWeaponJSON;
+    killed_side: ITeamSidesDTO;
+    weapon: IWeaponDTO;
     has_won: boolean;
     has_won_round: boolean;
     tick: number;
     seconds: number;
 }
 
-export interface IPlayerHurtJSON {
+export interface IPlayerHurtDTO {
     hurted_steamid: string;
     attacker_steamid: string;
-    attacker_side: TeamSides;
+    attacker_side: ITeamSidesDTO;
     armor_damage: number;
     health_damage: number;
     hitgroup: number;
-    weapon: IWeaponJSON;
+    weapon: IWeaponDTO;
     round_number: number;
     victim_x: number;
     victim_y: number;
@@ -318,13 +320,13 @@ export interface IPlayerHurtJSON {
     seconds: number;
 }
 
-export interface IOvertimeJSON {
+export interface IOvertimeDTO {
     number: number;
     score_team_ct: number;
     score_team_t: number;
 }
 
-export interface IPlayerBlindedEventJSON {
+export interface IPlayerBlindedEventDTO {
     thrower_steamid: string;
     thrower_name: string;
     thrower_team_name: string;
@@ -337,7 +339,7 @@ export interface IPlayerBlindedEventJSON {
     seconds: number;
 }
 
-export interface IPlayerJSON {
+export interface IPlayerDTO {
     steamid: string;
     name: string;
     kill_count: number;
@@ -378,13 +380,13 @@ export interface IPlayerJSON {
     equipement_value_rounds: { [key: string]: number };
     rounds_money_earned: { [key: string]: number };
     time_death_rounds: { [key: string]: number };
-    entry_kills: IEntryKillJSON[];
-    entry_hold_kills: IEntryKillJSON[];
-    kills: IKillJSON[];
-    deaths: IKillJSON[];
-    assits: IKillJSON[];
-    players_hurted: IPlayerHurtJSON[];
-    clutches: IClutchJSON[];
+    entry_kills: IEntryKillDTO[];
+    entry_hold_kills: IEntryKillDTO[];
+    kills: IKillDTO[];
+    deaths: IKillDTO[];
+    assits: IKillDTO[];
+    players_hurted: IPlayerHurtDTO[];
+    clutches: IClutchDTO[];
     rank_old: number;
     rank_new: number;
     win_count: number;
@@ -423,15 +425,15 @@ export interface IPlayerJSON {
     avg_time_death: number;
 }
 
-export interface IRoundJSON {
+export interface IRoundDTO {
     number: number;
     tick: number;
     end_tick: number;
     end_tick_officially: number;
     freezetime_end_tick: number;
     end_reason: EndReason;
-    kills: IKillJSON[];
-    winner_side: TeamSides;
+    kills: IKillDTO[];
+    winner_side: ITeamSidesDTO;
     winner_name: string;
     team_t_name: string;
     team_ct_name: string;
@@ -451,29 +453,29 @@ export interface IRoundJSON {
     bomb_defused_count: number;
     bomb_exploded_count: number;
     bomb_planted_count: number;
-    entry_kill: IEntryKillJSON | null;
-    entry_hold_kill: IEntryKillJSON | null;
-    bomb_planted: IBombJSON | null;
+    entry_kill: IEntryKillDTO | null;
+    entry_hold_kill: IEntryKillDTO | null;
+    bomb_planted: IBombDTO | null;
     bomb_defused: null;
-    bomb_exploded: IBombJSON | null;
+    bomb_exploded: IBombDTO | null;
     type: number;
     team_trouble_name: string | null;
-    side_trouble: TeamSides;
+    side_trouble: ITeamSidesDTO;
     flashbang_thrown_count: number;
     smoke_thrown_count: number;
     he_thrown_count: number;
     decoy_thrown_count: number;
     molotov_thrown_count: number;
     incendiary_thrown_count: number;
-    players_hurted: IPlayerHurtJSON[];
-    weapon_fired: IWeaponFiredJSON[];
+    players_hurted: IPlayerHurtDTO[];
+    weapon_fired: IWeaponFiredDTO[];
     duration: number;
     damage_health_count: number;
     damage_armor_count: number;
     average_health_damage_per_player: number;
-    flashbangs_exploded: IUtilityEventJSON[];
-    smokes_started: IUtilityEventJSON[];
-    he_exploded: IUtilityEventJSON[];
+    flashbangs_exploded: IUtilityEventDTO[];
+    smokes_started: IUtilityEventDTO[];
+    he_exploded: IUtilityEventDTO[];
 }
 
 export enum EndReason {
@@ -482,12 +484,12 @@ export enum EndReason {
     TerroristsWin = "Terrorists win",
 }
 
-export interface IWeaponFiredJSON {
-    heatmap_point: IHeatmapPointJSON;
+export interface IWeaponFiredDTO {
+    heatmap_point: IHeatmapPointDTO;
     shooter_steamid: string;
     shooter_name: string;
-    shooter_side: TeamSides;
-    weapon: IWeaponJSON;
+    shooter_side: ITeamSidesDTO;
+    weapon: IWeaponDTO;
     round_number: number;
     shooter_vel_x: number;
     shooter_vel_y: number;
@@ -501,11 +503,11 @@ export interface IWeaponFiredJSON {
     seconds: number;
 }
 
-export interface ITeamJSON {
+export interface ITeamDTO {
     team_name: string;
     score: number;
     score_first_half: number;
     score_second_half: number;
-    team_players: IPlayerJSON[];
+    team_players: IPlayerDTO[];
     $id?: string;
 }
