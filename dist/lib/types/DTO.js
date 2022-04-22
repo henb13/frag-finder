@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EndReason = exports.CommonWeaponNames = exports.TeamSides = exports.Site = void 0;
-var Site;
-(function (Site) {
-    Site["A"] = "A";
-    Site["B"] = "B";
-})(Site = exports.Site || (exports.Site = {}));
-var TeamSides;
-(function (TeamSides) {
-    TeamSides["CT"] = "CT";
-    TeamSides["T"] = "T";
-    TeamSides["Empty"] = "";
-})(TeamSides = exports.TeamSides || (exports.TeamSides = {}));
+exports.EndReason = exports.CommonWeaponNames = exports.ITeamSidesDTO = exports.ISiteDTO = void 0;
+var ISiteDTO;
+(function (ISiteDTO) {
+    ISiteDTO["A"] = "A";
+    ISiteDTO["B"] = "B";
+})(ISiteDTO = exports.ISiteDTO || (exports.ISiteDTO = {}));
+var ITeamSidesDTO;
+(function (ITeamSidesDTO) {
+    ITeamSidesDTO["CT"] = "CT";
+    ITeamSidesDTO["T"] = "T";
+    ITeamSidesDTO["Empty"] = "";
+})(ITeamSidesDTO = exports.ITeamSidesDTO || (exports.ITeamSidesDTO = {}));
 var CommonWeaponNames;
 (function (CommonWeaponNames) {
     CommonWeaponNames["Ak47"] = "AK-47";

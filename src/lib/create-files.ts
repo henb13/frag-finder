@@ -1,8 +1,8 @@
 import { IHighlight, IKill, IMatch, IMatchPrintFormatSingle } from "./types";
 
 const fs = require("fs").promises;
-const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
-const { camelizeIsh } = require("./utils/utils.js");
+const { CSGO_ROUND_LENGTH } = require("./utils/constants");
+const { camelizeIsh } = require("./utils/utils");
 
 async function createFiles(data: IMatch[]) {
     const dir = __dirname + "../../../exports";
