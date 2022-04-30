@@ -1,7 +1,10 @@
 const { addSpaces } = require("../../lib/create-files");
 
 describe("addSpaces works", () => {
-    test("should return four spaces", () => {
+    it("should return four spaces", () => {
         expect(addSpaces(4)).toBe("    ");
+    });
+    it("should return an empty string", () => {
+        expect(addSpaces(0)).toBe("");
     });
 });

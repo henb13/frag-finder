@@ -1,4 +1,4 @@
-import { IHighlight, IKill, IMatch, IMatchPrintFormatSingle } from "./types";
+import { IHighlight, IKill, IMatch, IMatchPrintFormatSingle } from "../types";
 
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants");

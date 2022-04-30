@@ -6,7 +6,7 @@ import {
     IMatchDataDTO,
     IPlayerDTO,
     IRoundDTO,
-} from "./types";
+} from "../types";
 
 const fs = require("fs").promises;
 const path = require("path");
@@ -58,6 +58,11 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
 
             let roundkillsPerPlayer = currentRound.kills.reduce(
                 (acc: IRoundKillPlayer[], kill) => {
+                    //Do not include teamkills.
+                    if (kill.killer_team !== kill.killed_team) {
+                        return acc;
+                    }
+
                     const killMapped = {
                         tick: kill.tick,
                         time: kill.time_death_seconds,
