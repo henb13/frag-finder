@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants");
 const { camelizeIsh } = require("./utils/utils");
-async function createFiles(data) {
-    const dir = __dirname + "../../../exports";
+async function createFiles(data, options = {}) {
+    const dir = __dirname + options.outDir || "../../../exports";
     await fs.writeFile(dir + "/highlights.txt", "\n");
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];

@@ -21,7 +21,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
 
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
-        const matchData: IMatchDataDTO = await JSON.parse(data);
+        const matchData: IMatchDataDTO = JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
 
         matchesAnalyzed.push({
@@ -59,7 +59,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
             let roundkillsPerPlayer = currentRound.kills.reduce(
                 (acc: IRoundKillPlayer[], kill) => {
                     //Do not include teamkills.
-                    if (kill.killer_team !== kill.killed_team) {
+                    if (kill.killer_team === kill.killed_team) {
                         return acc;
                     }
 

@@ -9,7 +9,7 @@ async function getFrags(playerChosenSteamid = null) {
     const matchesAnalyzed = [];
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
-        const matchData = await JSON.parse(data);
+        const matchData = JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
         matchesAnalyzed.push({
             demoName: matchData.name.replace(".dem", ""),
@@ -40,6 +40,9 @@ async function getFrags(playerChosenSteamid = null) {
                 highlights: [],
             });
             let roundkillsPerPlayer = currentRound.kills.reduce((acc, kill) => {
+                if (kill.killer_team === kill.killed_team) {
+                    return acc;
+                }
                 const killMapped = {
                     tick: kill.tick,
                     time: kill.time_death_seconds,

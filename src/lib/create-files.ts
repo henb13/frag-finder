@@ -1,11 +1,17 @@
-import { IHighlight, IKill, IMatch, IMatchPrintFormatSingle } from "../types";
+import {
+    CreateFilesOptions,
+    IHighlight,
+    IKill,
+    IMatch,
+    IMatchPrintFormatSingle,
+} from "../types";
 
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants");
 const { camelizeIsh } = require("./utils/utils");
 
-async function createFiles(data: IMatch[]) {
-    const dir = __dirname + "../../../exports";
+async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
+    const dir = __dirname + options.outDir || "../../../exports";
     await fs.writeFile(dir + "/highlights.txt", "\n");
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];
@@ -59,7 +65,6 @@ async function createFiles(data: IMatch[]) {
                 if (!matchText.includes(headlineText3ks)) {
                     matchText.push(headlineText3ks);
                 }
-
                 matchText.push(`${addSpaces(15)}${fragPrintFormat}\n`);
             } else if (!fragType.includes("deagle")) {
                 matchText.push(`${addSpaces(3)}${fragPrintFormat}\n`);
@@ -94,39 +99,30 @@ function getWeaponsUsed(kills: IKill[]): string {
                     setWeaponName(shortVersion, acc);
                     return acc;
                 }
-
                 case "Desert Eagle":
                     setWeaponName("deagle", acc);
                     return acc;
-
                 case "Galil AR":
                     setWeaponName("Galil", acc);
                     return acc;
-
                 case "Scar-20":
                     setWeaponName("Autosniper", acc);
                     return acc;
-
                 case "Incendiary":
                     setWeaponName("molotov", acc);
                     return acc;
-
                 case "SSG 08":
                     setWeaponName("scout", acc);
                     return acc;
-
                 case "SG 553":
                     setWeaponName("krieg", acc);
                     return acc;
-
                 case "UMP-45":
                     setWeaponName("UMP", acc);
                     return acc;
-
                 case "MP5-SD":
                     setWeaponName("mp5", acc);
                     return acc;
-
                 default:
                     if (curr[1] === 1) {
                         setWeaponName("pistol", acc);
@@ -184,8 +180,10 @@ function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | 
     const SPREAD_KILL_SEC_THRESHOLD = 15; // time elapsed between kills
 
     const killAmount = allKillsThatRoundForPlayer.length;
+
     const lastKillTimestamp =
         CSGO_ROUND_LENGTH - allKillsThatRoundForPlayer[killAmount - 1].time + 1;
+
     const firstKillTimestamp = CSGO_ROUND_LENGTH - allKillsThatRoundForPlayer[0].time + 1;
 
     if (firstKillTimestamp - lastKillTimestamp < FAST_KILL_SEC_THRESHOLD) {

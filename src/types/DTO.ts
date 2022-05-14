@@ -164,7 +164,7 @@ export interface IWeaponDTO {
     weapon_name: CommonWeaponNames | string;
 }
 
-export enum CommonWeaponNames { //TODO: Replace i getWeaponName
+export enum CommonWeaponNames { //TODO: Replace in getWeaponName
     Ak47 = "AK-47",
     Aug = "AUG",
     Awp = "AWP",

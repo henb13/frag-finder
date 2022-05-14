@@ -7,16 +7,19 @@
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
+    "copyfiles": "^2.4.1",
     "eslint": "^7.14.0",
     "jest": "^27.4.7",
+    "rimraf": "^3.0.2",
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   },
   "scripts": {
     "start": "node dist/app.js",
-    "build": "rm -rf dist && tsc --noEmitOnError",
+    "build": "rimraf dist && tsc --noEmitOnError && npm run copy-test-files",
     "build-and-run": "npm run build && npm start",
-    "test": "jest"
+    "copy-test-files": "copyfiles -u 1 src/__tests__/**/* -e **/*{.js,.ts} dist",
+    "test": "npm run build && jest"
   },
   "author": "https://github.com/HenB13",
   "license": "MIT"
