@@ -1,0 +1,103 @@
+
+**playdemo 1-55b47a82-85da-4cad-aea3-05d0ae830ac2-1-1
+
+    Unable to extract highlights from this match. There are no rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.
+
+
+
+**playdemo anomerdog@23086
+
+   x._Munyanya_4k-AK(3)-HE(1)_mirage_team-teamHalfNoLife_r02_#ANTIECO 1:41 (demo_gototick 23086)
+   x._Munyanya_4k-AK_mirage_team-teamHalfNoLife_r04 1:33 (demo_gototick 40602)
+   x._An0mXD_1v3-AK_mirage_team-teamHalfNoLife_r08 1:10 (demo_gototick 92600)
+   x._TSTHANHI_1v3-AK_mirage_team-teamFoxy8_r26 1:18 (demo_gototick 293338)
+
+         ----3k's:
+               x._HalfNoLife_3k-MAC-10(1)-M4(2)_mirage_team-teamHalfNoLife_r03 1:37 (demo_gototick 30527)
+               x._Kert1s_3k-deagle(2)-AK(1)_mirage_team-teamFoxy8_r04 1:17 (demo_gototick 42656)
+               x._exjet_3k-M4_mirage_team-teamFoxy8_r07 1:04 (demo_gototick 79914)
+               x._Munyanya_3k-Galil_mirage_team-teamHalfNoLife_r09 1:25 (demo_gototick 100154)
+               x._SHEGVI9_3k-AK-spread_mirage_team-teamHalfNoLife_r10 1:42 (demo_gototick 107666)
+               x._Munyanya_3k-M4-fast_mirage_team-teamHalfNoLife_r13 1:32 (demo_gototick 142585)
+               x._Munyanya_3k-AK_mirage_team-teamHalfNoLife_r14 1:38 (demo_gototick 150883)
+               x._HalfNoLife_3k-pistol_mirage_team-teamHalfNoLife_r16 1:43 (demo_gototick 169373)
+               x._An0mXD_3k-deagle_mirage_team-teamHalfNoLife_r18 1:16 (demo_gototick 199047)
+               x._Munyanya_3k-AWP_mirage_team-teamHalfNoLife_r28 1:14 (demo_gototick 314148)
+               x._TSTHANHI_3k-deagle(1)-AWP(2)_mirage_team-teamFoxy8_r29 1:18 (demo_gototick 322353)
+
+
+
+**playdemo runde18-17@214798
+
+   x._zPierry_1v3-4k-deagle(3)-M4(1)-spread_mirage_team-teamCAPTAINcurly_r20 1:20 (demo_gototick 214798)
+   x._suunD_1v3-AK_mirage_team-teamCAPTAINcurly_r27 1:19 (demo_gototick 295154)
+   x._thelvy_4k-Famas-spread_mirage_team-teamThelvy_r29 1:25 (demo_gototick 309868)
+   x._CAPTAINcurly_ACE-AK_mirage_team-teamCAPTAINcurly_r36 1:31 (demo_gototick 406787)
+
+         ----3k's:
+               x._halle1uja_3k-AWP_mirage_team-teamThelvy_r07 0:37 (demo_gototick 78710)
+               x._suunD_3k-AWP_mirage_team-teamCAPTAINcurly_r08 1:11 (demo_gototick 93093)
+               x._adpt_3k-AK(1)-HE(2)_mirage_team-teamCAPTAINcurly_r11 1:40 (demo_gototick 125376)
+               x._KuSnIkA_3k-AK_mirage_team-teamThelvy_r11 1:19 (demo_gototick 128068)
+               x._suunD_3k-AWP_mirage_team-teamCAPTAINcurly_r12 1:35 (demo_gototick 134291)
+               x._suunD_3k-AWP_mirage_team-teamCAPTAINcurly_r13 1:44 (demo_gototick 140489)
+               x._Geor4nD_3k-deagle(1)-M4(2)_mirage_team-teamThelvy_r14 1:43 (demo_gototick 147442)
+               x._KuSnIkA_3k-deagle_mirage_team-teamThelvy_r22 1:35 (demo_gototick 245323)
+               x._KuSnIkA_3k-AK-spread_mirage_team-teamThelvy_r23 1:37 (demo_gototick 251431)
+               x._coba_3k-AWP_mirage_team-teamThelvy_r26 1:41 (demo_gototick 287202)
+               x._thelvy_3k-Famas-fast_mirage_team-teamThelvy_r28 1:33 (demo_gototick 302202)
+               x._thelvy_3k-AK_mirage_team-teamThelvy_r30 0:37 (demo_gototick 331002)
+               x._suunD_3k-AK-fast_mirage_team-teamCAPTAINcurly_r31 1:26 (demo_gototick 340514)
+               x._zPierry_3k-AK_mirage_team-teamCAPTAINcurly_r32 1:17 (demo_gototick 351369)
+               x._KuSnIkA_3k-AWP(2)-deagle(1)-spread_mirage_team-teamThelvy_r33 1:36 (demo_gototick 358278)
+               x._Geor4nD_3k-AK(2)-AWP(1)_mirage_team-teamThelvy_r34 1:22 (demo_gototick 383240)
+               x._matielele_3k-M4-fast_mirage_team-teamCAPTAINcurly_r35 1:33 (demo_gototick 398977)
+
+
+
+**playdemo suunderbae@81947
+
+   x._suunD_ACE-deagle(4)-AWP(1)_vertigo_team-teamArsn1ki_r07 1:36 (demo_gototick 81947)
+   x._Dubskjii_4k-M4(3)-deagle(1)_vertigo_team-teamDubskjii_r25 1:40 (demo_gototick 261610)
+
+         ----3k's:
+               x._Clatalissa_3k-M4-fast_vertigo_team-teamArsn1ki_r03_#ANTIECO 0:47 (demo_gototick 38788)
+               x._LtDeN_3k-deagle(1)-M4(2)-spread_vertigo_team-teamDubskjii_r04 1:21 (demo_gototick 45603)
+               x._Wilfster_3k-AK-spread_vertigo_team-teamDubskjii_r07 1:33 (demo_gototick 82327)
+               x._Dubskjii_3k-krieg_vertigo_team-teamDubskjii_r08 0:48 (demo_gototick 103124)
+               x._suunD_3k-M4_vertigo_team-teamArsn1ki_r09 0:39 (demo_gototick 116454)
+               x._HarryP0tter_3k-AK_vertigo_team-teamDubskjii_r11 1:48 (demo_gototick 136775)
+               x._GnL_3k-AUG-fast_vertigo_team-teamArsn1ki_r13 1:29 (demo_gototick 152413)
+               x._Harrik_3k-AK-fast_vertigo_team-teamDubskjii_r14 1:13 (demo_gototick 163116)
+               x._Dubskjii_3k-AK_vertigo_team-teamDubskjii_r15 1:38 (demo_gototick 167741)
+               x._HarryP0tter_3k-pistol_vertigo_team-teamDubskjii_r16 1:33 (demo_gototick 179422)
+               x._Dubskjii_3k-Famas_vertigo_team-teamDubskjii_r17_#ANTIECO 1:45 (demo_gototick 185609)
+               x._Clatalissa_3k-MAC-10_vertigo_team-teamArsn1ki_r19 1:28 (demo_gototick 205861)
+               x._Wilfster_3k-M4_vertigo_team-teamDubskjii_r23 1:34 (demo_gototick 246560)
+               x._GnL_3k-AK_vertigo_team-teamArsn1ki_r24 1:47 (demo_gototick 251005)
+               x._Wilfster_3k-AK_vertigo_team-teamDubskjii_r24 1:22 (demo_gototick 254095)
+
+
+
+**playdemo ViceVertigo@20910
+
+   x._Zyrosuzu_1v4-pistol_vertigo_team-teamLivH_r01 1:10 (demo_gototick 20910)
+   x._3ck000_4k-MP9(3)-Galil(1)_vertigo_team-teamLivH_r02 1:37 (demo_gototick 27677)
+   x._V1ceeee_4k-AK_vertigo_team-teamCAPTAINcurly_r06 1:21 (demo_gototick 71913)
+
+         ----3k's:
+               x._V1ceeee_3k-AK-spread_vertigo_team-teamCAPTAINcurly_r04 1:32 (demo_gototick 43738)
+               x._Zyrosuzu_3k-M4-fast_vertigo_team-teamLivH_r04 1:05 (demo_gototick 47138)
+               x._Markzy_3k-Galil_vertigo_team-teamCAPTAINcurly_r05_#ANTIECO 1:41 (demo_gototick 64390)
+               x._CAPTAINcurly_3k-AK(2)-deagle(1)-fast_vertigo_team-teamCAPTAINcurly_r07_#ANTIECO 1:46 (demo_gototick 76506)
+               x._T4kem_3k-AK_vertigo_team-teamCAPTAINcurly_r08 0:52 (demo_gototick 96850)
+               x._Markzy_3k-AK_vertigo_team-teamCAPTAINcurly_r12 1:44 (demo_gototick 142756)
+               x._Markzy_3k-AK_vertigo_team-teamCAPTAINcurly_r15 1:05 (demo_gototick 187365)
+               x._Zyrosuzu_3k-AK_vertigo_team-teamLivH_r20 1:00 (demo_gototick 239043)
+               x._T4kem_3k-M4_vertigo_team-teamCAPTAINcurly_r21 0:35 (demo_gototick 255625)
+               x._Tree60_3k-AK(2)-molotov(1)_vertigo_team-teamLivH_r22 1:23 (demo_gototick 264106)
+               x._Markzy_3k-AUG-fast_vertigo_team-teamCAPTAINcurly_r24 1:29 (demo_gototick 286678)
+               x._Tree60_3k-AK_vertigo_team-teamLivH_r25 1:03 (demo_gototick 302785)
+
+
+

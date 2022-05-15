@@ -1,4 +1,3 @@
-// export {};
 import { getFrags } from "./lib/get-frags";
 import { createFiles } from "./lib/create-files";
 

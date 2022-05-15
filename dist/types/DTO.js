@@ -1,15 +1,18 @@
-export var ISiteDTO;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndReason = exports.CommonWeaponNames = exports.ITeamSidesDTO = exports.ISiteDTO = void 0;
+var ISiteDTO;
 (function (ISiteDTO) {
     ISiteDTO["A"] = "A";
     ISiteDTO["B"] = "B";
-})(ISiteDTO || (ISiteDTO = {}));
-export var ITeamSidesDTO;
+})(ISiteDTO = exports.ISiteDTO || (exports.ISiteDTO = {}));
+var ITeamSidesDTO;
 (function (ITeamSidesDTO) {
     ITeamSidesDTO["CT"] = "CT";
     ITeamSidesDTO["T"] = "T";
     ITeamSidesDTO["Empty"] = "";
-})(ITeamSidesDTO || (ITeamSidesDTO = {}));
-export var CommonWeaponNames;
+})(ITeamSidesDTO = exports.ITeamSidesDTO || (exports.ITeamSidesDTO = {}));
+var CommonWeaponNames;
 (function (CommonWeaponNames) {
     CommonWeaponNames["Ak47"] = "AK-47";
     CommonWeaponNames["Aug"] = "AUG";
@@ -37,10 +40,10 @@ export var CommonWeaponNames;
     CommonWeaponNames["UspS"] = "USP-S";
     CommonWeaponNames["Xm1014"] = "XM1014";
     CommonWeaponNames["ZeusTazer"] = "Zeus (Tazer)";
-})(CommonWeaponNames || (CommonWeaponNames = {}));
-export var EndReason;
+})(CommonWeaponNames = exports.CommonWeaponNames || (exports.CommonWeaponNames = {}));
+var EndReason;
 (function (EndReason) {
     EndReason["BombExploded"] = "Bomb exploded";
     EndReason["CounterTerroristsWin"] = "Counter-Terrorists win";
     EndReason["TerroristsWin"] = "Terrorists win";
-})(EndReason || (EndReason = {}));
+})(EndReason = exports.EndReason || (exports.EndReason = {}));

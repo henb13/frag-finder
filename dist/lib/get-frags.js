@@ -1,12 +1,18 @@
-import path from "path";
-import { promises as fs } from "fs";
-export async function getFrags(options = {}) {
-    const dir = path.resolve(__dirname, options.jsonDir || "../../json");
-    const files = await fs.readdir(dir);
-    const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getErrorMessage = exports.isHighlightAntieco = exports.hasDeagleHs = exports.getFragtype = exports.demoIsBroken = exports.getFrags = void 0;
+const path_1 = __importDefault(require("path"));
+const fs_1 = require("fs");
+async function getFrags(options = {}) {
+    const dir = path_1.default.resolve(__dirname, options.jsonDir || "../../json");
+    const files = await fs_1.promises.readdir(dir);
+    const jsonFiles = files.filter((file) => path_1.default.extname(file).toLowerCase() === ".json");
     const matchesAnalyzed = [];
     for (let i = 0; i < jsonFiles.length; i++) {
-        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`, { encoding: "utf8" });
+        const data = await fs_1.promises.readFile(`${dir}/${jsonFiles[i]}`, { encoding: "utf8" });
         const matchData = JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
         matchesAnalyzed.push({
@@ -95,10 +101,12 @@ export async function getFrags(options = {}) {
     }
     return matchesAnalyzed;
 }
-export function demoIsBroken(matchData) {
+exports.getFrags = getFrags;
+function demoIsBroken(matchData) {
     return matchData.rounds.length <= 15;
 }
-export function getFragtype(kills) {
+exports.demoIsBroken = demoIsBroken;
+function getFragtype(kills) {
     if (kills.length >= 3) {
         return `${kills.length}k`;
     }
@@ -108,17 +116,21 @@ export function getFragtype(kills) {
     }
     return `${kills.length}k`;
 }
-export function hasDeagleHs(kills) {
+exports.getFragtype = getFragtype;
+function hasDeagleHs(kills) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
-export function isHighlightAntieco(kills, players, roundNumber) {
+exports.hasDeagleHs = hasDeagleHs;
+function isHighlightAntieco(kills, players, roundNumber) {
     const THRESHOLD = 1000;
     const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
     return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNumber] < THRESHOLD) && ![1, 16].includes(roundNumber));
 }
-export function getErrorMessage(matchData) {
+exports.isHighlightAntieco = isHighlightAntieco;
+function getErrorMessage(matchData) {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? ` ${len}` : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
     return errorMessage;
 }
+exports.getErrorMessage = getErrorMessage;

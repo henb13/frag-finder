@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
       "outDir": "./dist",
-      "target": "es2021",
+      "target": "esnext",
       "lib": ["es2021"],
-      "module": "ES2020",
+      "module": "commonjs",
       "moduleResolution": "node",
       "allowJs": true,
       "strictNullChecks": true,
@@ -20,4 +20,5 @@
       "strict": true
     },
     "include": ["./src/**/*"],
+    "exclude": ["./src/types"]
   }
