@@ -37,20 +37,17 @@ async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
             continue;
         }
 
-        const allNotableClutchesInMatch: IClutch[] = matchData.players
-            .map((player) => {
-                return player.clutches
-                    .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
-                    .map((clutch) => {
-                        return {
-                            playerSteamid: player.steamid,
-                            opponentCount: clutch.opponent_count,
-                            roundNumber: clutch.round_number,
-                        };
-                    });
-            })
-            .filter((player) => player.length)
-            .flat();
+        const allNotableClutchesInMatch: IClutch[] = matchData.players.flatMap((player) => {
+            return player.clutches
+                .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
+                .map((clutch) => {
+                    return {
+                        playerSteamid: player.steamid,
+                        opponentCount: clutch.opponent_count,
+                        roundNumber: clutch.round_number,
+                    };
+                });
+        });
 
         matchData.rounds.forEach((currentRound: IRoundDTO, roundIndex: number) => {
             matchesAnalyzed[i].rounds.push({

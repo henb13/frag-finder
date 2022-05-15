@@ -20,8 +20,7 @@ async function getFrags(options = {}) {
             matchesAnalyzed[i].errorMessage = getErrorMessage(matchData);
             continue;
         }
-        const allNotableClutchesInMatch = matchData.players
-            .map((player) => {
+        const allNotableClutchesInMatch = matchData.players.flatMap((player) => {
             return player.clutches
                 .filter((clutch) => clutch.has_won && clutch.opponent_count >= 3)
                 .map((clutch) => {
@@ -31,9 +30,7 @@ async function getFrags(options = {}) {
                     roundNumber: clutch.round_number,
                 };
             });
-        })
-            .filter((player) => player.length)
-            .flat();
+        });
         matchData.rounds.forEach((currentRound, roundIndex) => {
             matchesAnalyzed[i].rounds.push({
                 roundNumber: currentRound.number,
