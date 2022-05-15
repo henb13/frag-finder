@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
@@ -20,7 +20,7 @@
     "build-and-run": "npm run build && npm start",
     "copy-test-files": "copyfiles -u 1 src/__tests__/**/* -e \"**/*{.js,.ts}\" dist",
     "create-text-file": "cross-env TEXTFILE=1 npm run start ",
-    "test": "npm run build && jest"
+    "test": "jest"
   },
   "author": "https://github.com/HenB13",
   "license": "MIT"

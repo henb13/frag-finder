@@ -121,7 +121,7 @@ function isHighlightAntieco(kills, players, roundNumber) {
 }
 function getErrorMessage(matchData) {
     const len = matchData.rounds.length;
-    const errorMessage = `Unable to extract highlights from this match. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? " " + len : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
+    const errorMessage = `Unable to extract highlights from this match. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? ` ${len}` : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
     return errorMessage;
 }
 module.exports = {

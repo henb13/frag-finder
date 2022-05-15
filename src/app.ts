@@ -1,5 +1,6 @@
-const { getFrags } = require("./lib/get-frags.js");
-const { createFiles } = require("./lib/create-files.js");
+export {};
+const { getFrags } = require("./lib/get-frags.ts");
+const { createFiles } = require("./lib/create-files.ts");
 
 (async function () {
     try {

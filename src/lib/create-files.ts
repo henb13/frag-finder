@@ -54,7 +54,7 @@ async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
                     fragCategory: h.fragCategory,
                     tickFirstKill,
                     fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
-                        !h.fragType.includes("deagle") ? "-" + weaponsUsed + fragSpeedStr : ""
+                        !h.fragType.includes("deagle") ? `-${weaponsUsed}${fragSpeedStr}` : ""
                     }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
                         h.isAntieco ? "_#ANTIECO" : ""
                     } ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
@@ -170,7 +170,7 @@ function getFragTypeDetails(
     if (fragType === "clutch") {
         return clutchOpponents === killAmount
             ? `1v${clutchOpponents}`
-            : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : killAmount + "k"}`;
+            : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : `${killAmount}k`}`;
     }
     if (fragType === "5k") {
         return "ACE";

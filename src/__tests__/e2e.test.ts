@@ -1,3 +1,4 @@
+export {};
 const { getFrags } = require("../lib/get-frags");
 const { createFiles } = require("../lib/create-files");
 const fs = require("fs").promises;
