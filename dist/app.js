@@ -1,6 +1,5 @@
-"use strict";
-const { getFrags } = require("./lib/get-frags.js");
-const { createFiles } = require("./lib/create-files.js");
+import { getFrags } from "./lib/get-frags";
+import { createFiles } from "./lib/create-files";
 (async function () {
     try {
         const highlights = await getFrags();

@@ -1,8 +1,7 @@
-export {};
-const { getFrags } = require("../lib/get-frags");
-const { createFiles } = require("../lib/create-files");
-const fs = require("fs").promises;
-const path = require("path");
+import { getFrags } from "../lib/get-frags";
+import { createFiles } from "../lib/create-files";
+import { promises as fs } from "fs";
+import path from "path";
 
 describe("end to end", () => {
     it("should export the file with the right highlights", async () => {

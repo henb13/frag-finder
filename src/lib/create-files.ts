@@ -1,4 +1,7 @@
-import path = require("path");
+import path from "path";
+import { promises as fs } from "fs";
+import { CSGO_ROUND_LENGTH } from "./utils/constants";
+import { camelizeIsh } from "./utils/utils";
 import {
     CreateFilesOptions,
     IHighlight,
@@ -7,11 +10,7 @@ import {
     IMatchPrintFormatSingle,
 } from "../types";
 
-const fs = require("fs").promises;
-const { CSGO_ROUND_LENGTH } = require("./utils/constants");
-const { camelizeIsh } = require("./utils/utils");
-
-async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
+export async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
     const dir = path.resolve(
         __dirname,
         process.env.TEXTFILE === "1" ? "../__tests__" : options.outDir || "../../exports"
@@ -30,7 +29,7 @@ async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
 
             highlights.forEach((h: IHighlight) => {
                 const playerCamelized = camelizeIsh(h.playerName);
-                const teamCamelized = camelizeIsh(h.team);
+                const teamCamelized = camelizeIsh(h.team ?? "");
                 const weaponsUsed = getWeaponsUsed(h.allKillsThatRoundForPlayer);
                 const killAmount = h.allKillsThatRoundForPlayer.length;
 
@@ -93,7 +92,7 @@ async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
     }
 }
 
-function getWeaponsUsed(kills: IKill[]): string {
+export function getWeaponsUsed(kills: IKill[]): string {
     const killsPerWeapon = kills
         .map<[string, number]>((kill) => [kill.weaponName, kill.weaponType])
         .reduce<{ [key: string]: number }>((acc, curr) => {
@@ -158,11 +157,11 @@ function getWeaponsUsed(kills: IKill[]): string {
               .join("");
 }
 
-function incrementWeaponKillCount(name: string, obj: { [key: string]: number }) {
+export function incrementWeaponKillCount(name: string, obj: { [key: string]: number }) {
     obj[name] = obj[name] + 1 || 1;
 }
 
-function getFragTypeDetails(
+export function getFragTypeDetails(
     fragType: IHighlight["fragType"],
     killAmount: number,
     clutchOpponents: number | undefined
@@ -182,7 +181,7 @@ function getFragTypeDetails(
 }
 
 //e.g. 1v3-4k vs just 4k etc
-function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | null {
+export function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | null {
     const FAST_KILL_SEC_THRESHOLD = 6;
     const SPREAD_KILL_SEC_THRESHOLD = 15; // time elapsed between kills
 
@@ -212,7 +211,7 @@ function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | 
 }
 
 // e.g. 0:54, 1:32 etc.
-function getIngameClockTime(firstKillTimestamp: number): string {
+export function getIngameClockTime(firstKillTimestamp: number): string {
     return firstKillTimestamp - 60 > 0
         ? `1:${Math.trunc(firstKillTimestamp - 60)
               .toString()
@@ -220,16 +219,6 @@ function getIngameClockTime(firstKillTimestamp: number): string {
         : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
 }
 
-function addSpaces(amount: number) {
+export function addSpaces(amount: number) {
     return " ".repeat(amount);
 }
-
-module.exports = {
-    createFiles,
-    getWeaponsUsed,
-    setWeaponName: incrementWeaponKillCount,
-    getFragTypeDetails,
-    getFragSpeed,
-    getIngameClockTime,
-    addSpaces,
-};

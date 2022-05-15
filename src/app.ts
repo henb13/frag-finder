@@ -1,6 +1,6 @@
-export {};
-const { getFrags } = require("./lib/get-frags.ts");
-const { createFiles } = require("./lib/create-files.ts");
+// export {};
+import { getFrags } from "./lib/get-frags";
+import { createFiles } from "./lib/create-files";
 
 (async function () {
     try {

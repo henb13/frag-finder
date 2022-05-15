@@ -1,4 +1,5 @@
-import path = require("path");
+import path from "path";
+import { promises as fs } from "fs";
 import {
     IMatch,
     IKill,
@@ -10,9 +11,7 @@ import {
     GetFragsOptions,
 } from "../types";
 
-const fs = require("fs").promises;
-
-async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
+export async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
     const dir = path.resolve(__dirname, options.jsonDir || "../../json");
 
     const files = await fs.readdir(dir);
@@ -148,11 +147,11 @@ async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
     return matchesAnalyzed;
 }
 
-function demoIsBroken(matchData: IMatchDataDTO): boolean {
+export function demoIsBroken(matchData: IMatchDataDTO): boolean {
     return matchData.rounds.length <= 15;
 }
 
-function getFragtype(kills: IKill[]): string {
+export function getFragtype(kills: IKill[]): string {
     if (kills.length >= 3) {
         return `${kills.length}k`;
     }
@@ -165,11 +164,15 @@ function getFragtype(kills: IKill[]): string {
     return `${kills.length}k`;
 }
 
-function hasDeagleHs(kills: IKill[]) {
+export function hasDeagleHs(kills: IKill[]) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 
-function isHighlightAntieco(kills: IKill[], players: IPlayerDTO[], roundNumber: number) {
+export function isHighlightAntieco(
+    kills: IKill[],
+    players: IPlayerDTO[],
+    roundNumber: number
+) {
     const THRESHOLD = 1000;
     const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
@@ -181,7 +184,7 @@ function isHighlightAntieco(kills: IKill[], players: IPlayerDTO[], roundNumber: 
     );
 }
 
-function getErrorMessage(matchData: IMatchDataDTO): string {
+export function getErrorMessage(matchData: IMatchDataDTO): string {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${
         len === 1 ? "is" : "are"
@@ -191,12 +194,3 @@ function getErrorMessage(matchData: IMatchDataDTO): string {
 
     return errorMessage;
 }
-
-module.exports = {
-    getFrags,
-    demoIsBroken,
-    getFragtype,
-    hasDeagleHs,
-    isHighlightAntieco,
-    getErrorMessage,
-};

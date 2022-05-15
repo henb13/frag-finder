@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("path");
-const fs = require("fs").promises;
-async function getFrags(options = {}) {
+import path from "path";
+import { promises as fs } from "fs";
+export async function getFrags(options = {}) {
     const dir = path.resolve(__dirname, options.jsonDir || "../../json");
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
@@ -97,10 +95,10 @@ async function getFrags(options = {}) {
     }
     return matchesAnalyzed;
 }
-function demoIsBroken(matchData) {
+export function demoIsBroken(matchData) {
     return matchData.rounds.length <= 15;
 }
-function getFragtype(kills) {
+export function getFragtype(kills) {
     if (kills.length >= 3) {
         return `${kills.length}k`;
     }
@@ -110,25 +108,17 @@ function getFragtype(kills) {
     }
     return `${kills.length}k`;
 }
-function hasDeagleHs(kills) {
+export function hasDeagleHs(kills) {
     return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
-function isHighlightAntieco(kills, players, roundNumber) {
+export function isHighlightAntieco(kills, players, roundNumber) {
     const THRESHOLD = 1000;
     const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
     const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
     return (enemyPlayers.every((player) => player.equipement_value_rounds[roundNumber] < THRESHOLD) && ![1, 16].includes(roundNumber));
 }
-function getErrorMessage(matchData) {
+export function getErrorMessage(matchData) {
     const len = matchData.rounds.length;
     const errorMessage = `Unable to extract highlights from this match. There ${len === 1 ? "is" : "are"} ${len === 0 ? "no" : "only"}${len ? ` ${len}` : ""} round${len === 1 ? "" : "s"} in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.`;
     return errorMessage;
 }
-module.exports = {
-    getFrags,
-    demoIsBroken,
-    getFragtype,
-    hasDeagleHs,
-    isHighlightAntieco,
-    getErrorMessage,
-};
