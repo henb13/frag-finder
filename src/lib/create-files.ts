@@ -47,7 +47,7 @@ async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
                 const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - 200;
 
                 const fragSpeed = getFragSpeed(h.allKillsThatRoundForPlayer);
-                const fragSpeedStr = fragSpeed ? "-" + fragSpeed : "";
+                const fragSpeedStr = fragSpeed ? `-${fragSpeed}` : "";
 
                 matchPrintFormat.push({
                     fragType: h.fragType,
