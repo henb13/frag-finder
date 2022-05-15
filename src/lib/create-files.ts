@@ -103,45 +103,45 @@ function getWeaponsUsed(kills: IKill[]): string {
                 case "M4A1-S":
                 case "CZ75-Auto": {
                     const shortVersion = curr[0].substr(0, 2);
-                    setWeaponName(shortVersion, acc);
+                    incrementWeaponKillCount(shortVersion, acc);
                     return acc;
                 }
                 case "Desert Eagle":
-                    setWeaponName("deagle", acc);
+                    incrementWeaponKillCount("deagle", acc);
                     return acc;
                 case "Galil AR":
-                    setWeaponName("Galil", acc);
+                    incrementWeaponKillCount("Galil", acc);
                     return acc;
                 case "Scar-20":
-                    setWeaponName("Autosniper", acc);
+                    incrementWeaponKillCount("Autosniper", acc);
                     return acc;
                 case "Incendiary":
-                    setWeaponName("molotov", acc);
+                    incrementWeaponKillCount("molotov", acc);
                     return acc;
                 case "SSG 08":
-                    setWeaponName("scout", acc);
+                    incrementWeaponKillCount("scout", acc);
                     return acc;
                 case "SG 553":
-                    setWeaponName("krieg", acc);
+                    incrementWeaponKillCount("krieg", acc);
                     return acc;
                 case "UMP-45":
-                    setWeaponName("UMP", acc);
+                    incrementWeaponKillCount("UMP", acc);
                     return acc;
                 case "MP5-SD":
-                    setWeaponName("mp5", acc);
+                    incrementWeaponKillCount("mp5", acc);
                     return acc;
                 default:
                     if (curr[1] === 1) {
-                        setWeaponName("pistol", acc);
+                        incrementWeaponKillCount("pistol", acc);
                         return acc;
                     } else if (curr[0] === "HE Grenade") {
-                        setWeaponName("HE", acc);
+                        incrementWeaponKillCount("HE", acc);
                         return acc;
                     } else if (curr[1] === 5) {
-                        setWeaponName("shotgun", acc);
+                        incrementWeaponKillCount("shotgun", acc);
                         return acc;
                     } else {
-                        setWeaponName(curr[0], acc);
+                        incrementWeaponKillCount(curr[0], acc);
                         return acc;
                     }
             }
@@ -158,7 +158,7 @@ function getWeaponsUsed(kills: IKill[]): string {
               .join("");
 }
 
-function setWeaponName(name: string, obj: { [key: string]: number }) {
+function incrementWeaponKillCount(name: string, obj: { [key: string]: number }) {
     obj[name] = obj[name] + 1 || 1;
 }
 
@@ -227,7 +227,7 @@ function addSpaces(amount: number) {
 module.exports = {
     createFiles,
     getWeaponsUsed,
-    setWeaponName,
+    setWeaponName: incrementWeaponKillCount,
     getFragTypeDetails,
     getFragSpeed,
     getIngameClockTime,
