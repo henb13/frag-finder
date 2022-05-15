@@ -10,6 +10,7 @@ import {
     IRoundDTO,
     GetFragsOptions,
 } from "../types";
+import { LOG } from "./utils/logger";
 
 export async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
     const dir = path.resolve(__dirname, options.jsonDir || "../../json");
@@ -23,7 +24,7 @@ export async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]>
     for (let i = 0; i < jsonFiles.length; i++) {
         const data = await fs.readFile(`${dir}/${jsonFiles[i]}`, { encoding: "utf8" });
         const matchData: IMatchDataDTO = JSON.parse(data);
-        console.log("analyzing match: ", matchData.name);
+        LOG("analyzing match: ", matchData.name);
 
         matchesAnalyzed.push({
             demoName: matchData.name.replace(".dem", ""),
@@ -158,7 +159,6 @@ export function getFragtype(kills: IKill[]): string {
 
     if (hasDeagleHs(kills)) {
         const deagleKills = kills.filter((kill) => kill.weaponName === "Desert Eagle");
-
         return `deagle${deagleKills.length}k`;
     }
     return `${kills.length}k`;

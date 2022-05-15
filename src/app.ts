@@ -1,12 +1,13 @@
 import { getFrags } from "./lib/get-frags";
 import { createFiles } from "./lib/create-files";
+import { LOG } from "./lib/utils/logger";
 
 (async function () {
     try {
         const highlights = await getFrags();
         await createFiles(highlights);
-        console.log("files created!");
+        LOG("files created!");
     } catch (e) {
-        console.log("something went wrong:", e);
+        LOG("something went wrong:", e);
     }
 })();

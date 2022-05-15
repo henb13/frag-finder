@@ -19,7 +19,7 @@
     "build": "rimraf dist && tsc --noEmitOnError && npm run copy-test-files && npx mkdirp dist/__tests__/exports",
     "build-and-run": "npm run build && npm start",
     "copy-test-files": "copyfiles -u 1 src/__tests__/**/* -e \"**/*{.js,.ts}\" dist",
-    "create-text-file": "cross-env TEXTFILE=1 npm run start ",
+    "create-app-output-for-test": "cross-env TEXTFILE=1 npm run start ",
     "test": "jest"
   },
   "author": "https://github.com/HenB13",
