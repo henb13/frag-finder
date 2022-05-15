@@ -6,13 +6,15 @@ import {
     IMatchDataDTO,
     IPlayerDTO,
     IRoundDTO,
+    GetFragsOptions,
 } from "../types";
 
 const fs = require("fs").promises;
 const path = require("path");
 
-async function getFrags(playerChosenSteamid: string | null = null): Promise<IMatch[]> {
-    const dir = __dirname + "../../../json";
+async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
+    const dir = options.jsonDir || "./json";
+
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter(
         (file: string) => path.extname(file).toLowerCase() === ".json"
@@ -20,7 +22,7 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
     const matchesAnalyzed: IMatch[] = [];
 
     for (let i = 0; i < jsonFiles.length; i++) {
-        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
+        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`, { encoding: "utf8" });
         const matchData: IMatchDataDTO = JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
 
@@ -91,9 +93,9 @@ async function getFrags(playerChosenSteamid: string | null = null): Promise<IMat
                 []
             );
 
-            if (playerChosenSteamid) {
+            if (options.playerSteamId) {
                 roundkillsPerPlayer = roundkillsPerPlayer.filter(
-                    (player) => player.steamid === playerChosenSteamid
+                    (player) => player.steamid === options.playerSteamId
                 );
             }
 

@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs").promises;
 const path = require("path");
-async function getFrags(playerChosenSteamid = null) {
-    const dir = __dirname + "../../../json";
+async function getFrags(options = {}) {
+    const dir = options.jsonDir || "./json";
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
     const matchesAnalyzed = [];
     for (let i = 0; i < jsonFiles.length; i++) {
-        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`);
+        const data = await fs.readFile(`${dir}/${jsonFiles[i]}`, { encoding: "utf8" });
         const matchData = JSON.parse(data);
         console.log("analyzing match: ", matchData.name);
         matchesAnalyzed.push({
@@ -65,8 +65,8 @@ async function getFrags(playerChosenSteamid = null) {
                 }
                 return acc;
             }, []);
-            if (playerChosenSteamid) {
-                roundkillsPerPlayer = roundkillsPerPlayer.filter((player) => player.steamid === playerChosenSteamid);
+            if (options.playerSteamId) {
+                roundkillsPerPlayer = roundkillsPerPlayer.filter((player) => player.steamid === options.playerSteamId);
             }
             for (const player of roundkillsPerPlayer) {
                 const { allKillsThatRoundForPlayer, steamid, team: playerTeam, playerName, } = player;

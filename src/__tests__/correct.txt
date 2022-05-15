@@ -1,7 +1,7 @@
 
 **playdemo 1-55b47a82-85da-4cad-aea3-05d0ae830ac2-1-1
 
-    Unable to extract highlights from this demo. There are no rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work. You could also try to analyze it again in CS:GO Demos Manager, export a new JSON file, and try again.
+    Unable to extract highlights from this match. There are no rounds in the JSON file. The demo is probably partially corrupted, but looking through it manually in-game might work.
 
 
 
@@ -27,7 +27,7 @@
 
 
 
-**playdemo runde18-17@214886
+**playdemo runde18-17@214898
 
    x._zPierry_1v3-4k-deagle(3)-M4(1)-spread_mirage_team-teamCAPTAINcurly_r20 1:20 (demo_gototick 214898)
    x._suunD_1v3-AK_mirage_team-teamCAPTAINcurly_r27 1:19 (demo_gototick 295254)
