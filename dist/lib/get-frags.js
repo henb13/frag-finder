@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = require("fs").promises;
 const path = require("path");
+const fs = require("fs").promises;
 async function getFrags(options = {}) {
-    const dir = options.jsonDir || "./json";
+    const dir = path.resolve(__dirname, options.jsonDir || "../../json");
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter((file) => path.extname(file).toLowerCase() === ".json");
     const matchesAnalyzed = [];

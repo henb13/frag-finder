@@ -1,3 +1,4 @@
+import path = require("path");
 import {
     IMatch,
     IKill,
@@ -10,10 +11,9 @@ import {
 } from "../types";
 
 const fs = require("fs").promises;
-const path = require("path");
 
 async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
-    const dir = options.jsonDir || "./json";
+    const dir = path.resolve(__dirname, options.jsonDir || "../../json");
 
     const files = await fs.readdir(dir);
     const jsonFiles = files.filter(

@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const path = require("path");
 const fs = require("fs").promises;
 const { CSGO_ROUND_LENGTH } = require("./utils/constants");
 const { camelizeIsh } = require("./utils/utils");
 async function createFiles(data, options = {}) {
-    const dir = options.outDir || "./exports";
-    await fs.writeFile(dir + "/highlights.txt", "\n");
+    const dir = path.resolve(__dirname, process.env.TEXTFILE === "1" ? "../__tests__" : options.outDir || "../../exports");
+    const printFileName = process.env.TEXTFILE === "1" ? "correct_app_output.txt" : "highlights.txt";
+    await fs.writeFile(`${dir}/${printFileName}`, "\n");
     for (const match of data) {
         const matchText = [`**playdemo ${match.demoName}`];
         const matchPrintFormat = [];
@@ -51,7 +53,7 @@ async function createFiles(data, options = {}) {
         }
         if (matchPrintFormat[0])
             matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
-        await fs.appendFile(dir + "/highlights.txt", matchText.join("") + "\n\n\n");
+        await fs.appendFile(`${dir}/${printFileName}`, matchText.join("") + "\n\n\n");
     }
 }
 function getWeaponsUsed(kills) {
