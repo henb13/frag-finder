@@ -2,9 +2,9 @@ export * from "./mapped";
 export * from "./DTO";
 
 export interface CreateFilesOptions {
-    outDir?: string;
+  outDir?: string;
 }
 export interface GetFragsOptions {
-    jsonDir?: string;
-    playerSteamId?: string;
+  jsonDir?: string;
+  playerSteamId?: string;
 }
