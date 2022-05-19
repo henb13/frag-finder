@@ -1,24 +1,26 @@
 {
     "compilerOptions": {
-      "outDir": "./dist",
-      "target": "esnext",
-      "lib": ["es2021"],
-      "module": "esnext",
-      "moduleResolution": "node",
-      "allowJs": true,
-      "strictNullChecks": true,
-      "noFallthroughCasesInSwitch": true,
-      "noImplicitReturns": true,
-      "esModuleInterop": true,
-      "noUnusedParameters": true,
-      "noUnusedLocals": true,
-      "noImplicitThis": true,
-      "noImplicitAny": true,
-      "removeComments": true,
-      "forceConsistentCasingInFileNames": true,
-      "skipLibCheck": true,
-      "strict": true
+        "outDir": "./dist",
+        "target": "es6",
+        "lib": ["ESnext"],
+        "module": "es6",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "esModuleInterop": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "strict": true,
+        
     },
-    "include": ["./src/**/*"],
-    "exclude": ["./src/types"]
-  }
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./src/types", "src/**/*.test.ts", "src/**/*.spec.ts"],
+}
+
