@@ -1,6 +1,7 @@
-import { getFrags } from "./lib/get-frags";
-import { createFiles } from "./lib/create-files";
-import { LOG } from "./lib/utils/logger";
+export {};
+const { getFrags } = require("./lib/get-frags");
+const { createFiles } = require("./lib/create-files");
+const { LOG } = require("./lib/utils/logger");
 
 (async function () {
   try {

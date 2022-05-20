@@ -1,16 +1,16 @@
-import path from "path";
-import { promises as fs } from "fs";
-import { CSGO_ROUND_LENGTH } from "./utils/constants";
-import { camelizeIsh } from "./utils/utils";
+const path = require("path");
+const fs = require("fs/promises");
+const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
+const { camelizeIsh } = require("./utils/utils.js");
 import {
-  CreateFilesOptions,
+  OptionsCreateFiles,
   IHighlight,
   IKill,
   IMatch,
   IMatchPrintFormatSingle,
 } from "../types";
 
-export async function createFiles(data: IMatch[], options: CreateFilesOptions = {}) {
+async function createFiles(data: IMatch[], options: OptionsCreateFiles = {}) {
   const dir = path.resolve(
     __dirname,
     process.env.TEXTFILE === "1" ? "../__tests__" : options.outDir || "../../exports"
@@ -88,7 +88,7 @@ export async function createFiles(data: IMatch[], options: CreateFilesOptions = 
   }
 }
 
-export function getWeaponsUsed(kills: IKill[]): string {
+function getWeaponsUsed(kills: IKill[]): string {
   const killsPerWeapon = kills
     .map<[string, number]>((kill) => [kill.weaponName, kill.weaponType])
     .reduce<{ [key: string]: number }>((acc, curr) => {
@@ -153,11 +153,11 @@ export function getWeaponsUsed(kills: IKill[]): string {
         .join("");
 }
 
-export function incrementWeaponKillCount(name: string, obj: { [key: string]: number }) {
+function incrementWeaponKillCount(name: string, obj: { [key: string]: number }) {
   obj[name] = obj[name] + 1 || 1;
 }
 
-export function getFragTypeDetails(
+function getFragTypeDetails(
   fragType: IHighlight["fragType"],
   killAmount: number,
   clutchOpponents: number | undefined
@@ -177,7 +177,8 @@ export function getFragTypeDetails(
 }
 
 //e.g. 1v3-4k vs just 4k etc
-export function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | null {
+
+function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spread" | null {
   const FAST_KILL_SEC_THRESHOLD = 6;
   const SPREAD_KILL_SEC_THRESHOLD = 15; // time elapsed between kills
 
@@ -206,7 +207,8 @@ export function getFragSpeed(allKillsThatRoundForPlayer: IKill[]): "fast" | "spr
 }
 
 // e.g. 0:54, 1:32 etc.
-export function getIngameClockTime(firstKillTimestamp: number): string {
+
+function getIngameClockTime(firstKillTimestamp: number): string {
   return firstKillTimestamp - 60 > 0
     ? `1:${Math.trunc(firstKillTimestamp - 60)
         .toString()
@@ -214,6 +216,16 @@ export function getIngameClockTime(firstKillTimestamp: number): string {
     : Math.trunc(firstKillTimestamp).toString().padStart(4, "0:");
 }
 
-export function addSpaces(amount: number) {
+function addSpaces(amount: number) {
   return " ".repeat(amount);
 }
+
+module.exports = {
+  createFiles,
+  getWeaponsUsed,
+  incrementWeaponKillCount,
+  getFragTypeDetails,
+  getFragSpeed,
+  getIngameClockTime,
+  addSpaces,
+};

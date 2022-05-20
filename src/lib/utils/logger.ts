@@ -1,5 +1,9 @@
-export function LOG(...args: any) {
-    if (process.env.NODE_ENV !== "test") {
-        console.log(...args);
-    }
+function LOG(...args: any) {
+  if (process.env.NODE_ENV !== "test") {
+    console.log(...args);
+  }
 }
+
+module.exports = {
+  LOG,
+};

@@ -1,5 +1,6 @@
-import path from "path";
-import { promises as fs } from "fs";
+const path = require("path");
+const fs = require("fs/promises");
+const { LOG } = require("./utils/logger.js");
 import {
   IMatch,
   IKill,
@@ -8,11 +9,10 @@ import {
   IMatchDataDTO,
   IPlayerDTO,
   IRoundDTO,
-  GetFragsOptions,
+  OptionsGetFrags,
 } from "../types";
-import { LOG } from "./utils/logger";
 
-export async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]> {
+async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]> {
   const dir = path.resolve(__dirname, options.jsonDir || "../../json");
 
   const files = await fs.readdir(dir);
@@ -137,11 +137,11 @@ export async function getFrags(options: GetFragsOptions = {}): Promise<IMatch[]>
   return matchesAnalyzed;
 }
 
-export function demoIsBroken(matchData: IMatchDataDTO): boolean {
+function demoIsBroken(matchData: IMatchDataDTO): boolean {
   return matchData.rounds.length <= 15;
 }
 
-export function getFragtype(kills: IKill[]): string {
+function getFragtype(kills: IKill[]): string {
   if (kills.length >= 3) {
     return `${kills.length}k`;
   }
@@ -153,15 +153,11 @@ export function getFragtype(kills: IKill[]): string {
   return `${kills.length}k`;
 }
 
-export function hasDeagleHs(kills: IKill[]) {
+function hasDeagleHs(kills: IKill[]) {
   return kills.some((kill) => kill.weaponName === "Desert Eagle" && kill.isHeadshot);
 }
 
-export function isHighlightAntieco(
-  kills: IKill[],
-  players: IPlayerDTO[],
-  roundNumber: number
-) {
+function isHighlightAntieco(kills: IKill[], players: IPlayerDTO[], roundNumber: number) {
   const THRESHOLD = 1000;
   const killedSteamIds = kills.map<string>((kill) => kill.killedPlayerSteamId);
   const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
@@ -172,7 +168,7 @@ export function isHighlightAntieco(
   );
 }
 
-export function getErrorMessage(matchData: IMatchDataDTO): string {
+function getErrorMessage(matchData: IMatchDataDTO): string {
   const len = matchData.rounds.length;
   const errorMessage = `Unable to extract highlights from this match. There ${
     len === 1 ? "is" : "are"
@@ -182,3 +178,12 @@ export function getErrorMessage(matchData: IMatchDataDTO): string {
 
   return errorMessage;
 }
+
+module.exports = {
+  getFrags,
+  demoIsBroken,
+  getFragtype,
+  hasDeagleHs,
+  isHighlightAntieco,
+  getErrorMessage,
+};
