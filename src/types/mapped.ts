@@ -46,8 +46,13 @@ export interface IMatchPrintFormatSingle
   fragPrintFormat: string;
 }
 
+/* 
+  1: clutch, 4k or ace
+  2: deagle 1k or 2k with a headshot
+  3: 3k's 
+*/
 export type IFragCategory = 1 | 2 | 3;
 
 type Steamid = string;
 
-//TODO: FragtypeDetails
+//TODO: FragtypeDetails ("4k", "deagle1k", "deagle2k", "3k", "ace") -- More?

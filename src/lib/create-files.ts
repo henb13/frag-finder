@@ -1,6 +1,6 @@
 import path from "path";
 import { promises as fs } from "fs";
-import { CSGO_ROUND_LENGTH } from "./utils/constants";
+import { CSGO_ROUND_LENGTH, TICK_BUFFER } from "./utils/constants";
 import { camelizeIsh } from "./utils/utils";
 import {
   OptionsCreateFiles,
@@ -39,7 +39,7 @@ export async function createFiles(data: IMatch[], options: OptionsCreateFiles = 
           CSGO_ROUND_LENGTH - h.allKillsThatRoundForPlayer[0].time + 1
         );
 
-        const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - 200;
+        const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - TICK_BUFFER;
 
         const fragSpeed = getFragSpeed(h.allKillsThatRoundForPlayer);
         const fragSpeedStr = fragSpeed ? `-${fragSpeed}` : "";
