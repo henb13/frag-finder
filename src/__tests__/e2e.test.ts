@@ -5,6 +5,8 @@ import path from "path";
 
 describe("end to end", () => {
   it("should export the file with the right highlights", async () => {
+    expect.assertions(1);
+
     const correctFile = await fs.readFile(path.join(__dirname, "/correct.txt"), {
       encoding: "utf8",
     });
@@ -17,7 +19,7 @@ describe("end to end", () => {
       encoding: "utf8",
     });
 
-    expect(correctFile.replace(/(\r\n|\n|\r)/gm, "")).toEqual(
+    expect(correctFile.replace(/(\r\n|\n|\r)/gm, "")).toBe(
       highlightFile.replace(/(\r\n|\n|\r)/gm, "")
     );
   });

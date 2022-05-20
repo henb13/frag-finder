@@ -41,6 +41,7 @@ export interface IMatchDataDTO {
   most_bomb_planted_player: IMostDTO;
   most_entry_kill: IMostDTO;
   bomb_planted: IBombDTO[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   bomb_defused: any[];
   bomb_exploded: IBombDTO[];
   kills: IKillDTO[];
