@@ -178,12 +178,3 @@ function getErrorMessage(matchData: IMatchDataDTO): string {
 
   return errorMessage;
 }
-
-module.exports = {
-  getFrags,
-  demoIsBroken,
-  getFragtype,
-  hasDeagleHs,
-  isHighlightAntieco,
-  getErrorMessage,
-};

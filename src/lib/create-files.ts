@@ -219,13 +219,3 @@ function getIngameClockTime(firstKillTimestamp: number): string {
 function addSpaces(amount: number) {
   return " ".repeat(amount);
 }
-
-module.exports = {
-  createFiles,
-  getWeaponsUsed,
-  incrementWeaponKillCount,
-  getFragTypeDetails,
-  getFragSpeed,
-  getIngameClockTime,
-  addSpaces,
-};
