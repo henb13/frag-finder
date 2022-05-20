@@ -1,6 +1,5 @@
-const path = require("path");
-const fs = require("fs/promises");
-const { LOG } = require("./utils/logger.js");
+import path from "path";
+import { promises as fs } from "fs";
 import {
   IMatch,
   IKill,
@@ -11,8 +10,9 @@ import {
   IRoundDTO,
   OptionsGetFrags,
 } from "../types";
+import { LOG } from "./utils/logger";
 
-async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]> {
+export async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]> {
   const dir = path.resolve(__dirname, options.jsonDir || "../../json");
 
   const files = await fs.readdir(dir);

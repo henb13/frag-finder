@@ -1,7 +1,7 @@
-const path = require("path");
-const fs = require("fs/promises");
-const { CSGO_ROUND_LENGTH } = require("./utils/constants.js");
-const { camelizeIsh } = require("./utils/utils.js");
+import path from "path";
+import { promises as fs } from "fs";
+import { CSGO_ROUND_LENGTH } from "./utils/constants";
+import { camelizeIsh } from "./utils/utils";
 import {
   OptionsCreateFiles,
   IHighlight,
@@ -10,7 +10,7 @@ import {
   IMatchPrintFormatSingle,
 } from "../types";
 
-async function createFiles(data: IMatch[], options: OptionsCreateFiles = {}) {
+export async function createFiles(data: IMatch[], options: OptionsCreateFiles = {}) {
   const dir = path.resolve(
     __dirname,
     process.env.TEXTFILE === "1" ? "../__tests__" : options.outDir || "../../exports"
