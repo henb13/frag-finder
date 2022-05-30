@@ -27,30 +27,27 @@ export async function createFiles(data: IMatch[], options: OptionsCreateFiles = 
       const roundNumberStr =
         roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
 
-      highlights.forEach((h: IHighlight) => {
+      highlights.forEach((h) => {
         const playerCamelized = camelizeIsh(h.playerName);
         const teamCamelized = camelizeIsh(h.team ?? "");
         const weaponsUsed = getWeaponsUsed(h.allKillsThatRoundForPlayer);
         const killAmount = h.allKillsThatRoundForPlayer.length;
-
         const fragTypeDetails = getFragTypeDetails(h.fragType, killAmount, h.clutchOpponents);
-
+        const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - TICK_BUFFER;
+        const fragSpeed = getFragSpeed(h.allKillsThatRoundForPlayer);
         const clockTimeFirstKill = getIngameClockTime(
           CSGO_ROUND_LENGTH - h.allKillsThatRoundForPlayer[0].time + 1
         );
-
-        const tickFirstKill = h.allKillsThatRoundForPlayer[0].tick - TICK_BUFFER;
-
-        const fragSpeed = getFragSpeed(h.allKillsThatRoundForPlayer);
-        const fragSpeedStr = fragSpeed ? `-${fragSpeed}` : "";
 
         matchPrintFormat.push({
           fragType: h.fragType,
           fragCategory: h.fragCategory,
           tickFirstKill,
           fragPrintFormat: `x._${playerCamelized}_${fragTypeDetails}${
-            !h.fragType.includes("deagle") ? `-${weaponsUsed}${fragSpeedStr}` : ""
-          }_${match.map}_team-${teamCamelized}_r${roundNumberStr}${
+            !h.fragType.includes("deagle")
+              ? `-${weaponsUsed}${fragSpeed ? `-${fragSpeed}` : ""}`
+              : ""
+          }_${match.map}${teamCamelized ? `_team-${teamCamelized}` : ""}_r${roundNumberStr}${
             h.isAntieco ? "_#ANTIECO" : ""
           } ${clockTimeFirstKill} (demo_gototick ${tickFirstKill})`,
         });
