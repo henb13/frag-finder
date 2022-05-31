@@ -39,13 +39,13 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
    x._gla1ve_3k-pistol_nuke_team-astralis_r16 1:34 (demo_gototick 223000)
    x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)
 ```
-  - <b>spread</b> (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the kills. 
-  - <b>fast</b> is labelled for any frag where all the kills happen within six seconds.
-  - The <b>timestamp</b> listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
-  - The <b>tick</b> listed at the end of each frag is the very end of the round prior (1000 ticks before the start of the target round to be precise). This is to prevent potential player model lags that can occur when using the "start of the round" button. Taking you to right before the round starts allows you to use the "next round" button instead, potentially preventing such lag. Including "demo_gototick" is meant for easier copy/paste to the ingame console.
-    - The tick after the demo name (@123000) makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
-  - The <b>round number</b> is shown at the end of each highlight string, for example <i>r25</i> for round 25.
-  - the <b>x._</b> preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example: 
+  - ``spread`` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the kills. 
+  - ``fast`` is labelled for any frag where all the kills happen within six seconds.
+  - The timestamp listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
+  - The tick listed at the end of each frag is the tick right before the first frag of the highlight occures. Including ``demo_gototick`` is meant for easier copy/paste to the ingame console.
+    - The tick after the demo name, for example playdemo <i>g2-vs-navi_map1-inferno</i>``@123000`` makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
+  - The round number is shown at the end of each highlight string, for example ``r25`` for round 25.
+  - the ``x._`` preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example: 
     
     <img src="./img/editing-software-example.png">
 

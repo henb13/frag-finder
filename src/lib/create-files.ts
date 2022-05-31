@@ -8,15 +8,14 @@ import {
   IKill,
   IMatch,
   IMatchPrintFormatSingle,
+  OptionsGetFrags,
 } from "../types";
 
 export async function createFiles(data: IMatch[], options: OptionsCreateFiles = {}) {
-  const dir = path.resolve(
-    __dirname,
-    process.env.TEXTFILE === "1" ? "../__tests__" : options.outDir || "../../exports"
-  );
-  const printFileName =
-    process.env.TEXTFILE === "1" ? "correct_app_output.txt" : "highlights.txt";
+  const dir = path.resolve(__dirname, options.outDir || "../../exports");
+  let printFileName = options.fileName || "highlights.txt";
+  printFileName = printFileName.endsWith(".txt") ? printFileName : `${printFileName}.txt`;
+
   await fs.writeFile(`${dir}/${printFileName}`, "\n");
 
   for (const match of data) {
