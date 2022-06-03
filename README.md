@@ -51,6 +51,14 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 
 ## How to use ##
 
+### Alternative 1 (recommended) ###
+
+📺 [*Watch tutorial*](www.youtube.com)
+
+1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON".
+2. Upload the files to the web version of frag-finder, at [fragfinder.io](fragfinder.io)! ✅
+### Alternative 2  ###
+
 1. Make sure you have [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) installed.
 2. [Download](https://github.com/HenB13/frag-finder/archive/refs/heads/master.zip) or [clone](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) this repo.
 3. Delete the [example.json](json/example.json) file in the [json](json) folder.
