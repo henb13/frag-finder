@@ -59,20 +59,22 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 2. Upload the files to the web version of frag-finder, at [fragfinder.io](fragfinder.io)! ✅
 ### Alternative 2  ###
 
-1. Make sure you have [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) installed.
-2. [Download](https://github.com/HenB13/frag-finder/archive/refs/heads/master.zip) or [clone](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) this repo.
+1. Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
+2. Run ``npm install``.
 3. Delete the [example.json](json/example.json) file in the [json](json) folder.
 4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
-5. Open your terminal in the root folder of this repo and write `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.  
+5. Run ``npm run build`` and ``npm start``. The text file containing the highlights for all demos will be created in the [exports](exports) folder.  
  
 <i>If you want to run the script again with different JSON files, move the already exported text file to a different location to prevent it from being overwritten.</i>
 
 ## Options ##
 
-- If you want to get frags of a single player only, add their STEAMID64 as an argument to `getFrags` in [dist/app.js](dist/app.js):
+- If you want to get frags of a single player only, add their STEAMID64 to `getFrags` in [src/app.ts](src/app.ts):
 
   ```javascript
-  getFrags("76561198036024464");
+  getFrags({
+    playerSteamId: "76561198036024464"
+  });
   ```
   
 ## Requirements ##
