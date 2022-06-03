@@ -17,6 +17,7 @@
     "jest": "^27.4.7",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.2",
+    "ts-node": "^10.8.0",
     "typescript": "^4.6.4"
   },
   "scripts": {
@@ -24,6 +25,7 @@
     "build": "rimraf dist && tsc --noEmitOnError",
     "build-and-run": "npm run build && npm start",
     "test": "jest && tsc --noEmit",
+    "create-new-testfile": "ts-node src/scripts/create-new-correct-test-file.ts",
     "lint": "eslint . --ext .js,.ts"
   },
   "engines": {

@@ -34,7 +34,7 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
                x._Amanek_3k-M4_inferno_team-G2_r04 1:00 (demo_gototick 53000)
                
                
-**playdemo astralis-vs-gambit_map2-nuke
+**playdemo astralis-vs-gambit_map2-nuke@223000
 
    x._gla1ve_3k-pistol_nuke_team-astralis_r16 1:34 (demo_gototick 223000)
    x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)

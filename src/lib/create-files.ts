@@ -8,7 +8,6 @@ import {
   IKill,
   IMatch,
   IMatchPrintFormatSingle,
-  OptionsGetFrags,
 } from "../types";
 
 export async function createFiles(data: IMatch[], options: OptionsCreateFiles = {}) {
