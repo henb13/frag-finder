@@ -1,4 +1,4 @@
-/* This file represent the JSON data */
+/* represents the JSON data */
 
 export interface IMatchDataDTO {
   id: string;

@@ -1,5 +1,5 @@
 export * from "./mapped";
-export * from "./DTO";
+export * from "./dto";
 
 export interface OptionsCreateFiles {
   outDir?: string;

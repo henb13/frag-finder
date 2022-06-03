@@ -14,7 +14,6 @@ import { LOG } from "./utils/logger";
 
 export async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]> {
   const dir = path.resolve(__dirname, options.jsonDir || "../../json");
-
   const files = await fs.readdir(dir);
   const jsonFiles = files.filter(
     (file: string) => path.extname(file).toLowerCase() === ".json"
