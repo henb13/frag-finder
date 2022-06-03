@@ -23,7 +23,7 @@ export async function createFiles(data: IMatch[], options: OptionsCreateFiles = 
 
     match.rounds.forEach(({ roundNumber, highlights }) => {
       const roundNumberStr =
-        roundNumber.toString().length == 1 ? "0" + roundNumber : roundNumber;
+        roundNumber.toString().length === 1 ? "0" + roundNumber : roundNumber;
 
       highlights.forEach((h) => {
         const playerCamelized = camelizeIsh(h.playerName);
@@ -160,7 +160,7 @@ function getFragTypeDetails(
   if (fragType === "clutch") {
     return clutchOpponents === killAmount
       ? `1v${clutchOpponents}`
-      : `1v${clutchOpponents}-${killAmount == 5 ? "ACE" : `${killAmount}k`}`;
+      : `1v${clutchOpponents}-${killAmount === 5 ? "ACE" : `${killAmount}k`}`;
   }
   if (fragType === "5k") {
     return "ACE";
