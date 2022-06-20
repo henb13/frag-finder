@@ -1,4 +1,3 @@
-
 <div align="center" text-align="center">
 
 # frag-finder
@@ -18,7 +17,7 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 
 </div>
 
-## Example output and explanation ###
+## Example output and explanation
 
 ```
 **playdemo g2-vs-navi_map1-inferno@123000
@@ -32,57 +31,58 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
          ----3k's:
                x._electronic_3k-AK_inferno_team-navi_r02_#ANTIECO 1:08 (demo_gototick 31000)
                x._Amanek_3k-M4_inferno_team-G2_r04 1:00 (demo_gototick 53000)
-               
-               
+
+
 **playdemo astralis-vs-gambit_map2-nuke@223000
 
    x._gla1ve_3k-pistol_nuke_team-astralis_r16 1:34 (demo_gototick 223000)
    x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)
 ```
-  - ``spread`` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the kills. 
-  - ``fast`` is labelled for any frag where all the kills happen within six seconds.
-  - The timestamp listed at the end of each frag represents the time shown on the ingame clock when the first kill of the highlight occures.
-  - The tick listed at the end of each frag is the tick right before the first frag of the highlight occures. Including ``demo_gototick`` is meant for easier copy/paste to the ingame console.
-    - The tick after the demo name, for example playdemo <i>g2-vs-navi_map1-inferno</i>``@123000`` makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
-  - The round number is shown at the end of each highlight string, for example ``r25`` for round 25.
-  - the ``x._`` preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example: 
-    
-    <img src="./img/editing-software-example.png">
 
-## How to use ##
+- `spread` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the frags.
+- `fast` is labelled for any highlight where all the kills happen within six seconds.
+- The timestamp listed at the end of each highlight represents the time shown on the ingame clock when the first frag of the highlight occures.
+- The tick listed at the end of each highlight is the tick right before the first frag of the highlight occures. Including `demo_gototick` is meant for easier copy/paste to the ingame console.
+  - The tick after the demo name, for example playdemo <i>g2-vs-navi_map1-inferno</i>`@123000` makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
+- The round number is shown at the end of each highlight, for example `r25` for round 25.
+- the `x._` preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example:
 
-### Alternative 1 (recommended) ###
+  <img src="./img/editing-software-example.png">
 
-📺 [*Watch tutorial*](www.youtube.com)
+## How to use
+
+### Alternative 1 (recommended)
+
+📺 [_Watch tutorial_](www.youtube.com)
 
 1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON".
 2. Upload the files to the web version of frag-finder, at [fragfinder.io](fragfinder.io)! ✅
-### Alternative 2  ###
+
+### Alternative 2
 
 1. Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
-2. Run ``npm install``.
+2. Run `npm install`.
 3. Delete the [example.json](json/example.json) file in the [json](json) folder.
 4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
-5. Run ``npm run build`` and ``npm start``. The text file containing the highlights for all demos will be created in the [exports](exports) folder.  
- 
+5. Run `npm run build` and `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.
+
 <i>If you want to run the script again with different JSON files, move the already exported text file to a different location to prevent it from being overwritten.</i>
 
-## Options ##
+## Options
 
 - If you want to get frags of a single player only, add their STEAMID64 to `getFrags` in [src/app.ts](src/app.ts):
 
   ```javascript
   getFrags({
-    playerSteamId: "76561198036024464"
+    playerSteamId: "76561198036024464",
   });
   ```
-  
-## Requirements ##
 
-* [Node](https://nodejs.org/en/)
-* [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
+## Requirements
 
+- [Node](https://nodejs.org/en/)
+- [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
 
-## Example ##
+## Example
 
-  You can see an example of exported highlights in the [exports](exports/example.txt) folder.
+You can see an example of exported highlights in the [exports](exports/example.txt) folder.
