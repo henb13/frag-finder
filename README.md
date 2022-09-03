@@ -2,7 +2,7 @@
 
 # frag-finder
 
-Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and spits out readable highlights meant as helpful filenames for CS:GO fragmovie recording.
+A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and spits out readable highlights meant as helpful filenames for CS:GO fragmovie recording.
 
 &#xa0;
 
