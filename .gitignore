@@ -1,6 +1,9 @@
 .vscode
 node_modules
+dist
 /exports/highlights.txt
+src/__tests__/exports/highlights.txt
 TODO
 /test.js
+/test.txt
 /text.txt
