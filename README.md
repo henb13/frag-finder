@@ -22,9 +22,9 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 ```
 **playdemo astralis-vs-complexity-m3-nuke@128052
 
-   x._junior_4k-AWP(3)-pistol(1)-spread_nuke_team-Complexity_r09 1:22 (demo_gototick 128652)
-   x._floppy_4k-M4_nuke_team-Complexity_r15 1:06 (demo_gototick 250415)
-   x._blameF_4k-M4_nuke_team-Astralis_r22 1:44 (demo_gototick 337706)
+   x._junior_ACE-AWP(3)-pistol(1)-spread_nuke_team-Complexity_r09 1:22 (demo_gototick 128652)
+   x._floppy_4k-M4-fast_nuke_team-Complexity_r15 1:06 (demo_gototick 250415)
+   x._blameF_4k-M4_nuke_team-Astralis_r22_#ANTIECO 1:44 (demo_gototick 337706)
 
          ----3k's:
                x._gla1ve_3k-MAC-10-fast_nuke_team-Astralis_r03 1:38 (demo_gototick 33789)
@@ -38,7 +38,7 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 
          ----3k's:
                x._NEOFRAG_3k-AK_ancient_team-OG_r02 1:42 (demo_gototick 12142)
-               x._ropz_3k-M4_ancient_team-FaZe_r04 1:36 (demo_gototick 38801)
+               x._ropz_3k-M4-spread_ancient_team-FaZe_r04 1:36 (demo_gototick 38801)
 ```
 
 - `spread` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the eliminations.
@@ -55,15 +55,17 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 
 ### Alternative 1 (recommended)
 
-📺 [_Watch tutorial_](www.youtube.com)
-
 1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON".
 2. Upload the files to the web version of frag-finder, at [fragfinder.io](fragfinder.io)! ✅
 
+📺 [_Watch tutorial_](www.youtube.com)
+
 ### Alternative 2
 
-1. Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
-2. Run `npm install`.
+Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
+
+1. Download or clone this repo.
+2. Run `npm install` in the root folder.
 3. Delete the [example.json](json/example.json) file in the [json](json) folder.
 4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
 5. Run `npm run build` and `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.

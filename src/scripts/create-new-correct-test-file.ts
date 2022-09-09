@@ -12,8 +12,8 @@ import { LOG } from "../lib/utils/logger";
       outDir: path.join(__dirname, "..", "__tests__"),
       fileName: "correct.txt",
     });
-    LOG("files created!");
+    LOG("output files created!");
   } catch (e) {
-    LOG("something went wrong:", e);
+    LOG("something went wrong creating output file for testing:", e);
   }
 })();
