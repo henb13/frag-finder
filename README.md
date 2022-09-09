@@ -20,32 +20,34 @@ Takes JSON files exported from [CS:GO Demos Manager](https://github.com/akiver/C
 ## Example output and explanation
 
 ```
-**playdemo g2-vs-navi_map1-inferno@123000
+**playdemo astralis-vs-complexity-m3-nuke@128052
 
-   x._NiKo_4k-Famas_inferno_team-G2_r08 0:39 (demo_gototick 123000)
-   x._s1mple_4k-AK-spread_inferno_team-navi_r10 1:42 (demo_gototick 171000)
-   x._nexa_ACE-M4-fast_inferno_team-G2_r17_#ANTIECO 1:04 (demo_gototick 209000)
-   x._s1mple_ACE-AWP(4)-deagle(1)_inferno_team-navi_r19 1:45 (demo_gototick 236000)
-   x._s1mple_1v3-4k-MP9_inferno_team-navi_r21 1:20 (demo_gototick 273000)
+   x._junior_4k-AWP(3)-pistol(1)-spread_nuke_team-Complexity_r09 1:22 (demo_gototick 128652)
+   x._floppy_4k-M4_nuke_team-Complexity_r15 1:06 (demo_gototick 250415)
+   x._blameF_4k-M4_nuke_team-Astralis_r22 1:44 (demo_gototick 337706)
 
          ----3k's:
-               x._electronic_3k-AK_inferno_team-navi_r02_#ANTIECO 1:08 (demo_gototick 31000)
-               x._Amanek_3k-M4_inferno_team-G2_r04 1:00 (demo_gototick 53000)
+               x._gla1ve_3k-MAC-10-fast_nuke_team-Astralis_r03 1:38 (demo_gototick 33789)
+               x._gla1ve_3k-AK(1)-AWP(2)_nuke_team-Astralis_r09 0:36 (demo_gototick 134588)
 
 
-**playdemo astralis-vs-gambit_map2-nuke@223000
+**playdemo faze-vs-og-m1-ancient@117776
 
-   x._gla1ve_3k-pistol_nuke_team-astralis_r16 1:34 (demo_gototick 223000)
-   x._Hobbit_AWP-4k_nuke_team-gambit_r33 1:11 (demo_gototick 439000)
+   x._Twistzz_4k-AK-fast_ancient_team-FaZe_r09_#ANTIECO 1:13 (demo_gototick 118376)
+   x._flameZ_4k-MP9(1)-AK(2)-HE(1)_ancient_team-OG_r18 1:45 (demo_gototick 214930)
+
+         ----3k's:
+               x._NEOFRAG_3k-AK_ancient_team-OG_r02 1:42 (demo_gototick 12142)
+               x._ropz_3k-M4_ancient_team-FaZe_r04 1:36 (demo_gototick 38801)
 ```
 
-- `spread` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the frags.
+- `spread` (as in the frags being "spread out") is labelled for any 3k, 4k or ace where at least 15 seconds elapsed between two or more of the eliminations.
 - `fast` is labelled for any highlight where all the kills happen within six seconds.
-- The timestamp listed at the end of each highlight represents the time shown on the ingame clock when the first frag of the highlight occures.
-- The tick listed at the end of each highlight is the tick right before the first frag of the highlight occures. Including `demo_gototick` is meant for easier copy/paste to the ingame console.
-  - The tick after the demo name, for example playdemo <i>g2-vs-navi_map1-inferno</i>`@123000` makes it so that you're taken to the start of the first highlight when using the playdemo command as listed.
+- The timestamp listed at the end of each highlight represents the time shown on the ingame clock when the first frag of the highlight occurs.
+- The tick listed at the end of each highlight is the tick right before the first opponent elimination of the highlight occurs. Including `demo_gototick` is meant for easier copy/paste to the in-game console.
+  - The tick after the demo name, for example <i>playdemo astralis-vs-complexity-m3-nuke</i>`@128052` makes it so that you're taken to the start of the first highlight when the demo loads (the tick buffer here is larger than the tick at the end of the highlight text since the demo seems to play in the background for some time when loading, making it so the first few frags might have already happened when you start watching).
 - The round number is shown at the end of each highlight, for example `r25` for round 25.
-- the `x._` preceding every highlight is meant to be replaced by a number when you have recorded the frag, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example:
+- the `x._` preceding every highlight is meant to be replaced by a number when you have recorded the highlight, making the whole line appropriate as a filename for your video file. The information provided in the filename will then be easily searchable in your editing software, serving as helpful tags. For example:
 
   <img src="./img/editing-software-example.png">
 

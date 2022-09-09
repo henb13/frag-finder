@@ -17,6 +17,7 @@ module.exports = {
     },
   ],
   rules: {
+    "no-param-reassign": "warn",
     "prefer-const": [
       "warn",
       {

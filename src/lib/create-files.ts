@@ -78,7 +78,7 @@ export async function createFiles(data: IMatch[], options: OptionsCreateFiles = 
       );
     }
 
-    if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tickFirstKill}\n\n`;
+    if (matchPrintFormat[0]) matchText[0] += `@${matchPrintFormat[0].tickFirstKill - 600}\n\n`;
     await fs.appendFile(`${dir}/${printFileName}`, matchText.join("") + "\n\n\n");
   }
 }
