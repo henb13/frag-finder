@@ -62,7 +62,7 @@ Prerequisites: [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manage
 1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager), select all and and click "analyze". With all demos still selected, right click and click "Export JSON".
 2. Upload the files to the web GUI at [fragfinder.app](https://fragfinder.app/)
 
-📺 [_Watch tutorial_](www.youtube.com)
+📺 [_Watch tutorial_](https://www.youtube.com/watch?v=g7UYciS2Hbg)
 
 ### Alternative 2
 
