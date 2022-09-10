@@ -55,8 +55,10 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 
 ### Alternative 1 (recommended)
 
+Prerequisites: [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
+
 1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON".
-2. Upload the files to the web GUI at [fragfinder.app](fragfinder.app)! ✅
+2. Upload the files to the web GUI at [fragfinder.app](https://fragfinder.app/)
 
 📺 [_Watch tutorial_](www.youtube.com)
 
@@ -66,9 +68,8 @@ Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://
 
 1. Download or clone this repo.
 2. Run `npm install` in the root folder.
-3. Delete the [example.json](json/example.json) file in the [json](json) folder.
-4. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
-5. Run `npm run build` and `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.
+3. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON". Move the files to the [json](json) folder.
+4. Run `npm run build` and `npm start`. The text file containing the highlights for all demos will be created in the [exports](exports) folder.
 
 <i>If you want to run the script again with different JSON files, move the already exported text file to a different location to prevent it from being overwritten.</i>
 
@@ -81,11 +82,6 @@ Prerequisites: [Node](https://nodejs.org/en/) and [CS:GO Demos Manager](https://
     playerSteamId: "76561198036024464",
   });
   ```
-
-## Requirements
-
-- [Node](https://nodejs.org/en/)
-- [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager)
 
 ## Example
 
