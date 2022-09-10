@@ -35,7 +35,7 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 
 **playdemo faze-vs-og-m1-ancient@117776
 
-   x._Twistzz_4k-AK-fast_ancient_team-FaZe_r09_#ANTIECO 1:13 (demo_gototick 118376)
+   x._Twistzz_1v3-AK_ancient_team-FaZe_r09_#ANTIECO 1:13 (demo_gototick 118376)
    x._flameZ_4k-MP9(1)-AK(2)-HE(1)_ancient_team-OG_r18 1:45 (demo_gototick 214930)
 
          ----3k's:
