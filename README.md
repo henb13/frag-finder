@@ -56,7 +56,7 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 ### Alternative 1 (recommended)
 
 1. Open the demos in [CS:GO Demos Manager](https://github.com/akiver/CSGO-Demos-Manager) and analyze them. Select all, right click and select "Export JSON".
-2. Upload the files to the web version of frag-finder, at [fragfinder.io](fragfinder.io)! ✅
+2. Upload the files to the web GUI at [fragfinder.app](fragfinder.app)! ✅
 
 📺 [_Watch tutorial_](www.youtube.com)
 
