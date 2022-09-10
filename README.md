@@ -26,7 +26,7 @@ A CLI tool that consumes JSON files exported from [CS:GO Demos Manager](https://
 
    x._junior_ACE-AWP(3)-pistol(1)-spread_nuke_team-Complexity_r09 1:22 (demo_gototick 128652)
    x._floppy_4k-M4-fast_nuke_team-Complexity_r15 1:06 (demo_gototick 250415)
-   x._blameF_4k-M4_nuke_team-Astralis_r22_#ANTIECO 1:44 (demo_gototick 337706)
+   x._blameF_1v3-4k-M4_nuke_team-Astralis_r22_#ANTIECO 1:44 (demo_gototick 337706)
 
          ----3k's:
                x._gla1ve_3k-MAC-10-fast_nuke_team-Astralis_r03 1:38 (demo_gototick 33789)
