@@ -35,7 +35,7 @@ export interface IRoundKillPlayer
 }
 
 export interface IClutch {
-  playerSteamid: Steamid;
+  playerSteamId: Steamid;
   opponentCount: number;
   roundNumber: number;
 }
