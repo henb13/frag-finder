@@ -56,7 +56,10 @@ export async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]>
 
       let roundkillsPerPlayer = currentRound.kills.reduce((acc: IRoundKillPlayer[], kill) => {
         //Do not include teamkills.
-        if (kill.killer_team === kill.killed_team) {
+        if (
+          kill.killer_team === kill.killed_team ||
+          (options.playerSteamId && options.playerSteamId !== kill.killer_steamid)
+        ) {
           return acc;
         }
 
@@ -83,12 +86,6 @@ export async function getFrags(options: OptionsGetFrags = {}): Promise<IMatch[]>
         }
         return acc;
       }, []);
-
-      if (options.playerSteamId) {
-        roundkillsPerPlayer = roundkillsPerPlayer.filter(
-          (player) => player.steamid === options.playerSteamId
-        );
-      }
 
       for (const player of roundkillsPerPlayer) {
         const { allKillsThatRoundForPlayer, steamid, team: playerTeam, playerName } = player;
