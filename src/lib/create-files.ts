@@ -142,9 +142,7 @@ function getWeaponsUsed(kills: IKill[]): string {
   return keys.length === 1
     ? keys[0]
     : keys
-        .map<string>(
-          (weapon, i) => `${i === 0 ? "" : "-"}${weapon}(${killsPerWeapon[weapon]})`
-        )
+        .map((weapon, i) => `${i === 0 ? "" : "-"}${weapon}(${killsPerWeapon[weapon]})`)
         .join("");
 }
 

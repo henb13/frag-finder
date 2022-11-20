@@ -157,13 +157,13 @@ function hasDeagleHs(kills: IKill[]) {
 }
 
 function isHighlightAntieco(kills: IKill[], players: IPlayerDTO[], roundNumber: number) {
-  const THRESHOLD = 1000;
+  const THRESHOLD = 2000;
   const killedSteamIds = kills.map((kill) => kill.killedPlayerSteamId);
   const enemyPlayers = players.filter((player) => killedSteamIds.includes(player.steamid));
 
   return (
-    enemyPlayers.every((player) => player.equipement_value_rounds[roundNumber] < THRESHOLD) &&
-    ![1, 16].includes(roundNumber)
+    enemyPlayers.filter((player) => player.equipement_value_rounds[roundNumber] < THRESHOLD)
+      .length > 3 && ![1, 16].includes(roundNumber)
   );
 }
 
